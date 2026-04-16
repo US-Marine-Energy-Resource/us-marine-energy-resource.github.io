@@ -16,12 +16,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      # - uses: actions/setup-python@v5
-      #   with:
-      #     python-version: '3.11'
-      #
-      # - name: Install dependencies
-      #   run: pip install -r docs/requirements.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r docs/requirements.txt
 
       - name: Build and deploy
         run: mkdocs gh-deploy --force
