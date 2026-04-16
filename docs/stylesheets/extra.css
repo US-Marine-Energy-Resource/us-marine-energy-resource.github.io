@@ -3,20 +3,22 @@
 
 /* NLR Color Palette */
 :root {
-  /* Primary NLR Blue */
+  /* NLR Mesa Blue */
   --md-primary-fg-color: #0079C2;
   --md-primary-fg-color--light: #00A3E4;
   --md-primary-fg-color--dark: #005a91;
 
-  /* Accent - Secondary Blue */
-  --md-accent-fg-color: #00A3E4;
+  /* Accent - NLR Rocky Blue */
+  --md-accent-fg-color: #003A69;
   --md-accent-fg-color--transparent: rgba(0, 163, 228, 0.1);
 
   /* NLR additional colors for reference */
-  --nlr-yellow: #FFC423;
-  --nlr-green: #7DA544;
-  --nlr-gray: #626D72;
-  --nlr-light-gray: #D1D5D8;
+
+  /* NLR Golden Sun */
+  --nlr-yellow: #DB9728;
+  --nlr-green: #819E7E;
+  --nlr-gray: #CEC3BA;
+  --nlr-light-gray: #f6f4f1;
 }
 
 /* Header font - Karla, all uppercase */
