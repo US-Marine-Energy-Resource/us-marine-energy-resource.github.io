@@ -1,0 +1,38 @@
+name: Wave Data Path Tests
+
+on:
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'docs/wave/**'
+      - 'tests/test_wave_data_paths.py'
+      - 'tests/requirements.txt'
+      - '.github/workflows/test-wave-paths.yml'
+  schedule:
+    # Run weekly on Mondays at 08:00 UTC to catch upstream S3/HSDS changes
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install test dependencies
+        run: pip install -r tests/requirements.txt
+
+      - name: Run S3 path tests (no credentials required)
+        run: python -m pytest tests/test_wave_data_paths.py -v -k "s3"
+
+      - name: Run HSDS path tests
+        env:
+          HSDS_API_KEY: ${{ secrets.HSDS_API_KEY }}
+        run: python -m pytest tests/test_wave_data_paths.py -v -k "hsds"
