@@ -1988,7 +1988,7 @@
 <h1 id="tidal-energy-datasets">Tidal Energy Datasets<a class="headerlink" href="#tidal-energy-datasets" title="Permanent link">&para;</a></h1>
 <p>High-resolution tidal current datasets for U.S. coastal locations, generated using the Finite Volume Community Ocean Model (FVCOM) [@fvcom].</p>
 <h2 id="what-are-tides">What Are Tides?<a class="headerlink" href="#what-are-tides" title="Permanent link">&para;</a></h2>
-<p>Tides are the periodic rise and fall of sea level caused by the gravitational attraction of the Moon and Sun acting on Earth's rotating oceans [@noc_tidal_modelling]. Most U.S. coastal locations experience <strong>semidiurnal tides</strong>, two high waters and two low waters every ~24 hours 50 minutes.</p>
+<p>Tides are the periodic rise and fall of sea level caused by the gravitational attraction of the Moon and Sun acting on Earth's rotating oceans [@noc_tidal_modeling]. Most U.S. coastal locations experience <strong>semidiurnal tides</strong>, two high waters and two low waters every ~24 hours 50 minutes.</p>
 <p>The kinetic energy carried by tidal currents as water accelerates through constricted passages is the primary resource exploited by current energy converters (CEC).</p>
 <!--
 
@@ -1996,14 +1996,14 @@
 
 ## The Spring–Neap Cycle
 
-The most important low-frequency modulation of tidal energy is the **spring–neap cycle** — a ~14.8-day oscillation driven by the alignment of the Moon and Sun [@noc_tidal_modelling]:
+The most important low-frequency modulation of tidal energy is the **spring–neap cycle** — a ~14.8-day oscillation driven by the alignment of the Moon and Sun [@noc_tidal_modeling]:
 
 | Phase      | Condition                               | Relative Current Speed | Relative Power Density |
 | ---------- | --------------------------------------- | ---------------------- | ---------------------- |
 | **Spring** | Moon and Sun aligned (new or full moon) | ≈ 1.4× mean            | ≈ 2.7× mean            |
 | **Neap**   | Moon at first/third quarter             | ≈ 0.7× mean            | ≈ 0.3× mean            |
 
-Because tidal power density scales as $P \propto \frac{1}{2}\rho U^3$, the spring tidal current can generate roughly **8 times** the power of a neap current [@noc_tidal_modelling] — making the spring–neap cycle the dominant source of variability in tidal energy yield over a typical project assessment period.
+Because tidal power density scales as $P \propto \frac{1}{2}\rho U^3$, the spring tidal current can generate roughly **8 times** the power of a neap current [@noc_tidal_modeling] — making the spring–neap cycle the dominant source of variability in tidal energy yield over a typical project assessment period.
 
 The time series below shows one spring–neap cycle at Upper Cook Inlet, AK (2005), plotting current speed across the surface (layer 0), mid-column (layer 4), and near-bed (layer 9) sigma layers:
 
@@ -2015,7 +2015,7 @@ _Cook Inlet, AK — March 2005. Three sigma layers (surface, mid-column, near-be
 
 ## Tidal Harmonics and Constituents
 
-The observed tide at any location can be decomposed into a sum of sinusoidal **tidal constituents** (harmonics), each with a fixed astronomical frequency but a locally determined amplitude and phase [@noc_tidal_modelling]. The local amplitude and phase reflect the shape of the coastline, water depth, and resonant properties of the basin.
+The observed tide at any location can be decomposed into a sum of sinusoidal **tidal constituents** (harmonics), each with a fixed astronomical frequency but a locally determined amplitude and phase [@noc_tidal_modeling]. The local amplitude and phase reflect the shape of the coastline, water depth, and resonant properties of the basin.
 
 $$Z(t) = Z_0 + \sum_{n} A_n \cos\!\left(\omega_n t + \phi_n\right)$$
 
@@ -2104,15 +2104,15 @@ _Cook Inlet, AK — sigma layer 4, full year 2005. Generated with [`plot_tidal_e
 
 ## How FVCOM Models Tidal Currents
 
-The datasets here are produced using the **Finite Volume Community Ocean Model (FVCOM)** [@fvcom], a 3D unstructured-grid coastal ocean model. Key aspects relevant to tidal energy assessment [@noc_tidal_modelling]:
+The datasets here are produced using the **Finite Volume Community Ocean Model (FVCOM)** [@fvcom], a 3D unstructured-grid coastal ocean model. Key aspects relevant to tidal energy assessment [@noc_tidal_modeling]:
 
 **Governing equations.** FVCOM solves the 3D Reynolds-averaged Navier–Stokes equations for horizontal velocities $u$, $v$ and sea surface elevation $\eta$ on a triangular finite-volume mesh. Tidal forcing enters as open-boundary conditions prescribed from a larger-scale ocean tidal atlas.
 
 **Unstructured grid.** Unlike regular-grid models, FVCOM's triangular mesh can be refined around complex coastlines and constricted passages without wasting resolution in the open ocean. Grid resolution at the five U.S. sites ranges from ~10 m in narrow channels to ~500 m offshore. See [Unstructured Grid](high_resolution_hindcast/unstructured-grid.md).
 
-**Sigma (terrain-following) coordinates.** The water column is divided into a fixed number of vertical layers that scale with local depth, so the near-bed boundary layer and the near-surface zone are always resolved regardless of water depth [@noc_tidal_modelling]. The dataset provides **10 sigma layers** per grid point. See [Sigma Layers](high_resolution_hindcast/sigma-layers.md).
+**Sigma (terrain-following) coordinates.** The water column is divided into a fixed number of vertical layers that scale with local depth, so the near-bed boundary layer and the near-surface zone are always resolved regardless of water depth [@noc_tidal_modeling]. The dataset provides **10 sigma layers** per grid point. See [Sigma Layers](high_resolution_hindcast/sigma-layers.md).
 
-**Boundary conditions.** Tidal constituents from a global ocean tidal atlas are imposed at the open boundaries of each regional model domain. The model is spun up and run for a full hindcast year to capture seasonal spring–neap variability [@noc_tidal_modelling].
+**Boundary conditions.** Tidal constituents from a global ocean tidal atlas are imposed at the open boundaries of each regional model domain. The model is spun up and run for a full hindcast year to capture seasonal spring–neap variability [@noc_tidal_modeling].
 
 **Validation.** Each site's model output is compared against tide gauge observations and, where available, ADCP current measurements, using standard skill metrics (RMSE, bias, $R^2$). See [Validation](high_resolution_hindcast/validation.md).
 
