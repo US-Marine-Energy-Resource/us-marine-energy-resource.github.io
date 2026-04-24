@@ -110,6 +110,11 @@
   background-color: var(--nlr-gray);
 }
 
+/* Prev/Next nav section — match the header blue */
+.md-footer-nav {
+  background-color: var(--md-primary-fg-color);
+}
+
 /* Search highlight */
 .md-search__form {
   background-color: rgba(255, 255, 255, 0.1);
@@ -664,7 +669,7 @@
 .cite-widget-locations-label {
   font-size: 0.9em;
   margin-bottom: 0.5em;
-  color: var(--nlr-gray);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .cite-widget-select-all-row {
@@ -675,7 +680,7 @@
 
 .cite-widget-select-all-row .cite-widget-checkbox-label {
   font-size: 0.85em;
-  color: var(--nlr-gray);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .cite-widget-location-grid {
@@ -701,7 +706,7 @@
 /* Hint text below checkboxes */
 .cite-widget-hint {
   font-size: 0.8em;
-  color: var(--nlr-gray);
+  color: rgba(0, 0, 0, 0.6);
   margin-top: 0.5em;
   margin-bottom: 0;
   font-style: italic;
