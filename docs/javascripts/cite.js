@@ -247,7 +247,7 @@
   var tabGroupCounter = 0
 
   /** Keys whose format tabs should be expanded by default */
-  var AUTO_EXPAND_KEYS = new Set(['mhkdr_submission'])
+  var AUTO_EXPAND_KEYS = new Set(['mhkdr_tidal_hindcast_submission'])
 
   /** File extension for each format */
   var FORMAT_EXT = {
@@ -592,7 +592,7 @@
     var selectAllCb = widgetEl.querySelector('#cite-widget-select-all')
 
     function getSelectedKeys () {
-      var keys = ['mhkdr_submission']
+      var keys = ['mhkdr_tidal_hindcast_submission']
       locationEntries.forEach(function (loc) {
         var cb = widgetEl.querySelector('input[data-prefix="' + loc.prefix + '"]')
         if (cb && cb.checked) {

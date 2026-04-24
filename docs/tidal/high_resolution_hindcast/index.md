@@ -45,7 +45,7 @@ This dataset contains high-resolution tidal hindcast data generated using FVCOM 
 
 ## Citation
 
-[!@mhkdr_submission]
+[!@mhkdr_tidal_hindcast_submission]
 
 ## Acknowledgement
 

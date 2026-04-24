@@ -8,7 +8,7 @@
 
 ## Description
 
-Geodesic distance from each grid cell center to the nearest shoreline point, calculated using the Global Self-consistent Hierarchical High-resolution Geography (GSHHG) shoreline database [@gsshhg_dataset] and reported in nautical miles (NM). This metric serves as a practical siting constraint that affects cable cost and grid connection feasibility.
+Geodesic distance from each grid cell center to the nearest shoreline point, calculated using the Global Self-consistent Hierarchical High-resolution Geography (GSHHG) shoreline database [@gshhg_dataset] and reported in nautical miles (NM). This metric serves as a practical siting constraint that affects cable cost and grid connection feasibility.
 
 ## Equation
 

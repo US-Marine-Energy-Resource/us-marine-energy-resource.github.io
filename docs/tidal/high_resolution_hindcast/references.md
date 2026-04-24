@@ -2,7 +2,7 @@
 
 ## Dataset Citation
 
-[!@mhkdr_submission]
+[!@mhkdr_tidal_hindcast_submission]
 
 ## Standards and Model Documentation
 
@@ -24,9 +24,9 @@
 
 ### Maine, Western Passage
 
-[!@ME_western_Deb2023_turbulence]
+[!@me_western_deb2023_turbulence]
 
-[!@ME_western_yang2020_modeling]
+[!@me_western_yang2020_modeling]
 
 ### New Hampshire, Piscataqua River
 
