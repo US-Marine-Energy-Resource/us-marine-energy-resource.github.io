@@ -20,6 +20,7 @@
   --nlr-yellow: #DB9728;
   --nlr-green: #819E7E;
   --nlr-gray: #CEC3BA;
+  --nlr-black: #111212
   --nlr-light-gray: #f6f4f1;
 }
 
@@ -408,7 +409,7 @@
   cursor: pointer;
   padding: 0.4em 0.75em;
   font-weight: 600;
-  color: var(--nlr-gray);
+  color: var(--nlr-black);
   user-select: none;
 }
 
@@ -437,7 +438,7 @@
   transform: translateY(-50%);
   transition: transform 0.2s ease;
   display: inline-flex;
-  color: var(--nlr-gray);
+  color: var(--nlr-black);
 }
 .cite-formats[open] > summary .cite-chevron {
   transform: translateY(-50%) rotate(90deg);
@@ -470,7 +471,7 @@
   cursor: pointer;
   font-size: 0.9em;
   font-family: inherit;
-  color: var(--nlr-gray);
+  color: var(--nlr-black);
   border-bottom: 2px solid transparent;
   margin-bottom: -2px;
   transition: color 0.15s, border-color 0.15s;
@@ -558,7 +559,7 @@
   cursor: pointer;
   font-size: 0.85em;
   font-family: inherit;
-  color: var(--nlr-gray);
+  color: var(--nlr-black);
   transition: color 0.15s, border-color 0.15s, background-color 0.15s;
 }
 
