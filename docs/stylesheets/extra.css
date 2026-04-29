@@ -22,6 +22,9 @@
   --nlr-gray: #CEC3BA;
   --nlr-black: #111212
   --nlr-light-gray: #f6f4f1;
+  --success-green: #388E3C;
+  --danger-red: #D32F2F;
+  --warning-orange: #E64A19;
 }
 
 /* Header font - Karla, all uppercase */
@@ -90,7 +93,7 @@
 /* Admonitions - Success */
 .md-typeset .admonition.success,
 .md-typeset details.success {
-  border-color: var(--nlr-green);
+  border-color: var(--success-green);
 }
 
 .md-typeset .success > .admonition-title,
@@ -529,6 +532,8 @@
   border: none !important;
   background: rgba(255, 255, 255, 0.8) !important;
   border-radius: 3px !important;
+  cursor: pointer;
+  color: var(--nlr-black);
 }
 
 .cite-format-pre-wrapper:hover .cite-copy-inline {
@@ -544,36 +549,40 @@
   display: flex;
   gap: 0.5em;
   margin-top: 0.4em;
+  justify-content: flex-end;
 }
 
-/* Copy button */
-.cite-copy-btn,
+/* Action bar buttons — solid filled "buttony" style */
+.cite-action-bar .cite-copy-btn,
 .cite-save-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.3em;
-  padding: 0.25em 0.6em;
-  background: none;
-  border: 1px solid var(--nlr-light-gray);
+  gap: 0.4em;
+  padding: 0.4em 0.9em;
+  background: var(--md-primary-fg-color);
+  border: 1px solid var(--md-primary-fg-color);
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.85em;
+  font-size: 0.925em;
   font-family: inherit;
-  color: var(--nlr-black);
-  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+  color: #fff;
+  font-weight: 500;
+  transition: filter 0.15s, box-shadow 0.15s;
 }
 
-.cite-copy-btn:hover,
+.cite-action-bar .cite-copy-btn:hover,
 .cite-save-btn:hover {
-  color: var(--md-primary-fg-color);
-  border-color: var(--md-primary-fg-color);
-  background-color: rgba(0, 121, 194, 0.05);
+  filter: brightness(0.88);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  color: #fff;
 }
 
-.cite-copy-btn.copied,
+.cite-action-bar .cite-copy-btn.copied,
 .cite-save-btn.saved {
-  color: var(--nlr-green);
-  border-color: var(--nlr-green);
+  background: var(--success-green);
+  border-color: var(--success-green);
+  color: #fff;
+  filter: none;
 }
 
 /* On pages with a bibliography (e.g. references), show format tabs
