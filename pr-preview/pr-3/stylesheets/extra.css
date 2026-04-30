@@ -14,11 +14,17 @@
 
   /* NLR additional colors for reference */
 
+  --nlr-blue: #0079C2;
+  --nlr-dark-blue: #003A69;
   /* NLR Golden Sun */
   --nlr-yellow: #DB9728;
   --nlr-green: #819E7E;
   --nlr-gray: #CEC3BA;
+  --nlr-black: #111212
   --nlr-light-gray: #f6f4f1;
+  --success-green: #388E3C;
+  --danger-red: #D32F2F;
+  --warning-orange: #E64A19;
 }
 
 /* Header font - Karla, all uppercase */
@@ -87,7 +93,7 @@
 /* Admonitions - Success */
 .md-typeset .admonition.success,
 .md-typeset details.success {
-  border-color: var(--nlr-green);
+  border-color: var(--success-green);
 }
 
 .md-typeset .success > .admonition-title,
@@ -107,7 +113,7 @@
 
 /* Footer */
 .md-footer {
-  background-color: var(--nlr-gray);
+  background-color: var(--nlr-blue);
 }
 
 /* Prev/Next nav section — match the header blue */
@@ -406,7 +412,7 @@
   cursor: pointer;
   padding: 0.4em 0.75em;
   font-weight: 600;
-  color: var(--nlr-gray);
+  color: var(--nlr-black);
   user-select: none;
 }
 
@@ -435,7 +441,7 @@
   transform: translateY(-50%);
   transition: transform 0.2s ease;
   display: inline-flex;
-  color: var(--nlr-gray);
+  color: var(--nlr-black);
 }
 .cite-formats[open] > summary .cite-chevron {
   transform: translateY(-50%) rotate(90deg);
@@ -468,7 +474,7 @@
   cursor: pointer;
   font-size: 0.9em;
   font-family: inherit;
-  color: var(--nlr-gray);
+  color: var(--nlr-black);
   border-bottom: 2px solid transparent;
   margin-bottom: -2px;
   transition: color 0.15s, border-color 0.15s;
@@ -526,6 +532,8 @@
   border: none !important;
   background: rgba(255, 255, 255, 0.8) !important;
   border-radius: 3px !important;
+  cursor: pointer;
+  color: var(--nlr-black);
 }
 
 .cite-format-pre-wrapper:hover .cite-copy-inline {
@@ -541,36 +549,40 @@
   display: flex;
   gap: 0.5em;
   margin-top: 0.4em;
+  justify-content: flex-end;
 }
 
-/* Copy button */
-.cite-copy-btn,
+/* Action bar buttons — solid filled "buttony" style */
+.cite-action-bar .cite-copy-btn,
 .cite-save-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.3em;
-  padding: 0.25em 0.6em;
-  background: none;
-  border: 1px solid var(--nlr-light-gray);
+  gap: 0.4em;
+  padding: 0.4em 0.9em;
+  background: var(--md-primary-fg-color);
+  border: 1px solid var(--md-primary-fg-color);
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.85em;
+  font-size: 0.925em;
   font-family: inherit;
-  color: var(--nlr-gray);
-  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+  color: #fff;
+  font-weight: 500;
+  transition: filter 0.15s, box-shadow 0.15s;
 }
 
-.cite-copy-btn:hover,
+.cite-action-bar .cite-copy-btn:hover,
 .cite-save-btn:hover {
-  color: var(--md-primary-fg-color);
-  border-color: var(--md-primary-fg-color);
-  background-color: rgba(0, 121, 194, 0.05);
+  filter: brightness(0.88);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  color: #fff;
 }
 
-.cite-copy-btn.copied,
+.cite-action-bar .cite-copy-btn.copied,
 .cite-save-btn.saved {
-  color: var(--nlr-green);
-  border-color: var(--nlr-green);
+  background: var(--success-green);
+  border-color: var(--success-green);
+  color: #fff;
+  filter: none;
 }
 
 /* On pages with a bibliography (e.g. references), show format tabs
