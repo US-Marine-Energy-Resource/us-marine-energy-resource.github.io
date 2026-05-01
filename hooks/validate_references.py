@@ -47,7 +47,7 @@ def on_pre_build(config, **kwargs):
         )
 
     locations: dict = json.loads(_LOCATIONS_FILE.read_text(encoding="utf-8"))
-    known_tags = set(locations.keys())
+    known_tags = {k: v for k, v in locations.items() if not k.startswith("_")}
 
     bib_files = sorted(_BIB_DIR.glob("*.bib"))
     if not bib_files:
@@ -60,7 +60,7 @@ def on_pre_build(config, **kwargs):
     for bib_path in bib_files:
         used = _extract_keywords_from_bib(bib_path)
         all_used_tags |= used
-        missing = used - known_tags
+        missing = used - set(known_tags)
         for tag in sorted(missing):
             errors.append(f"  '{tag}' in {bib_path.name} is not defined in locations.json")
 
@@ -72,12 +72,12 @@ def on_pre_build(config, **kwargs):
             '  "tag_name": "Human Readable Location Name"\n'
         )
 
-    unused_tags = known_tags - all_used_tags
+    unused_tags = set(known_tags) - all_used_tags
     for tag in sorted(unused_tags):
         log.warning(
             "Location tag '%s' (%s) is defined in locations.json but not used in any .bib file",
             tag,
-            locations[tag],
+            known_tags[tag],
         )
 
     log.info(
