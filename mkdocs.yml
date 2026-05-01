@@ -98,6 +98,15 @@ nav:
     #   - FAQ: wave/hindcast/faq.md
     #   - References: wave/hindcast/references.md
 
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      zoomable: true
+      draggable: true
+
 markdown_extensions:
   - tables
   - admonition
@@ -119,6 +128,7 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/toc-fix.js
+  - javascripts/glightbox-init.js
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - javascripts/citation.min.js
