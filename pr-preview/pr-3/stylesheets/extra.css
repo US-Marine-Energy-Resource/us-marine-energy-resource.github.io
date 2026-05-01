@@ -213,6 +213,77 @@
   padding-left: 0 !important;
 }
 
+/* --- Glightbox overrides --- */
+
+/* Semi-transparent overlay instead of solid black */
+.goverlay {
+  background: rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Constrain image to reasonable viewport size */
+.glightbox-clean .ginner-container {
+  max-width: min(82vw, 1400px) !important;
+  width: auto !important;
+}
+
+.glightbox-clean .gslide-image img {
+  max-height: 72vh !important;
+  max-width: min(82vw, 1400px) !important;
+  width: auto !important;
+}
+
+/* Caption below the image — dark, properly wrapped */
+.glightbox-clean .gslide-description {
+  background: rgba(15, 15, 15, 0.88) !important;
+  max-width: min(82vw, 1400px) !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.glightbox-clean .gdesc-inner {
+  padding: 0.65em 1.25em;
+}
+
+.glightbox-clean .gslide-title {
+  display: none;
+}
+
+.glightbox-clean .gslide-desc,
+.gslide-desc {
+  font-size: 0.925rem !important;
+  font-weight: 700 !important;
+  line-height: 1.5;
+  color: #d8d8d8;
+  white-space: normal !important;
+  word-break: break-word;
+  margin: 0;
+}
+
+/* --- Figure captions --- */
+
+/* Auto-number figures per page */
+.md-typeset {
+  counter-reset: figure-counter;
+}
+
+.md-typeset figure {
+  counter-increment: figure-counter;
+}
+
+.md-typeset figcaption::before {
+  content: "Figure " counter(figure-counter) ": ";
+  font-weight: 700;
+}
+
+.md-typeset figcaption {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  margin-top: 0.35rem;
+  max-width: 90%;
+}
+
 /* --- Citation styles --- */
 
 /* Citation placeholders: styled pills shown while citations load */
