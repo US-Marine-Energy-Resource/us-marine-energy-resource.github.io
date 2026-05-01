@@ -132,4 +132,8 @@
          <loc>https://us-marine-energy-resource.github.io/pr-preview/pr-3/tidal/high_resolution_hindcast/variables/tidal-range/</loc>
          <lastmod>2026-05-01</lastmod>
     </url>
+    <url>
+         <loc>https://us-marine-energy-resource.github.io/pr-preview/pr-3/wave/hindcast/s3-inventory/</loc>
+         <lastmod>2026-05-01</lastmod>
+    </url>
 </urlset>
