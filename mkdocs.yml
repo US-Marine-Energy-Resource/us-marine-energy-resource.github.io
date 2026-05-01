@@ -1,8 +1,8 @@
 site_name: U.S. Marine Energy Resource
 site_url: https://us-marine-energy-resource.github.io/
-site_description: United States marine energy resource characterization research sponsored by the U.S. Department of Energy
-repo_url: https://github.com/US-Marine-Energy-Resource/documentation
-repo_name: US-Marine-Energy-Resource/documentation
+site_description: United States marine energy resource characterization research sponsored by the U.S. Department of Energy Hydropower and Hydrokinetic Office (H2O)
+repo_url: https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource.github.io
+repo_name: US-Marine-Energy-Resource/us-marine-energy-resource.github.io
 
 theme:
   name: material
