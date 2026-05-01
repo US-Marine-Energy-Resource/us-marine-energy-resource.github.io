@@ -15,12 +15,12 @@ $$
 where $D = h + \zeta$ (bathymetry + sea surface elevation).
 
 <figure markdown="span">
-  ![Sigma coordinate system over a tidal cycle](../../assets/sigma_timeseries.png){ width="100%" }
+  ![Sigma coordinate system over a tidal cycle](../../assets/tidal/sigma_timeseries.png){ width="100%" }
   <figcaption>Sigma coordinate system over a 4-day tidal cycle at Cook Inlet, Alaska. Top panel shows sigma level boundaries (solid lines) and layer centers (dashed lines) in elevation relative to NAVD88. The seafloor remains fixed while the sea surface oscillates with tides, causing sigma layers to expand during high tide and compress during low tide. Middle and bottom panels show the corresponding total water depth and individual layer height variations.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Sigma layer comparison at low and high tide](../../assets/sigma_layer_comparison.png){ width="100%" }
+  ![Sigma layer comparison at low and high tide](../../assets/tidal/sigma_layer_comparison.png){ width="100%" }
   <figcaption>Sigma levels and layer centers at low tide (left) and high tide (right) for Cook Inlet, Alaska. The 10 sigma layers maintain their proportional positions within the water column while physical depths change with tidal elevation. Layer centers (dots) indicate where model variables are computed.</figcaption>
 </figure>
 

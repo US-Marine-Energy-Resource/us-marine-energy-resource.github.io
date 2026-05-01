@@ -20,7 +20,7 @@ This documentation, and the underlying datasets, document and provide links to t
 - **Complete time series** at every model grid point, not just annual summaries
 - **3D vertical structure (Tidal)** across depth layers (tidal) and spectral parameters (wave, virtual buoy)
 - **IEC-compliant methodology** documentation for use in formal resource assessments
-- **Direct data access** via [MHKDR](http://mhkdr.openei.org/632), [HSDS](getting-started/hsds-setup.md), and [AWS S3](getting-started/aws-s3.md)
+- **Direct data access** via [MHKDR](http://mhkdr.openei.org/632), HSDS, and AWS S3
 
 ## How to Access Marine Energy Resource Data
 
@@ -46,9 +46,9 @@ This documentation, and the underlying datasets, document and provide links to t
 
   [Tidal Variables](tidal/high_resolution_hindcast/variables/index.md){ .md-button }
 
-  [Wave Variables](wave/hindcast/variables.md)
+  Wave Variables (coming soon)
 
-  [Getting Started](getting-started/index.md)
+  Getting Started (coming soon)
 
 - **Engineers and Researchers**
 
@@ -56,9 +56,9 @@ This documentation, and the underlying datasets, document and provide links to t
 
   If you need full time-series data for device design, structural loading, IEC Stage 1 resource assessments, or academic research, the complete hindcast datasets are available for download and programmatic access. Datasets follow CF-1.10, ACDD-1.3, IEC 62600-101 [@iec_62600_101], and IEC 62600-201 [@iec_62600_201] conventions and are fully documented including model configuration, validation, and known limitations.
 
-  [Tidal Data Access](tidal/high_resolution_hindcast/data-access.md){ .md-button }
+  Tidal Data Access (coming soon)
 
-  [Wave Data Access](wave/hindcast/data-access.md)
+  Wave Data Access (coming soon)
 
   [Download Tidal Dataset on MHKDR](https://mhkdr.openei.org/submissions/632)
 
@@ -82,7 +82,7 @@ High-resolution 3D tidal current data for five U.S. coastal locations with signi
 
 [Full tidal documentation](tidal/high_resolution_hindcast/index.md) · [Download on MHKDR](https://mhkdr.openei.org/submissions/632)
 
-### [Wave Hindcast](wave/hindcast/index.md)
+### Wave Hindcast
 
 A 40-year (1979–2020) high-resolution wave hindcast covering the U.S. Exclusive Economic Zone (EEZ), produced using WaveWatch III and SWAN. Provides the long-term statistical record of wave conditions needed for IEC 62600-101 [@iec_62600_101] wave energy resource assessment and device design.
 
@@ -94,7 +94,7 @@ A 40-year (1979–2020) high-resolution wave hindcast covering the U.S. Exclusiv
 | Puerto Rico & Gulf of Mexico    | 1979–2020         | 3-hourly            |
 | Guam & Northern Mariana Islands | 1979–2020         | 3-hourly            |
 
-[Full wave documentation](wave/hindcast/index.md) · [Download on MHKDR](https://mhkdr.openei.org/submissions/326)
+Full wave documentation (coming soon) · [Download on MHKDR](https://mhkdr.openei.org/submissions/326)
 
 ## Scientific Standards
 

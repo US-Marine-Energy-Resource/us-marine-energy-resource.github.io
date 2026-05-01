@@ -70,7 +70,7 @@ Summary-level Parquet files contain one row per grid point with all VAP variable
 
 ## Atlas Data (Level b5)
 
-A subset of summary statistics formatted for the [Marine Energy Atlas](../../getting-started/marine-energy-atlas.md) visualization platform, including spatial metadata for map rendering.
+A subset of summary statistics formatted for the [Marine Energy Atlas](https://maps.nlr.gov/marine-energy-atlas) visualization platform, including spatial metadata for map rendering.
 
 ## Quality Control
 

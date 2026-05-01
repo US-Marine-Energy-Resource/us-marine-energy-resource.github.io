@@ -7,7 +7,7 @@ High-resolution 3D tidal current hindcast data for U.S. coastal locations, gener
 This dataset contains high-resolution tidal hindcast data generated using FVCOM at five strategically selected U.S. coastal locations. The project represents a collaborative effort between [Pacific Northwest National Laboratory](https://www.pnnl.gov/marine-energy-resource-characterization) (PNNL) for data generation and the [National Laboratory of the Rockies](https://www.nlr.gov/water/resource-characterization) for data processing and visualization.
 
 !!! info "Data Access"
-    Complete standardized datasets are available from the [AWS S3 Open Energy Data Initiative Marine Energy Data Lake](https://data.openei.org/s3_viewer?bucket=marine-energy-data). Summary data is visualized on the [Marine Energy Atlas](https://maps.nlr.gov/marine-energy-atlas). See [Getting Started](../../getting-started/index.md) for HSDS/S3 setup and [Data Access](data-access.md) for dataset-specific code examples.
+    Complete standardized datasets are available from the [AWS S3 Open Energy Data Initiative Marine Energy Data Lake](https://data.openei.org/s3_viewer?bucket=marine-energy-data). Summary data is visualized on the [Marine Energy Atlas](https://maps.nlr.gov/marine-energy-atlas).
 
 !!! warning "Data Limitations"
     This dataset is derived from numerical model simulations, not direct measurements. Results are based on a single hindcast year, which may not capture interannual variability in tidal energy resources. Model validation has been performed against observations at available measurement stations, but uncertainties exist, particularly in areas with complex bathymetry or limited observational data. See [Limitations](limitations.md) for details.

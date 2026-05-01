@@ -9,7 +9,7 @@ An unstructured grid is a computational mesh composed of irregularly-shaped elem
 The FVCOM model uses an unstructured triangular mesh where each element (cell) is defined by three nodes. Model variables are computed at element centers, while the mesh geometry is defined by node positions. The flexibility of triangular elements allows the mesh to conform to complex coastlines and bathymetric features without requiring uniform grid spacing.
 
 <figure markdown="span">
-  ![FVCOM unstructured triangular mesh](../../assets/unstructured_grid_overview.png){ width="100%" }
+  ![FVCOM unstructured triangular mesh](../../assets/tidal/unstructured_grid_overview.png){ width="100%" }
   <figcaption>Wide angle and detailed view of the underlying FVCOM unstructured triangular mesh used for the High Resolution Tidal Hindcast in Cook Inlet, Alaska. The main panel shows the full model domain with 392,002 triangular elements conforming to the complex coastline geometry. The inset shows a detailed view of the mesh structure, illustrating how element size varies with higher resolution near coastlines and in channels where accurate representation of tidal dynamics requires finer spatial detail.</figcaption>
 </figure>
 
