@@ -34,18 +34,20 @@ extra_css:
 nav:
   - Home:
     - index.md
-    - About:
-      - Project: about/project.md
-      - Funding: about/funding.md
-      - Contact: about/contact.md
-  - Getting Started:
-    - getting-started/index.md
-    - Accessing Data:
-      - HSDS Setup: getting-started/hsds-setup.md
-      - AWS S3 Downloads: getting-started/aws-s3.md
-      - Marine Energy Atlas: getting-started/marine-energy-atlas.md
-    - Data Formats: getting-started/data-formats.md
-    - Contributing: getting-started/contributing.md
+    # About pages not yet committed
+    # - About:
+    #   - Project: about/project.md
+    #   - Funding: about/funding.md
+    #   - Contact: about/contact.md
+  # Getting Started section not yet committed
+  # - Getting Started:
+  #   - getting-started/index.md
+  #   - Accessing Data:
+  #     - HSDS Setup: getting-started/hsds-setup.md
+  #     - AWS S3 Downloads: getting-started/aws-s3.md
+  #     - Marine Energy Atlas: getting-started/marine-energy-atlas.md
+  #   - Data Formats: getting-started/data-formats.md
+  #   - Contributing: getting-started/contributing.md
   - Tidal:
     - tidal/index.md
     - High Resolution Hindcast:
