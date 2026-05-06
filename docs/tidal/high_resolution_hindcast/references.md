@@ -40,6 +40,8 @@
 
 [!@wa_puget_yang2021_tidal]
 
+[!@wa_puget_deb2026_combined]
+
 ## Full Bibliography
 
 <div class="bibliography"></div>
