@@ -8,9 +8,9 @@
 
 [!@iec_62600_201]
 
-[!@hass_2011_assessment]
-
 [!@fvcom]
+
+[!@hass_2011_assessment]
 
 ## Location-Specific Validation Studies
 
