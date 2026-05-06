@@ -4,13 +4,13 @@
 
 [!@mhkdr_tidal_hindcast_submission]
 
-## Standards and Model Documentation
+## Dataset Standards
 
 [!@iec_62600_201]
 
-[!@fvcom]
+## Dataset Model (Used for all Locations)
 
-[!@hass_2011_assessment]
+[!@fvcom]
 
 ## Location-Specific Validation Studies
 
@@ -41,6 +41,10 @@
 [!@wa_puget_yang2021_tidal]
 
 [!@wa_puget_deb2026_combined]
+
+## Equation References
+
+[!@hass_2011_assessment]
 
 ## Full Bibliography
 
