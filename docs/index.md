@@ -70,14 +70,14 @@ This documentation, and the underlying datasets, document and provide links to t
 
 ### [Tidal Hindcast](tidal/high_resolution_hindcast/index.md)
 
-High-resolution 3D tidal current data for five U.S. coastal locations with significant tidal energy potential, generated using the Finite Volume Community Ocean Model (FVCOM). Each location covers one complete year at sub-500 m spatial resolution across 10 vertical depth layers — meeting IEC 62600-201 [@iec_62600_201] Stage 1 standards for tidal energy resource assessment.
+High-resolution 3D tidal current data for five U.S. coastal locations with significant tidal energy potential, generated using the Finite Volume Community Ocean Model (FVCOM). Each location covers one complete year at sub-500 m spatial resolution across 10 vertical depth layers - meeting IEC 62600-201 [@iec_62600_201] Stage 1 standards for tidal energy resource assessment.
 
 | Location                        | Simulation Period | Temporal Resolution | Grid Points |
 | ------------------------------- | ----------------- | ------------------- | ----------- |
 | Aleutian Islands, Alaska        | 2010–2011         | Hourly              | 797,978     |
 | Cook Inlet, Alaska              | 2005              | Hourly              | 392,002     |
 | Piscataqua River, New Hampshire | 2007              | Half-hourly         | 292,927     |
-| Puget Sound, Washington         | 2015              | Half-hourly         | 1,734,765   |
+| Salish Sea, Washington          | 2015              | Half-hourly         | 1,734,765   |
 | Western Passage, Maine          | 2017              | Half-hourly         | 231,208     |
 
 [Full tidal documentation](tidal/high_resolution_hindcast/index.md) · [Download on MHKDR](https://mhkdr.openei.org/submissions/632)

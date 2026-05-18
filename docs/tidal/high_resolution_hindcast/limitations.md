@@ -6,10 +6,10 @@ This dataset is derived from numerical model simulations and has inherent limita
 
 The model does not include:
 
-- **Wave-current interaction** — Waves are small in the study domains
-- **Atmospheric forcing** — Wind and pressure effects on tidal currents are negligible
-- **Density-driven estuarine flow** — Temperature and salinity effects are small
-- **Storm surge** — Only astronomical tidal forcing from 12 constituents via OSU TPXO Tide Models is applied
+- **Wave-current interaction** - Waves are small in the study domains
+- **Atmospheric forcing** - Wind and pressure effects on tidal currents are negligible
+- **Density-driven estuarine flow** - Temperature and salinity effects are small
+- **Storm surge** - Only astronomical tidal forcing from 12 constituents via OSU TPXO Tide Models is applied
 
 ## Temporal Limitations
 
@@ -25,7 +25,7 @@ Results represent a **single hindcast year** and do not capture interannual vari
 
 | Location         | Issue                                     |
 | ---------------- | ----------------------------------------- |
-| Puget Sound      | Missing 2015-12-31                        |
+| Salish Sea       | Missing 2015-12-31                        |
 | Aleutian Islands | File MD_AIS_west_hrBathy_0370.nc excluded |
 | Cook Inlet       | File cki_0366.nc excluded                 |
 | Piscataqua River | File PIR_0368.nc excluded                 |

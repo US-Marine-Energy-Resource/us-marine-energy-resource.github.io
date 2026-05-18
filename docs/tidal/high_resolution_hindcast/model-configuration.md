@@ -36,10 +36,10 @@ Surface wind stress is applied using ERA5 or CFSv2 reanalysis data, depending on
 
 ### Physics Not Included
 
-- **Wave-current interaction** — Waves are small in all study domains
-- **Atmospheric pressure forcing** — Effects on tidal currents are negligible
-- **Density-driven flow** — Temperature and salinity effects are small in these tidally dominated environments
-- **Storm surge** — Only astronomical tidal forcing is applied
+- **Wave-current interaction** - Waves are small in all study domains
+- **Atmospheric pressure forcing** - Effects on tidal currents are negligible
+- **Density-driven flow** - Temperature and salinity effects are small in these tidally dominated environments
+- **Storm surge** - Only astronomical tidal forcing is applied
 
 See [Limitations](limitations.md) for a complete discussion of model limitations.
 

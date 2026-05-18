@@ -10,9 +10,9 @@ For detailed turbine design or array layout, **Stage 2 and Stage 3 assessments**
 
 The tidal hindcast covers one year per location because:
 
-- **Tidal currents are highly predictable** — driven by astronomical forcing that repeats on known cycles
-- **One year captures the full range of tidal conditions** — including spring-neap variability and seasonal modulation
-- **Computational cost** — each location requires months of supercomputer time; multi-year runs were not feasible within project scope
+- **Tidal currents are highly predictable** - driven by astronomical forcing that repeats on known cycles
+- **One year captures the full range of tidal conditions** - including spring-neap variability and seasonal modulation
+- **Computational cost** - each location requires months of supercomputer time; multi-year runs were not feasible within project scope
 
 Interannual variability in tidal currents is generally small compared to the tidal signal itself. However, meteorological effects (storms, river discharge) that vary between years are not fully captured.
 
@@ -25,17 +25,17 @@ Interannual variability in tidal currents is generally small compared to the tid
 
 Several possible reasons:
 
-- **Shallow/intertidal areas** — Cells that dry out during low tide will have zero or near-zero time-averaged values
-- **Open water boundary** — Cells near domain edges may have reduced accuracy
-- **Protected embayments** — Some areas within the domain have naturally weak tidal currents
+- **Shallow/intertidal areas** - Cells that dry out during low tide will have zero or near-zero time-averaged values
+- **Open water boundary** - Cells near domain edges may have reduced accuracy
+- **Protected embayments** - Some areas within the domain have naturally weak tidal currents
 
 ## How does this compare to NOAA tidal predictions?
 
 NOAA tidal predictions provide water level forecasts at specific stations based on harmonic analysis. This dataset provides:
 
-- **Spatial coverage** — 231K to 1.7M grid points vs. individual stations
-- **Current velocity** — 3D velocity fields, not just water levels
-- **Engineering variables** — Power density, depth, grid resolution
+- **Spatial coverage** - 231K to 1.7M grid points vs. individual stations
+- **Current velocity** - 3D velocity fields, not just water levels
+- **Engineering variables** - Power density, depth, grid resolution
 
 FVCOM [@fvcom] uses similar tidal constituents but solves the full hydrodynamic equations on a 3D unstructured grid, producing spatially continuous fields rather than point predictions.
 

@@ -1,4 +1,4 @@
-<!-- AUTO-GENERATED FILE — DO NOT EDIT DIRECTLY -->
+<!-- AUTO-GENERATED FILE - DO NOT EDIT DIRECTLY -->
 <!-- Source of truth: src/variable_registry.py (VARIABLE_REGISTRY) -->
 <!-- To update: edit the registry, then run `python generate_variable_docs.py` -->
 

@@ -14,7 +14,7 @@ Some FVCOM model domains were originally configured in projected coordinate syst
 | Cook Inlet       | Geographic (lat/lon) | None           |
 | Western Passage  | UTM Zone 19 (NAD83)  | → WGS84        |
 | Piscataqua River | UTM Zone 19 (NAD83)  | → WGS84        |
-| Puget Sound      | UTM Zone 10 (NAD83)  | → WGS84        |
+| Salish Sea       | UTM Zone 10 (NAD83)  | → WGS84        |
 
 ## Transformation Details
 

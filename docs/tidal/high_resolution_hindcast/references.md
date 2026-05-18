@@ -22,6 +22,8 @@
 
 [!@ak_cook_deb2025_characterizing]
 
+[!@ak_cook_wang2020_tidal]
+
 ### Maine, Western Passage
 
 [!@me_western_deb2023_turbulence]
@@ -32,7 +34,7 @@
 
 [!@nh_piscataqua_spicer2023_tidal]
 
-### Washington, Puget Sound
+### Washington, Salish Sea
 
 [!@wa_puget_deb2024_tidal_iec]
 
@@ -42,6 +44,8 @@
 
 [!@wa_puget_deb2026_combined]
 
+[!@wa_puget_calandra2023_comparison]
+
 ## Equation References
 
 [!@hass_2011_assessment]
@@ -49,6 +53,5 @@
 ## Full Bibliography
 
 <div class="bibliography"></div>
-
 
 --8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"

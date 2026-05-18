@@ -1,4 +1,4 @@
-# WPTO High Resolution Tidal Hindcast
+# H2O High Resolution Tidal Hindcast
 
 High-resolution 3D tidal current hindcast data for U.S. coastal locations, generated using the Finite Volume Community Ocean Model (FVCOM) [@fvcom].
 
@@ -19,8 +19,11 @@ This dataset contains high-resolution tidal hindcast data generated using FVCOM 
 | Aleutian Islands, Alaska        | 2010-06-03 00:00:00 | 2011-06-02 23:00:00 | Hourly             | 797,978     |
 | Cook Inlet, Alaska              | 2005-01-01 00:00:00 | 2005-12-31 23:00:00 | Hourly             | 392,002     |
 | Piscataqua River, New Hampshire | 2007-01-01 00:00:00 | 2007-12-31 23:30:00 | Half-Hourly        | 292,927     |
-| Puget Sound, Washington         | 2015-01-01 00:00:00 | 2015-12-30 23:30:00 | Half-Hourly        | 1,734,765   |
+| Salish Sea, Washington          | 2015-01-01 00:00:00 | 2015-12-30 23:30:00 | Half-Hourly        | 1,734,765   |
 | Western Passage, Maine          | 2017-01-01 00:00:00 | 2017-12-31 23:30:00 | Half-Hourly        | 231,208     |
+
+!!! note "Salish Sea / Puget Sound Naming"
+    The Salish Sea dataset encompasses the broader Washington region including Puget Sound, and is available on MHKDR as Puget Sound, Washington.
 
 ## IEC 62600-201 Compliance
 

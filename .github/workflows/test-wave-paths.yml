@@ -22,17 +22,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: '3.11'
+          enable-cache: true
+          cache-dependency-glob: 'tests/requirements.txt'
 
       - name: Install test dependencies
-        run: pip install -r tests/requirements.txt
+        run: uv venv && uv pip install -r tests/requirements.txt
 
       - name: Run S3 path tests (no credentials required)
-        run: python -m pytest tests/test_wave_data_paths.py -v -k "s3"
+        run: uv run python -m pytest tests/test_wave_data_paths.py -v -k "s3"
 
       - name: Run HSDS path tests
         env:
           HSDS_API_KEY: ${{ secrets.HSDS_API_KEY }}
-        run: python -m pytest tests/test_wave_data_paths.py -v -k "hsds"
+        run: uv run python -m pytest tests/test_wave_data_paths.py -v -k "hsds"
