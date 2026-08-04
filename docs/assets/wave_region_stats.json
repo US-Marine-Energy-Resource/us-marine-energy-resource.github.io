@@ -1,0 +1,991 @@
+{
+  "west-coast": {
+    "display_name": "West Coast",
+    "version": "v1.0.1",
+    "year_start": 1979,
+    "year_end": 2020,
+    "num_years": 42,
+    "years_note": null,
+    "s3_bucket": "wpto-pds-us-wave",
+    "s3_prefix": "v1.0.1/West_Coast",
+    "s3_file_pattern": "West_Coast_wave_{year}.h5",
+    "hsds_prefix": "/nrel/US_wave/v1.0.1/West_Coast",
+    "file_size_mb": 73459.3,
+    "file_size_gb": 71.7,
+    "total_tb": 2.9,
+    "grid_points": 699904,
+    "time_steps": 2928,
+    "variables": [
+      {
+        "name": "directionality_coefficient",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Directionality coefficient",
+        "iec_name": "d",
+        "swan_name": "",
+        "units": ""
+      },
+      {
+        "name": "energy_period",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Energy period",
+        "iec_name": "T_e,T_-10",
+        "swan_name": "TMM10",
+        "units": "s"
+      },
+      {
+        "name": "maximum_energy_direction",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Peak wave direction (nautical convention)",
+        "iec_name": "",
+        "swan_name": "PDIR",
+        "units": "degr"
+      },
+      {
+        "name": "mean_absolute_period",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Mean absolute wave period - equivalent to T_m01",
+        "iec_name": "",
+        "swan_name": "PER",
+        "units": "s"
+      },
+      {
+        "name": "mean_wave_direction",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Mean wave direction (nautical convention)",
+        "iec_name": "",
+        "swan_name": "DIR",
+        "units": "degr"
+      },
+      {
+        "name": "omni-directional_wave_power",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Omnidirectional wave power",
+        "iec_name": "J",
+        "swan_name": "",
+        "units": "W/m"
+      },
+      {
+        "name": "peak_period",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Relative peak period of the variance density spectrum",
+        "iec_name": "T_p",
+        "swan_name": "RTP",
+        "units": "s"
+      },
+      {
+        "name": "significant_wave_height",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Significant wave height",
+        "iec_name": "H_m0",
+        "swan_name": "HSIGN",
+        "units": "m"
+      },
+      {
+        "name": "spectral_width",
+        "shape": [
+          2928,
+          699904
+        ],
+        "dtype": "float32",
+        "description": "Spectral width",
+        "iec_name": "epsilon_0",
+        "swan_name": "",
+        "units": ""
+      },
+      {
+        "name": "water_depth",
+        "shape": [
+          248,
+          699904
+        ],
+        "dtype": "float64",
+        "description": "Water depth",
+        "iec_name": "",
+        "swan_name": "",
+        "units": "m"
+      }
+    ],
+    "meta_fields": [
+      {
+        "name": "water_depth",
+        "dtype": "float32"
+      },
+      {
+        "name": "latitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "longitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "distance_to_shore",
+        "dtype": "float32"
+      },
+      {
+        "name": "timezone",
+        "dtype": "int16"
+      },
+      {
+        "name": "jurisdiction",
+        "dtype": "str[20]"
+      }
+    ]
+  },
+  "atlantic": {
+    "display_name": "Atlantic",
+    "version": "v1.0.1",
+    "year_start": 1979,
+    "year_end": 2020,
+    "num_years": 42,
+    "years_note": null,
+    "s3_bucket": "wpto-pds-us-wave",
+    "s3_prefix": "v1.0.1/Atlantic",
+    "s3_file_pattern": "Atlantic_wave_{year}.h5",
+    "hsds_prefix": "/nrel/US_wave/v1.0.1/Atlantic",
+    "file_size_mb": 323839.4,
+    "file_size_gb": 316.2,
+    "total_tb": 13.0,
+    "grid_points": 2635135,
+    "time_steps": 2928,
+    "variables": [
+      {
+        "name": "directionality_coefficient",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Directionality coefficient",
+        "iec_name": "d",
+        "swan_name": "",
+        "units": ""
+      },
+      {
+        "name": "energy_period",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Energy period",
+        "iec_name": "T_e,T_-10",
+        "swan_name": "TMM10",
+        "units": "s"
+      },
+      {
+        "name": "maximum_energy_direction",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Direction of maximum directionally resolved wave power (nautical convention)",
+        "iec_name": "theta_J",
+        "swan_name": "",
+        "units": "deg"
+      },
+      {
+        "name": "mean_absolute_period",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Mean absolute wave period - equivalent to T_m01",
+        "iec_name": "",
+        "swan_name": "PER",
+        "units": "s"
+      },
+      {
+        "name": "mean_wave_direction",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Mean wave direction (nautical convention)",
+        "iec_name": "",
+        "swan_name": "DIR",
+        "units": "deg"
+      },
+      {
+        "name": "mean_zero-crossing_period",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Mean absolute zero-crossing period",
+        "iec_name": "T_Z,T_02",
+        "swan_name": "TM02",
+        "units": "s"
+      },
+      {
+        "name": "omni-directional_wave_power",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Omnidirectional wave power",
+        "iec_name": "J",
+        "swan_name": "",
+        "units": "W/m"
+      },
+      {
+        "name": "peak_period",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Relative peak period of the variance density spectrum",
+        "iec_name": "T_p",
+        "swan_name": "RTP",
+        "units": "s"
+      },
+      {
+        "name": "peak_period_direction",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Peak wave direction (nautical convention)",
+        "iec_name": "",
+        "swan_name": "PDIR",
+        "units": "deg"
+      },
+      {
+        "name": "significant_wave_height",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Significant wave height",
+        "iec_name": "H_m0",
+        "swan_name": "HSIGN",
+        "units": "m"
+      },
+      {
+        "name": "spectral_width",
+        "shape": [
+          2928,
+          2635135
+        ],
+        "dtype": "float32",
+        "description": "Spectral width",
+        "iec_name": "epsilon_0",
+        "swan_name": "",
+        "units": ""
+      }
+    ],
+    "meta_fields": []
+  },
+  "hawaii": {
+    "display_name": "Hawaii",
+    "version": "v1.0.0",
+    "year_start": 1979,
+    "year_end": 2010,
+    "num_years": 32,
+    "years_note": "Files for 2011\u20132020 are not available on AWS S3 or HSDS.",
+    "s3_bucket": "wpto-pds-us-wave",
+    "s3_prefix": "v1.0.0/Hawaii",
+    "s3_file_pattern": "Hawaii_wave_{year}.h5",
+    "hsds_prefix": "/nrel/US_wave/v1.0.0/Hawaii",
+    "file_size_mb": 83869.3,
+    "file_size_gb": 81.9,
+    "total_tb": 2.6,
+    "grid_points": 700414,
+    "time_steps": 2920,
+    "variables": [
+      {
+        "name": "directionality_coefficient",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "Fraction of total wave energy travelling in the \"direction of maximum wave power\" direction",
+        "iec_name": "d",
+        "swan_name": "description: Fraction of total wave energy travelling in the \"direction of maximum wave power\" direction",
+        "units": ""
+      },
+      {
+        "name": "energy_period",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak",
+        "iec_name": "T_e",
+        "swan_name": "TM02",
+        "units": "s"
+      },
+      {
+        "name": "maximum_energy",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "Maximum directionally resolved wave energy",
+        "iec_name": "J_sigma_jdmax",
+        "swan_name": "jdmax",
+        "units": "W/m"
+      },
+      {
+        "name": "maximum_energy_direction",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "The direction from which the most wave energy is travelling",
+        "iec_name": "Jsigma_Jmax",
+        "swan_name": "description: The direction from which the most wave energy is travelling",
+        "units": "deg"
+      },
+      {
+        "name": "mean_absolute_period",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "Resolved Spectral Moment (m_0/m_1)",
+        "iec_name": "T_p",
+        "swan_name": "PER",
+        "units": "s"
+      },
+      {
+        "name": "mean_wave_direction",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "Direction Normal to the Wave Crests",
+        "iec_name": "Sigma",
+        "swan_name": "DIR",
+        "units": "deg"
+      },
+      {
+        "name": "omni-directional_wave_power",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "Total wave energy flux from all directions",
+        "iec_name": "J",
+        "swan_name": "description: Total wave energy flux from all directions",
+        "units": "W/m"
+      },
+      {
+        "name": "peak_period",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "The period associated with the maximum value of the wave energy spectrum",
+        "iec_name": "T_p",
+        "swan_name": "RTP",
+        "units": "s"
+      },
+      {
+        "name": "significant_wave_height",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "Calculated as the zeroth spectral moment (i.e., H_m0)",
+        "iec_name": "H_s",
+        "swan_name": "HSIGN",
+        "units": "m"
+      },
+      {
+        "name": "spectral_width",
+        "shape": [
+          2920,
+          700414
+        ],
+        "dtype": "float32",
+        "description": "Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak",
+        "iec_name": "epsilon_o",
+        "swan_name": "description: Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak",
+        "units": ""
+      }
+    ],
+    "meta_fields": [
+      {
+        "name": "latitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "longitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "distance_to_shore",
+        "dtype": "float32"
+      },
+      {
+        "name": "timezone",
+        "dtype": "int16"
+      },
+      {
+        "name": "jurisdiction",
+        "dtype": "str[7]"
+      },
+      {
+        "name": "water_depth",
+        "dtype": "float32"
+      }
+    ]
+  },
+  "alaska": {
+    "display_name": "Alaska",
+    "version": "v1.0.1",
+    "year_start": 1979,
+    "year_end": 2020,
+    "num_years": 42,
+    "years_note": null,
+    "s3_bucket": "wpto-pds-us-wave",
+    "s3_prefix": "v1.0.1/Alaska",
+    "s3_file_pattern": "Alaska_wave_{year}.h5",
+    "hsds_prefix": "/nrel/US_wave/v1.0.1/Alaska",
+    "file_size_mb": 408655.5,
+    "file_size_gb": 399.1,
+    "total_tb": 16.4,
+    "grid_points": 3894283,
+    "time_steps": 2928,
+    "variables": [
+      {
+        "name": "directionality_coefficient",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Directionality coefficient",
+        "iec_name": "d",
+        "swan_name": "",
+        "units": ""
+      },
+      {
+        "name": "energy_period",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Energy period",
+        "iec_name": "T_e,T_-10",
+        "swan_name": "TMM10",
+        "units": "s"
+      },
+      {
+        "name": "maximum_energy_direction",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Direction of maximum directionally resolved wave power (nautical convention)",
+        "iec_name": "theta_J",
+        "swan_name": "",
+        "units": "degr"
+      },
+      {
+        "name": "mean_absolute_period",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Mean absolute wave period - equivalent to T_m01",
+        "iec_name": "",
+        "swan_name": "PER",
+        "units": "s"
+      },
+      {
+        "name": "mean_wave_direction",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Mean wave direction (nautical convention)",
+        "iec_name": "",
+        "swan_name": "DIR",
+        "units": "degr"
+      },
+      {
+        "name": "omni-directional_wave_power",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Omnidirectional wave power",
+        "iec_name": "J",
+        "swan_name": "",
+        "units": "W/m"
+      },
+      {
+        "name": "peak_period",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Relative peak period of the variance density spectrum",
+        "iec_name": "T_p",
+        "swan_name": "RTP",
+        "units": "s"
+      },
+      {
+        "name": "significant_wave_height",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Significant wave height",
+        "iec_name": "H_m0",
+        "swan_name": "HSIGN",
+        "units": "m"
+      },
+      {
+        "name": "spectral_width",
+        "shape": [
+          2928,
+          3894283
+        ],
+        "dtype": "float32",
+        "description": "Spectral width",
+        "iec_name": "epsilon_0",
+        "swan_name": "",
+        "units": ""
+      },
+      {
+        "name": "water_depth",
+        "shape": [
+          248,
+          3894283
+        ],
+        "dtype": "float64",
+        "description": "Water depth",
+        "iec_name": "",
+        "swan_name": "",
+        "units": "m"
+      }
+    ],
+    "meta_fields": [
+      {
+        "name": "latitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "longitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "timezone",
+        "dtype": "float32"
+      },
+      {
+        "name": "distance",
+        "dtype": "float32"
+      },
+      {
+        "name": "jurisdiction",
+        "dtype": "str[7]"
+      },
+      {
+        "name": "water_depth",
+        "dtype": "float32"
+      }
+    ]
+  },
+  "cnmi-guam": {
+    "display_name": "CNMI and Guam",
+    "version": "v1.0.0",
+    "year_start": 1979,
+    "year_end": 2020,
+    "num_years": 42,
+    "years_note": null,
+    "s3_bucket": "wpto-pds-us-wave",
+    "s3_prefix": "v1.0.0/CNMI_and_Guam",
+    "s3_file_pattern": "CNMI_and_Guam_wave_{year}.h5",
+    "hsds_prefix": "/nrel/US_wave/v1.0.0/CNMI_and_Guam",
+    "file_size_mb": 48432.5,
+    "file_size_gb": 47.3,
+    "total_tb": 1.9,
+    "grid_points": 461465,
+    "time_steps": 2928,
+    "variables": [
+      {
+        "name": "directionality_coefficient",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Directionality coefficient",
+        "iec_name": "d",
+        "swan_name": "",
+        "units": ""
+      },
+      {
+        "name": "energy_period",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Energy period",
+        "iec_name": "T_e,T_-10",
+        "swan_name": "TMM10",
+        "units": "s"
+      },
+      {
+        "name": "maximum_energy_direction",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Direction of maximum directionally resolved wave power (nautical convention)",
+        "iec_name": "theta_J",
+        "swan_name": "",
+        "units": "degr"
+      },
+      {
+        "name": "mean_absolute_period",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Mean absolute wave period - equivalent to T_m01",
+        "iec_name": "",
+        "swan_name": "PER",
+        "units": "s"
+      },
+      {
+        "name": "mean_wave_direction",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Mean wave direction (nautical convention)",
+        "iec_name": "",
+        "swan_name": "DIR",
+        "units": "degr"
+      },
+      {
+        "name": "omni-directional_wave_power",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Omnidirectional wave power",
+        "iec_name": "J",
+        "swan_name": "",
+        "units": "W/m"
+      },
+      {
+        "name": "peak_period",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Relative peak period of the variance density spectrum",
+        "iec_name": "T_p",
+        "swan_name": "RTP",
+        "units": "s"
+      },
+      {
+        "name": "significant_wave_height",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Significant wave height",
+        "iec_name": "H_m0",
+        "swan_name": "HSIGN",
+        "units": "m"
+      },
+      {
+        "name": "spectral_width",
+        "shape": [
+          2928,
+          461465
+        ],
+        "dtype": "float32",
+        "description": "Spectral width",
+        "iec_name": "epsilon_0",
+        "swan_name": "",
+        "units": ""
+      },
+      {
+        "name": "water_depth",
+        "shape": [
+          248,
+          461465
+        ],
+        "dtype": "float64",
+        "description": "Water depth",
+        "iec_name": "",
+        "swan_name": "",
+        "units": "m"
+      }
+    ],
+    "meta_fields": [
+      {
+        "name": "latitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "longitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "timezone",
+        "dtype": "int16"
+      },
+      {
+        "name": "depth",
+        "dtype": "float32"
+      },
+      {
+        "name": "distance_to_shore",
+        "dtype": "float32"
+      },
+      {
+        "name": "jurisdiction",
+        "dtype": "str[24]"
+      }
+    ]
+  },
+  "gulf-of-america-and-puerto-rico": {
+    "display_name": "Gulf of America and Puerto Rico",
+    "version": "v1.0.1",
+    "year_start": 1979,
+    "year_end": 2020,
+    "num_years": 42,
+    "years_note": null,
+    "s3_bucket": "wpto-pds-us-wave",
+    "s3_prefix": "v1.0.1/Gulf_of_Mexico_and_Puerto_Rico",
+    "s3_file_pattern": "GOM_PR_{year}.h5",
+    "hsds_prefix": "/nrel/US_wave/v1.0.1/Gulf_of_Mexico_and_Puerto_Rico",
+    "file_size_mb": 586508.9,
+    "file_size_gb": 572.8,
+    "total_tb": 23.5,
+    "grid_points": 4656637,
+    "time_steps": 2928,
+    "variables": [
+      {
+        "name": "direction_of_maximum_directionally_resolved_wave_power",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Direction of maximum directionally resolved wave power (nautical convention)",
+        "iec_name": "theta_J",
+        "swan_name": "",
+        "units": "degr"
+      },
+      {
+        "name": "directionality_coefficient",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Directionality coefficient",
+        "iec_name": "d",
+        "swan_name": "",
+        "units": ""
+      },
+      {
+        "name": "energy_period",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Energy period",
+        "iec_name": "T_e,T_-10",
+        "swan_name": "TMM10",
+        "units": "s"
+      },
+      {
+        "name": "mean_absolute_period",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Mean absolute wave period - equivalent to T_m01",
+        "iec_name": "",
+        "swan_name": "PER",
+        "units": "s"
+      },
+      {
+        "name": "mean_wave_direction",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Mean wave direction (nautical convention)",
+        "iec_name": "",
+        "swan_name": "DIR",
+        "units": "degr"
+      },
+      {
+        "name": "mean_zero-crossing_period",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Mean absolute zero-crossing period",
+        "iec_name": "T_z,T_02",
+        "swan_name": "TM02",
+        "units": "s"
+      },
+      {
+        "name": "omnidirectional_wave_power",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Omnidirectional wave power",
+        "iec_name": "J",
+        "swan_name": "",
+        "units": "W/m"
+      },
+      {
+        "name": "peak_period",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Relative peak period of the variance density spectrum",
+        "iec_name": "T_p",
+        "swan_name": "RTP",
+        "units": "s"
+      },
+      {
+        "name": "peak_wave_direction",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Peak wave direction (nautical convention)",
+        "iec_name": "",
+        "swan_name": "PDIR",
+        "units": "degr"
+      },
+      {
+        "name": "significant_wave_height",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Significant wave height",
+        "iec_name": "H_m0",
+        "swan_name": "HSIGN",
+        "units": "m"
+      },
+      {
+        "name": "spectral_width",
+        "shape": [
+          2928,
+          4656637
+        ],
+        "dtype": "float32",
+        "description": "Spectral width",
+        "iec_name": "epsilon_0",
+        "swan_name": "",
+        "units": ""
+      }
+    ],
+    "meta_fields": [
+      {
+        "name": "latitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "longitude",
+        "dtype": "float32"
+      },
+      {
+        "name": "timezone",
+        "dtype": "int16"
+      },
+      {
+        "name": "depth",
+        "dtype": "float32"
+      },
+      {
+        "name": "distance_to_shore",
+        "dtype": "float32"
+      },
+      {
+        "name": "jurisdiction",
+        "dtype": "str[19]"
+      }
+    ]
+  }
+}
