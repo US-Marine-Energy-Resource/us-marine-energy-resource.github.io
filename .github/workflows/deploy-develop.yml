@@ -16,15 +16,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: '3.11'
+          enable-cache: true
+          cache-dependency-glob: 'docs/requirements.txt'
 
       - name: Install dependencies
-        run: pip install -r docs/requirements.txt
+        run: uv venv && uv pip install -r docs/requirements.txt
 
       - name: Build develop preview
-        run: python scripts/build_pr_preview.py develop /tmp/site
+        run: uv run python scripts/build_pr_preview.py develop /tmp/site
 
       - name: Deploy to gh-pages pr-preview/develop
         uses: peaceiris/actions-gh-pages@v4
