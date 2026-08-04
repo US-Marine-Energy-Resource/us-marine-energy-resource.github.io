@@ -1,7 +1,7 @@
 - **Grid points:** 461,465
 - **File size:** ~47.3 GB per year
-- **Total archive:** ~1.9 TB
 - **Period:** 1979–2020 &nbsp;·&nbsp; 42 annual files
+- **Total archive:** ~1.9 TB
 - **Version:** `v1.0.0`
 
 ??? note "Spatiotemporal variables (9)"

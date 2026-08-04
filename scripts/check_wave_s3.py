@@ -13,16 +13,18 @@ Usage:
 """
 
 import argparse
-import re
-from dataclasses import dataclass, field
 from pathlib import Path
 
-import boto3
 import pandas as pd
-from botocore import UNSIGNED
-from botocore.config import Config
 
-BUCKET = "wpto-pds-us-wave"
+from wave_s3 import (
+    BUCKET,
+    DOMAIN_LABELS,
+    DOMAINS,
+    LATEST_VERSIONS,
+    list_domain,
+    s3_client,
+)
 
 SNAPSHOT_PATH = (
     Path(__file__).parent.parent / "docs" / "wave" / "hindcast" / "s3-inventory.md"
@@ -32,98 +34,11 @@ CARD_SUMMARY_PATH = (
     Path(__file__).parent.parent / "docs" / "includes" / "wave-s3-summary.md"
 )
 
-DOMAINS = {
-    "v1.0.0": [
-        "West_Coast",
-        "Atlantic",
-        "Hawaii",
-        "Alaska",
-        "CNMI_and_Guam",
-        "Gulf_of_Mexico_and_Puerto_Rico",
-        "virtual_buoy/West_Coast",
-    ],
-    "v1.0.1": [
-        "West_Coast",
-        "Atlantic",
-        "Alaska",
-        "Gulf_of_Mexico_and_Puerto_Rico",
-    ],
-}
-
-LATEST_VERSIONS = {
-    "West_Coast": "v1.0.1",
-    "Atlantic": "v1.0.1",
-    "Hawaii": "v1.0.0",
-    "Alaska": "v1.0.1",
-    "CNMI_and_Guam": "v1.0.0",
-    "Gulf_of_Mexico_and_Puerto_Rico": "v1.0.1",
-    "virtual_buoy/West_Coast": "v1.0.0",
-}
-
-
-@dataclass
-class DomainInfo:
-    version: str
-    domain: str
-    file_count: int
-    year_min: int | None
-    year_max: int | None
-    file_pattern: str
-    total_size_gb: float
-    s3_path: str
-    openei_url: str = field(init=False)
-
-    def __post_init__(self):
-        prefix = f"{self.version}/{self.domain}/"
-        self.openei_url = (
-            f"https://data.openei.org/s3_viewer?bucket={BUCKET}"
-            f"&prefix={prefix.replace('/', '%2F')}"
-        )
-
-
-def list_domain(s3_client, version: str, domain: str) -> DomainInfo:
-    prefix = f"{version}/{domain}/"
-    paginator = s3_client.get_paginator("list_objects_v2")
-    pages = paginator.paginate(Bucket=BUCKET, Prefix=prefix)
-
-    files = []
-    total_bytes = 0
-    for page in pages:
-        for obj in page.get("Contents", []):
-            key = obj["Key"]
-            size = obj["Size"]
-            if size == 0:
-                continue
-            files.append(key)
-            total_bytes += size
-
-    years = []
-    for f in files:
-        m = re.search(r"(\d{4})\.h5$", f)
-        if m:
-            years.append(int(m.group(1)))
-
-    pattern = ""
-    if files:
-        fname = files[0].split("/")[-1]
-        pattern = re.sub(r"\d{4}", "{year}", fname)
-
-    return DomainInfo(
-        version=version,
-        domain=domain,
-        file_count=len(files),
-        year_min=min(years) if years else None,
-        year_max=max(years) if years else None,
-        file_pattern=pattern,
-        total_size_gb=total_bytes / 1e9,
-        s3_path=f"s3://{BUCKET}/{prefix}",
-    )
-
 
 def build_card_summary(rows: list[dict] | None = None) -> str:
     """Build a compact per-region size table for use in the homepage card snippet."""
     if rows is None:
-        s3 = boto3.client("s3", config=Config(signature_version=UNSIGNED))
+        s3 = s3_client()
         rows = []
         for version, domains in DOMAINS.items():
             for domain in domains:
@@ -135,16 +50,6 @@ def build_card_summary(rows: list[dict] | None = None) -> str:
                         "Size (GB)": info.total_size_gb,
                     }
                 )
-
-    DOMAIN_LABELS = {
-        "Alaska": "Alaska",
-        "Atlantic": "Atlantic",
-        "Gulf_of_Mexico_and_Puerto_Rico": "Gulf of Mexico & Puerto Rico",
-        "West_Coast": "West Coast",
-        "Hawaii": "Hawaii",
-        "CNMI_and_Guam": "CNMI and Guam",
-        "virtual_buoy/West_Coast": "Virtual Buoy (West Coast)",
-    }
 
     summary_rows = []
     for domain, version in LATEST_VERSIONS.items():
@@ -182,7 +87,7 @@ def build_card_summary(rows: list[dict] | None = None) -> str:
 
 def build_markdown(verbose: bool = False) -> str:
     """Query S3 and return the full markdown string for both tables."""
-    s3 = boto3.client("s3", config=Config(signature_version=UNSIGNED))
+    s3 = s3_client()
 
     rows = []
     for version, domains in DOMAINS.items():
