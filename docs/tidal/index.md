@@ -68,53 +68,6 @@ For power performance assessment, IEC 62600-200 [@iec_62600_200] provides more s
 | Bulk and raw data access                                                        | HSDS or AWS S3                                               | [HSDS Setup](../getting-started/hsds-setup.md) · [AWS S3](../getting-started/aws-s3.md) |
 | Variable definitions and units                                                  | Variable documentation                                       | [Tidal Variables](high_resolution_hindcast/variables/index.md)                          |
 
----
-
-## Background
-
-The sections below explain how tidal currents work and the modeling approach used to produce these datasets.
-
-### Tides
-
-Tides are the periodic rise and fall of sea level driven by the gravitational pull of the Moon and Sun [@noc_tidal_modeling]. Most U.S. coastal locations experience semidiurnal tides: two high waters and two low waters roughly every 24 hours.
-
-Tidal currents in constricted passages carry kinetic energy that current energy converters (CECs) can extract.
-
-### The Spring-Neap Cycle
-
-The most significant variation in tidal energy over time is the spring-neap cycle, a ~14.8-day pattern driven by the alignment of the Moon and Sun [@noc_tidal_modeling]:
-
-| Phase  | Condition                               | Relative Current Speed | Relative Power Density |
-| ------ | --------------------------------------- | ---------------------- | ---------------------- |
-| Spring | Moon and Sun aligned (new or full moon) | ~$1.4\times$ mean     | ~$2.7\times$ mean     |
-| Neap   | Moon at first/third quarter             | ~$0.7\times$ mean     | ~$0.3\times$ mean     |
-
-Power density is calculated as $P = \frac{1}{2}\rho U^3$, where $\rho \approx 1025\ \text{kg m}^{-3}$. At 1 m/s this gives ~512 W/m²; at 2 m/s ~4,100 W/m²; at 3 m/s ~13,800 W/m². The cubic relationship means small changes in current speed produce large changes in available power [@noc_tidal_modeling].
-
-### Tidal Harmonics and Constituents
-
-The tidal signal at any location can be described as a sum of repeating cycles, each with a fixed frequency and a locally determined amplitude and phase. Fitting this model to a time series (harmonic analysis) allows the tidal signal to be reconstructed and predicted beyond the observation period. The local amplitude and phase reflect coastline geometry, water depth, and basin shape [@noc_tidal_modeling].
-
-$$Z(t) = Z_0 + \sum_{n} A_n \cos\!\left(\omega_n t + \phi_n\right)$$
-
-where $Z_0$ is mean water level, $A_n$ is amplitude, $\omega_n$ is angular frequency, and $\phi_n$ is the phase of the $n$-th constituent.
-
-| Constituent | Period (h) | Type          | Description                             |
-| ----------- | ---------- | ------------- | --------------------------------------- |
-| $M_2$       | 12.42      | Semidiurnal   | Principal lunar; dominant at most sites |
-| $S_2$       | 12.00      | Semidiurnal   | Principal solar                         |
-| $N_2$       | 12.66      | Semidiurnal   | Larger lunar elliptic                   |
-| $K_1$       | 23.93      | Diurnal       | Lunar-solar diurnal                     |
-| $O_1$       | 25.82      | Diurnal       | Principal lunar diurnal                 |
-| $M_4$       | 6.21       | Shallow-water | Overtide of $M_2$                       |
-| $M_6$       | 4.14       | Shallow-water | Second overtide of $M_2$                |
-
-!!! info "Shallow-water harmonics"
-In constricted, shallow channels such as Tacoma Narrows and the Piscataqua River, shallow-water overtides ($M_4$, $M_6$) can reach amplitudes of 10-50% of $M_2$, producing [tidal asymmetry](#joint-probability-distribution): a faster flood or ebb half-cycle. This affects net turbine energy output over a tidal cycle. See [Definitions](high_resolution_hindcast/definitions.md).
-
-!!! example "Harmonic analysis visualization - coming soon"
-A figure showing the observed vs. reconstructed current speed (RMSE, $R^2$), FFT amplitude spectrum with constituent frequencies marked, and constituent amplitude bar chart will be added here. Pending a refactor of `plot_tidal_harmonic_analysis()` in the `us-marine-energy-resource` library to support individual panel output.
-
 ## Example Site
 
 The visualizations below use data from a single grid point in Upper Cook Inlet, Alaska (60.74°N, 151.43°W), near Nikiski. Cook Inlet has some of the strongest tidal currents in the U.S. The map shows the model domain boundary and the example point. See [Regional Coverage](high_resolution_hindcast/coverage-maps.md) for all five dataset extents.
