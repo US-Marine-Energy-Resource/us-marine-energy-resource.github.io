@@ -6,7 +6,18 @@
 
 ## Bug Reports & Feature Requests
 
-- **GitHub Issues**: [NatLabRockies/Marine_Energy_Resource_Characterization](https://github.com/NatLabRockies/Marine_Energy_Resource_Characterization/issues)
+For **documentation issues** (typos, missing content, broken pages):
+
+- [US Marine Energy Resource Documentation](https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource.github.io/issues)
+
+For **technical issues** (data, API, Python package bugs):
+
+- [US Marine Energy Resource Python](https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource-python/issues)
+
+For **MHKiT issues**:
+
+- [MHKiT-Python](https://github.com/MHKiT-Software/MHKiT-Python/issues)
+- [MHKiT-MATLAB](https://github.com/MHKiT-Software/MHKiT-MATLAB/issues)
 
 ## Data Access Support
 
