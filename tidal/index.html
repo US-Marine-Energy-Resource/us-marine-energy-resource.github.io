@@ -1,0 +1,2920 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="United States marine energy resource characterization research sponsored by the U.S. Department of Energy Hydropower and Hydrokinetic Office (H2O)">
+      
+      
+      
+        <link rel="canonical" href="https://us-marine-energy-resource.github.io/tidal/">
+      
+      
+        <link rel="prev" href="../wave/hindcast/references/">
+      
+      
+        <link rel="next" href="high_resolution_hindcast/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tidal Current Energy - U.S. Marine Energy Resource</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Figtree";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tidal-current-energy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+              </button>
+            
+            
+  <strong>Note:</strong> This site is under active development; data and content may change.
+  <a href="https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource.github.io" target="_blank" rel="noopener">Contribute on GitHub</a>
+  or <a href="mailto:marineresource@nlr.gov">send feedback</a>.
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/" title="U.S. Marine Energy Resource" class="md-header__button md-logo" aria-label="U.S. Marine Energy Resource" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            U.S. Marine Energy Resource
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tidal Current Energy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-hidden="true" type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../wave/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Wave
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tidal
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../otec/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  OTEC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ocean-current/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Ocean Current
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../river/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  River
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../about/project/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/" title="U.S. Marine Energy Resource" class="md-nav__button md-logo" aria-label="U.S. Marine Energy Resource" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg>
+
+    </a>
+    U.S. Marine Energy Resource
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../us-marine-energy-potential-by-region/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    U.S. Marine Energy Potential By Region
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types-of-marine-energy-conversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Types of Marine Energy Conversion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resource-characterization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resource Characterization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../wave/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wave
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wave
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../wave/hindcast/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hindcast
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hindcast
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wave/hindcast/variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wave/hindcast/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tidal
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tidal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="high_resolution_hindcast/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    High Resolution Hindcast
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    High Resolution Hindcast
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/model-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FVCOM Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/sigma-layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sigma Layers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/unstructured-grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unstructured Grid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/coverage-maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regional Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="high_resolution_hindcast/variables/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atlas Variables
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atlas Variables
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/mean-current-speed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mean Current Speed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/95th-percentile-current-speed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    95th Percentile Current Speed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/mean-power-density/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mean Power Density
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/95th-percentile-power-density/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    95th Percentile Power Density
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/minimum-water-depth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Minimum Water Depth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/maximum-water-depth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maximum Water Depth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/grid-resolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grid Resolution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/tidal-range/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tidal Range
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/distance-to-shore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distance to Shore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/max-sea-surface-elevation-at-high-tide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    High Tide Max Elevation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/min-sea-surface-elevation-at-low-tide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Low Tide Min Elevation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/center_latitude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Center Latitude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/center_longitude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Center Longitude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/face_id/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Face Id
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/full_year_https_url/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full Year HTTPS URL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/variables/full_year_s3_uri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full Year S3 URL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/time-series-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Time Series Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methodology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/data-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/coordinate-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coordinate Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/definitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="high_resolution_hindcast/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../otec/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OTEC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OTEC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ocean-current/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ocean Current
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ocean Current
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../river/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    River
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    River
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team &amp; Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/funding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#resource-characterization-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resource Characterization Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource Characterization Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#site-screening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Site Screening
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feasibility-study-iec-62600-201-stage-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feasibility Study (IEC 62600-201 Stage 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout-design-iec-62600-201-stage-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout Design (IEC 62600-201 Stage 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-performance-assessment-and-engineering-design-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Performance Assessment and Engineering Design Inputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Site
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertical-current-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertical Current Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joint-probability-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joint Probability Distribution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#velocity-exceedance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocity Exceedance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-fvcom-models-tidal-currents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How FVCOM Models Tidal Currents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datasets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tidal-current-energy">Tidal Current Energy<a class="headerlink" href="#tidal-current-energy" title="Permanent link">¶</a></h1>
+<p>Tidal currents are the large-scale movement of water through coastal channels driven by the rise and fall of tides. In constricted passages, this movement can produce strong, sustained flows that can be captured by underwater turbines to generate electricity.</p>
+<p>The Moon and Sun exert a gravitational pull on the ocean. As the Earth rotates beneath them, the alignment between any fixed coastal location and that pull changes on a predictable schedule, driving the tidal cycle [@noc_tidal_modeling]. The two primary drivers are Earth's rotation (~24 hours), which produces the roughly twice-daily flood and ebb, and the Moon's orbit (~29.5 days), which produces the spring-neap cycle. While the underlying drivers are predictable, the actual current speed and direction at any coastal location is shaped by local geography in ways that are difficult to estimate without detailed numerical simulation.</p>
+<p>To better understand tidal energy potential in the United States, the U.S. Department of Energy's H2O program and national laboratories created detailed computer models of tidal currents using high-performance computing. The open-source datasets include current speed, direction, and water movement at different depths for five major U.S. coastal sites, helping researchers and developers evaluate locations and design tidal energy projects.</p>
+<h2 id="resource-characterization-workflow">Resource Characterization Workflow<a class="headerlink" href="#resource-characterization-workflow" title="Permanent link">¶</a></h2>
+<p>IEC TS 62600-201 defines two stages for tidal resource assessment: a feasibility study (Stage 1) covering the broader estuary or channel, and a layout design study (Stage 2) focused on a specific development site.</p>
+<h3 id="site-screening">Site Screening<a class="headerlink" href="#site-screening" title="Permanent link">¶</a></h3>
+<p>The <a href="https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library">Marine Energy Atlas</a> displays time- and depth-averaged current speed and power density across all five hindcast domains. Grid cells are color-coded by magnitude. The point-query tool returns summary statistics for a selected location.</p>
+<h3 id="feasibility-study-iec-62600-201-stage-1">Feasibility Study (IEC 62600-201 Stage 1)<a class="headerlink" href="#feasibility-study-iec-62600-201-stage-1" title="Permanent link">¶</a></h3>
+<p>A Stage 1 feasibility study investigates the scale and attributes of the energy resource within a study area. The hindcast provides current speed and direction at 10 depth layers over the full model duration, from which the following can be derived:</p>
+<ul>
+<li><strong>Mean current speed</strong>: time-averaged speed at each depth layer</li>
+<li><strong>95th-percentile current speed</strong>: upper bound on current speed for a given location</li>
+<li><strong>Mean power density</strong>: time-averaged kinetic energy flux per unit rotor area (W/m²)</li>
+<li><strong>Velocity exceedance curve</strong>: the fraction of time current speed exceeds a given threshold</li>
+<li><strong>Joint probability distribution</strong>: the joint distribution of current speed and direction</li>
+</ul>
+<p>The <a href="https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library">Marine Energy Atlas</a> provides a point-and-click interface for summary statistics at any model grid point. The <a href="https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource-python"><code>us-marine-energy-resource</code> Python library</a> (which includes the <code>us-tidal</code> command line tool) can query tidal hindcast data by point, transect, or area, with built-in tools to visualize and analyze the results:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">us_marine_energy_resource.tidal_hindcast</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tidal</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Fetch the full hindcast time series for the nearest grid point.</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Data is downloaded from S3 and cached locally on first call.</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">tidal</span><span class="o">.</span><span class="n">get_data_at_point</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mf">60.73</span><span class="p">,</span> <span class="n">lon</span><span class="o">=-</span><span class="mf">151.43</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Plot velocity exceedance curves across all depth layers.</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">fig</span><span class="p">,</span> <span class="n">stats</span> <span class="o">=</span> <span class="n">tidal</span><span class="o">.</span><span class="n">plot_velocity_exceedance</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Plot the joint probability distribution at a single depth layer.</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">tidal</span><span class="o">.</span><span class="n">generate_tidal_joint_probability</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">sigma_layer</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Query from the command line, no Python required.</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># See Data Access for the full CLI reference.</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>us-tidal<span class="w"> </span><span class="m">60</span>.73,-151.43<span class="w"> </span>--info
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Prerequisites</p>
+<p>See <a href="../getting-started/">Getting Started</a> for installation and setup instructions. Full <code>us-tidal</code> CLI reference is in <a href="high_resolution_hindcast/data-access/#us-tidal-cli">Data Access</a>.</p>
+</div>
+<h3 id="layout-design-iec-62600-201-stage-2">Layout Design (IEC 62600-201 Stage 2)<a class="headerlink" href="#layout-design-iec-62600-201-stage-2" title="Permanent link">¶</a></h3>
+<p>A Stage 2 layout design study focuses on a specific development site to determine annual energy production (AEP) and support array layout decisions. The full depth-resolved time series can be queried by point, transect, or area using the <a href="https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource-python"><code>us-marine-energy-resource</code> Python library</a>, which includes the <code>us-tidal</code> CLI. Raw data is also available for bulk access via <a href="../getting-started/hsds-setup/">HSDS</a> or <a href="../getting-started/aws-s3/">AWS S3</a>.</p>
+<h3 id="power-performance-assessment-and-engineering-design-inputs">Power Performance Assessment and Engineering Design Inputs<a class="headerlink" href="#power-performance-assessment-and-engineering-design-inputs" title="Permanent link">¶</a></h3>
+<p>For power performance assessment, IEC 62600-200 [@iec_62600_200] provides more specific guidance. The hindcast provides current speed, direction, and water depth at 10 depth layers over the full model year, queryable by point, transect, or area via the <a href="https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource-python"><code>us-marine-energy-resource</code> Python library</a>, which includes the <code>us-tidal</code> CLI.</p>
+<hr>
+<h2 id="data-access">Data Access<a class="headerlink" href="#data-access" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>Interface</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spatial resource exploration and point statistics</td>
+<td><a href="https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library">Marine Energy Atlas</a></td>
+<td><a href="../getting-started/marine-energy-atlas/">Atlas guide</a></td>
+</tr>
+<tr>
+<td>Query tidal hindcast data by point, transect, or area, with built-in tools to visualize and analyze the results</td>
+<td><a href="https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource-python"><code>us-marine-energy-resource</code> Python library</a> (includes <code>us-tidal</code> CLI)</td>
+<td><a href="high_resolution_hindcast/data-access/">Data Access</a></td>
+</tr>
+<tr>
+<td>Bulk and raw data access</td>
+<td>HSDS or AWS S3</td>
+<td><a href="../getting-started/hsds-setup/">HSDS Setup</a> · <a href="../getting-started/aws-s3/">AWS S3</a></td>
+</tr>
+<tr>
+<td>Variable definitions and units</td>
+<td>Variable documentation</td>
+<td><a href="high_resolution_hindcast/variables/">Tidal Variables</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-site">Example Site<a class="headerlink" href="#example-site" title="Permanent link">¶</a></h2>
+<p>The visualizations below use data from a single grid point in Upper Cook Inlet, Alaska (60.74°N, 151.43°W), near Nikiski. Cook Inlet has some of the strongest tidal currents in the U.S. The map shows the model domain boundary and the example point. See <a href="high_resolution_hindcast/coverage-maps/">Regional Coverage</a> for all five dataset extents.</p>
+<p><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></p>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<div id="site-context-map" style="height: 300px; width: 100%; border-radius: 6px; border: 1px solid #e0e0e0; margin: 1em 0;"></div>
+
+<script>
+(function () {
+  var map = L.map("site-context-map", { zoomControl: true, scrollWheelZoom: false, center: [60.74, -151.43], zoom: 7 });
+
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: "abcd",
+    maxZoom: 19
+  }).addTo(map);
+
+  var color = "#4C72B0";
+  var assetBase = window.location.origin + "/assets/tidal/";
+
+  fetch(assetBase + "AK_cook_inlet_boundary.geojson")
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var boundary = L.geoJSON(data, {
+        style: { color: color, weight: 1.5, opacity: 0.9, fillColor: color, fillOpacity: 0.12 },
+        smoothFactor: 2
+      }).addTo(map);
+
+      // Example point marker
+      var siteLatLon = [60.735016, -151.431396];
+      L.circleMarker(siteLatLon, {
+        radius: 7,
+        fillColor: "#C44E52",
+        color: "#fff",
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.95
+      })
+        .bindTooltip("Near Nikiski, AK (example site)", { permanent: true, direction: "right", offset: [10, 0] })
+        .addTo(map);
+
+      map.fitBounds(boundary.getBounds().pad(0.05));
+      // Ensure tiles fill the container after layout is finalized
+      setTimeout(function () { map.invalidateSize(); }, 100);
+    })
+    .catch(function (err) {
+      console.warn("Could not load Cook Inlet boundary", err);
+      map.setView([60.5, -152], 7);
+    });
+})();
+</script>
+
+<h2 id="vertical-current-structure">Vertical Current Structure<a class="headerlink" href="#vertical-current-structure" title="Permanent link">¶</a></h2>
+<p>FVCOM resolves the water column with 10 sigma (terrain-following) layers. Current speed decreases toward the seafloor due to bottom friction.</p>
+<p>The depth-time plot below shows current speed across all 10 sigma layers for the full hindcast year at Upper Cook Inlet, AK. Each band represents one sigma layer, covering an equal fraction of the water column from surface to seafloor.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/tidal/cook_inlet_sigma_layers_speed_full.png" data-desc-position="bottom"><img alt="Cook Inlet - sigma layer current speed, full year" src="../assets/tidal/cook_inlet_sigma_layers_speed_full.png" width="100%"></a>
+<br>
+<figcaption>Current speed across all 10 sigma layers at Cook Inlet, AK (60.74°N, 151.43°W), full hindcast year. Each horizontal band is one sigma layer, from Layer 9 (surface, ~1.6 m) at the top to Layer 0 (bottom, ~30.8 m) at the base. The repeating ~14.8-day amplitude variation is the spring-neap cycle. Peak speeds exceed 3 m/s during spring tides.</figcaption>
+</figure>
+<p>The direction plot shows the flood-ebb reversal and any rotational signal in the water column.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/tidal/cook_inlet_sigma_layers_direction_full.png" data-desc-position="bottom"><img alt="Cook Inlet - sigma layer direction, full year" src="../assets/tidal/cook_inlet_sigma_layers_direction_full.png" width="100%"></a>
+<br>
+<figcaption>Current direction across all 10 sigma layers at Cook Inlet, AK, full hindcast year. Direction is in degrees clockwise from True North. Alternations between ~$030^\circ$ (flood, NE) and ~$210^\circ$ (ebb, SW) reflect the channel orientation. Color is nearly uniform with depth, indicating that directional turning with depth is small at this site.</figcaption>
+</figure>
+<p>A 3-day window shows individual tidal cycles and the vertical shear between the surface and bottom layers.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/tidal/cook_inlet_sigma_layers_speed_zoom.png" data-desc-position="bottom"><img alt="Cook Inlet - sigma layer current speed, 3-day zoom" src="../assets/tidal/cook_inlet_sigma_layers_speed_zoom.png" width="100%"></a>
+<br>
+<figcaption>Three-day window of current speed across all 10 sigma layers. Each semidiurnal cycle is approximately 12.4 hours ($M_2$). The speed difference between Layer 9 (surface, ~1.6 m) and Layer 0 (bottom, ~30.8 m) is visible during peak flows, reflecting vertical shear from bottom friction.</figcaption>
+</figure>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/tidal/cook_inlet_sigma_layers_direction_zoom.png" data-desc-position="bottom"><img alt="Cook Inlet - sigma layer direction, 3-day zoom" src="../assets/tidal/cook_inlet_sigma_layers_direction_zoom.png" width="100%"></a>
+<br>
+<figcaption>Three-day window of current direction across all 10 sigma layers. Reversals between flood (~$030^\circ$) and ebb (~$210^\circ$) are sharp. Direction is nearly uniform with depth, confirming the current is rectilinear with little rotational component.</figcaption>
+</figure>
+<p>For background on sigma coordinates see <a href="high_resolution_hindcast/sigma-layers/">Sigma Layers</a>.</p>
+<h2 id="joint-probability-distribution">Joint Probability Distribution<a class="headerlink" href="#joint-probability-distribution" title="Permanent link">¶</a></h2>
+<p>A joint probability distribution (JPD) is a polar histogram of current speed and direction at a single depth layer. It shows the dominant flow direction, flood-ebb asymmetry, and the speed distribution across the tidal cycle.</p>
+<p>The plot below uses sigma layer 4 (mid-column) at Cook Inlet, AK. The reversing tidal current reflects the flood-ebb cycle in the inlet.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/tidal/cook_inlet_jpd.png" data-desc-position="bottom"><img alt="Cook Inlet - joint probability distribution, sigma layer 4" src="../assets/tidal/cook_inlet_jpd.png" width="80%"></a>
+<br>
+<figcaption>Speed and direction at sigma layer 4 (~17.8 m depth), Cook Inlet, AK, full hindcast year. Each point is one hourly observation; color encodes joint probability [%]. The bidirectional pattern along ~$030^\circ$/$210^\circ$ reflects a rectilinear, reversing current with little rotational component. The distribution is nearly symmetric about the flood-ebb axis, with peak speeds near 3 m/s and the highest probability density at 1-2 m/s.</figcaption>
+</figure>
+<p>Tidal asymmetry - where the flood and ebb half-cycles differ in speed or duration - can have a significant effect on energy estimates. The comparison below shows the bottom sigma layer JPD for Tacoma Narrows, Admiralty Inlet, and the Piscataqua River.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/tidal/tidal_asymmetry_jpd.png" data-desc-position="bottom"><img alt="Tidal asymmetry JPD comparison - Tacoma Narrows, Admiralty Inlet, Piscataqua River" src="../assets/tidal/tidal_asymmetry_jpd.png" width="100%"></a>
+<br>
+<figcaption>Joint probability distribution at the bottom sigma layer for three high-resource sites: Tacoma Narrows, WA; Admiralty Inlet, WA; and UNH Living Bridge, NH (Piscataqua River). Asymmetry between the flood and ebb lobes indicates that one half-cycle is faster or more energetic than the other.</figcaption>
+</figure>
+<h2 id="velocity-exceedance">Velocity Exceedance<a class="headerlink" href="#velocity-exceedance" title="Permanent link">¶</a></h2>
+<p>An exceedance curve shows what fraction of the year the current exceeds a given speed. Because power scales with the cube of speed (see <a href="#the-spring-neap-cycle">Spring-Neap Cycle</a>), the exceedance curve directly characterizes the annual energy available at a given sigma layer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>Sigma layers follow the shape of the seafloor and water surface, so the depth each layer represents varies across the model domain. See <a href="high_resolution_hindcast/sigma-layers/">Sigma Layers</a>.</p>
+<p>Exceedance curves are a standard output for IEC 62600-201 Stage 1 feasibility studies [@iec_62600_201]:</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/tidal/cook_inlet_exceedance.png" data-desc-position="bottom"><img alt="Cook Inlet - velocity exceedance curve" src="../assets/tidal/cook_inlet_exceedance.png" width="100%"></a>
+<br>
+<figcaption>Velocity exceedance curves for all 10 sigma layers, Cook Inlet, AK, full hindcast year. Each curve shows the fraction of the year that current speed exceeds a given value, from Layer 9 (surface, ~1.6 m) to Layer 0 (deepest, ~30.8 m). The spread between layers increases at higher speeds, reflecting the vertical shear profile.</figcaption>
+</figure>
+<h2 id="how-fvcom-models-tidal-currents">How FVCOM Models Tidal Currents<a class="headerlink" href="#how-fvcom-models-tidal-currents" title="Permanent link">¶</a></h2>
+<p>The datasets are produced with the Finite Volume Community Ocean Model (FVCOM) [@fvcom], a 3D coastal ocean model designed for complex coastlines [@noc_tidal_modeling].</p>
+<p><strong>Governing equations.</strong> FVCOM solves the 3D Reynolds-averaged Navier-Stokes equations for horizontal velocities <span class="arithmatex">\(u\)</span>, <span class="arithmatex">\(v\)</span> and sea surface elevation <span class="arithmatex">\(\eta\)</span> on a triangular mesh. Tidal forcing is applied at open boundaries from a global ocean tidal atlas.</p>
+<p><strong>Unstructured grid.</strong> FVCOM uses a triangular mesh that can be refined around complex coastlines and narrow passages. Grid resolution at the five U.S. sites ranges from ~10 m in narrow channels to ~500 m offshore. See <a href="high_resolution_hindcast/unstructured-grid/">Unstructured Grid</a>.</p>
+<p><strong>Sigma coordinates.</strong> The water column is divided into vertical layers that scale with local depth, so the seafloor and surface are resolved at any water depth. The dataset provides 10 sigma layers per grid point. See <a href="high_resolution_hindcast/sigma-layers/">Sigma Layers</a>.</p>
+<p><strong>Boundary conditions.</strong> Tidal constituents from a global ocean tidal atlas are applied at the open boundaries of each regional domain. The model runs for a full hindcast year. See <a href="high_resolution_hindcast/model-configuration/">Model Configuration</a>.</p>
+<p><strong>Validation.</strong> Model output is compared against tide gauge observations and, where available, ADCP current measurements using standard skill metrics (RMSE, bias, <span class="arithmatex">\(R^2\)</span>). See <a href="high_resolution_hindcast/validation/">Validation</a>.</p>
+<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">¶</a></h2>
+<p>The <a href="high_resolution_hindcast/">H2O High Resolution Tidal Hindcast</a> provides 3D tidal current data at five U.S. coastal locations. Each dataset includes depth-resolved current speed, direction, power density, water depth, and tidal range derived from FVCOM simulations.</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Period</th>
+<th>Sampling</th>
+<th>Grid Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="high_resolution_hindcast/">Aleutian Islands, AK</a></td>
+<td>2010-2011</td>
+<td>Hourly</td>
+<td>797,978</td>
+</tr>
+<tr>
+<td><a href="high_resolution_hindcast/">Cook Inlet, AK</a></td>
+<td>2005</td>
+<td>Hourly</td>
+<td>392,002</td>
+</tr>
+<tr>
+<td><a href="high_resolution_hindcast/">Piscataqua River, NH</a></td>
+<td>2007</td>
+<td>Half-hourly</td>
+<td>292,927</td>
+</tr>
+<tr>
+<td><a href="high_resolution_hindcast/">Salish Sea, WA</a></td>
+<td>2015</td>
+<td>Half-hourly</td>
+<td>1,734,765</td>
+</tr>
+<tr>
+<td><a href="high_resolution_hindcast/">Western Passage, ME</a></td>
+<td>2017</td>
+<td>Half-hourly</td>
+<td>231,208</td>
+</tr>
+</tbody>
+</table>
+<p>Click a location to view documentation including model configuration, variable descriptions, and data access.</p>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Browse the datasets</strong> - click a location in the table above to view model configuration, variable descriptions, and data access.</li>
+<li><strong>Access the data</strong> - see <a href="high_resolution_hindcast/data-access/">Data Access</a> for installation, Python library usage, CLI reference, and bulk download options.</li>
+<li><strong>Read the technical background</strong> - see <a href="high_resolution_hindcast/sigma-layers/">Sigma Layers</a>, <a href="high_resolution_hindcast/unstructured-grid/">Unstructured Grid</a>, and <a href="high_resolution_hindcast/model-configuration/">Model Configuration</a> for model details.</li>
+</ul>
+<script id="cite-config" type="application/json">
+{"bibFiles": ["assets/general.bib", "assets/tidal.bib"]}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../wave/hindcast/references/" class="md-footer__link md-footer__link--prev" aria-label="Previous: References">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                References
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="high_resolution_hindcast/" class="md-footer__link md-footer__link--next" aria-label="Next: H2O High Resolution Tidal Hindcast">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                H2O High Resolution Tidal Hindcast
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Alliance for Energy Innovation, LLC
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/US-Marine-Energy-Resource/documentation" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "navigation.footer", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/notice.js"></script>
+      
+        <script src="../javascripts/navpane.js"></script>
+      
+        <script src="../javascripts/toc-fix.js"></script>
+      
+        <script src="../javascripts/glightbox-init.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/citation.min.js"></script>
+      
+        <script src="../javascripts/cite.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

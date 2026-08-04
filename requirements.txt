@@ -1,4 +1,3 @@
 mkdocs-material[recommended]
-numpy
-cmocean
-matplotlib
+mkdocs-glightbox
+us-marine-energy-resource
