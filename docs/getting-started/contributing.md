@@ -65,12 +65,10 @@ docs/
 │   └── contributing.md
 ├── tidal/                            # Tidal datasets
 │   ├── index.md
-│   └── high_resolution_hindcast/
+│   └── high-resolution-hindcast/
 │       ├── index.md
-│       ├── variables/
-│       │   ├── index.md              # Quick reference (auto-generated)
-│       │   ├── mean-current-speed.md # (auto-generated)
-│       │   └── ...
+│       ├── variables.md              # Quick reference (auto-generated)
+│       ├── mean-current-speed.md     # (auto-generated)
 │       └── ...
 ├── wave/                             # Wave datasets
 │   ├── index.md
@@ -151,7 +149,8 @@ cd tidal/fvcom/high_resolution_tidal_hindcast
 python generate_mkdocs_variable_section.py --mode pages
 ```
 
-This writes individual variable pages to `docs/tidal/high_resolution_hindcast/variables/`.
+This writes individual variable pages directly into `docs/tidal/high-resolution-hindcast/`, alongside
+the section pages, so each variable is served at `/tidal/high-resolution-hindcast/<variable-slug>/`.
 
 To preview without writing:
 
