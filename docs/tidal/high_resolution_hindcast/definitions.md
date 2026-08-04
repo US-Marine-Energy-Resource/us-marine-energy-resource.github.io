@@ -27,22 +27,22 @@ Technical terms, mathematical symbols, and acronyms used throughout this documen
 | Symbol | Definition                                                     |
 | ------ | -------------------------------------------------------------- |
 | U      | Current speed (velocity magnitude), m/s                        |
-| Ū      | Mean (time-averaged) current speed, m/s                        |
-| u      | Eastward velocity component, m/s (positive toward true east)   |
-| v      | Northward velocity component, m/s (positive toward true north) |
-| P      | Power density (kinetic energy flux per unit area), W/m²        |
-| P̄      | Mean (time-averaged) power density, W/m²                       |
-| ρ      | Seawater density, kg/m³ (nominal value: 1025 kg/m³)            |
-| h      | Bathymetry depth below NAVD88, m (positive downward)           |
-| ζ      | Sea surface elevation relative to NAVD88, m (positive upward)  |
-| d      | Water depth (total water column height), m                     |
-| R      | Grid resolution (average triangle edge length), m              |
-| T      | Time period (hindcast duration = 1 year)                       |
-| t      | Time index                                                     |
-| i      | Sigma layer index (1 to Nσ)                                    |
-| Nσ     | Number of sigma layers (= 10 in this dataset)                  |
-| σ      | Sigma coordinate (terrain-following vertical coordinate)       |
-| P₉₅    | 95th percentile operator                                       |
+| $\bar{U}$      | Mean (time-averaged) current speed, m/s                        |
+| u              | Eastward velocity component, m/s (positive toward true east)   |
+| v              | Northward velocity component, m/s (positive toward true north) |
+| P              | Power density (kinetic energy flux per unit area), W/m²        |
+| $\bar{P}$      | Mean (time-averaged) power density, W/m²                       |
+| $\rho$         | Seawater density, kg/m³ (nominal value: 1025 kg/m³)            |
+| h              | Bathymetry depth below NAVD88, m (positive downward)           |
+| $\zeta$        | Sea surface elevation relative to NAVD88, m (positive upward)  |
+| d              | Water depth (total water column height), m                     |
+| R              | Grid resolution (average triangle edge length), m              |
+| T              | Time period (hindcast duration = 1 year)                       |
+| t              | Time index                                                     |
+| i              | Sigma layer index (1 to $N_\sigma$)                            |
+| $N_\sigma$     | Number of sigma layers (= 10 in this dataset)                  |
+| $\sigma$       | Sigma coordinate (terrain-following vertical coordinate)       |
+| $P_{95}$       | 95th percentile operator                                       |
 
 ## Acronyms
 
