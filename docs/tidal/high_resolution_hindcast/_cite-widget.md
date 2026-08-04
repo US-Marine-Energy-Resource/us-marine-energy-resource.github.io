@@ -6,4 +6,5 @@
 
 <div id="cite-dataset-widget" class="cite-dataset-widget"
      data-title="High Resolution Tidal Hindcast"
+     data-key="mhkdr_tidal_hindcast_submission"
      data-locations-url="assets/locations.json"></div>
