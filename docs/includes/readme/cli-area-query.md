@@ -1,8 +1,8 @@
-`--bbox` takes `lat_min,lon_min,lat_max,lon_max`. Use `--dry-run` first;
-bbox queries can match thousands of faces.
+`--bbox` takes `lat_min,lon_min,lat_max,lon_max`. Use `--dry-run` first
+because bbox queries can match thousands of faces.
 
 ``` bash
-us-tidal --bbox 60.725,-151.445,60.735,-151.425 --dry-run
+mer tidal --bbox 60.725,-151.445,60.735,-151.425 --dry-run
 ```
 
     Matched 103 faces  ·  AK_cook_inlet

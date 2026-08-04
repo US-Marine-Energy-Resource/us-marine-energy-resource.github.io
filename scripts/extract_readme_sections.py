@@ -35,6 +35,10 @@ Add an entry to the ``README_SOURCES`` list below:
     )
 
 Snippet files are written to ``docs/includes/readme/<slug>.md``.
+
+Absolute links back to this site are correct in a README on GitHub but wrong in
+an inlined docs page, so they are rewritten to relative ``.md`` links via
+``_SITE_LINK_REWRITES``.
 """
 
 from __future__ import annotations
@@ -90,6 +94,67 @@ README_SOURCES: list[ReadmeSource] = [
     #     ],
     # ),
 ]
+
+# ---------------------------------------------------------------------------
+# Self-referential link rewriting
+# ---------------------------------------------------------------------------
+
+_SITE_URL = "https://us-marine-energy-resource.github.io/"
+
+# Site path (as it appears in a README URL) -> relative markdown target.
+#
+# Targets are relative to a docs/ subdirectory two levels deep, which holds for
+# both the snippet itself (docs/includes/readme/) and the pages including it
+# (docs/tidal/high-resolution-hindcast/), so the link resolves either way.
+# `mkdocs build --strict` catches it if that stops being true.
+_SITE_LINK_REWRITES: dict[str, str] = {
+    "tidal/high-resolution-hindcast/": "../../tidal/high-resolution-hindcast/index.md",
+    "tidal/high-resolution-hindcast/variables/": "../../tidal/high-resolution-hindcast/variables.md",
+    "tidal/high-resolution-hindcast/sigma-layers/": "../../tidal/high-resolution-hindcast/sigma-layers.md",
+    "tidal/high-resolution-hindcast/methodology/": "../../tidal/high-resolution-hindcast/methodology.md",
+    "tidal/high-resolution-hindcast/limitations/": "../../tidal/high-resolution-hindcast/limitations.md",
+    "tidal/high-resolution-hindcast/data-access/": "../../tidal/high-resolution-hindcast/data-access.md",
+    "tidal/high-resolution-hindcast/references/": "../../tidal/high-resolution-hindcast/references.md",
+}
+
+_SITE_URL_RE = re.compile(re.escape(_SITE_URL) + r"([^\s)\]]*)")
+
+
+def _normalise_site_path(path: str) -> str:
+    """Normalise a README site path for lookup in ``_SITE_LINK_REWRITES``."""
+    path = path.lstrip("/")
+    path = path.replace("high_resolution_hindcast", "high-resolution-hindcast")
+    if path and not path.endswith("/") and "." not in path.rsplit("/", 1)[-1]:
+        path += "/"
+    return path
+
+
+def _rewrite_site_links(content: str, slug: str) -> str:
+    """Turn absolute links back to this site into relative markdown links.
+
+    Unmapped paths are left as-is and reported rather than silently shipping as
+    off-site URLs.
+    """
+    unmapped: list[str] = []
+
+    def _sub(match: re.Match[str]) -> str:
+        key = _normalise_site_path(match.group(1))
+        target = _SITE_LINK_REWRITES.get(key)
+        if target is None:
+            unmapped.append(match.group(0))
+            return match.group(0)
+        return target
+
+    result = _SITE_URL_RE.sub(_sub, content)
+
+    for url in dict.fromkeys(unmapped):
+        print(
+            f"  WARNING: {slug}.md keeps absolute self-link {url} — "
+            "add it to _SITE_LINK_REWRITES in scripts/extract_readme_sections.py"
+        )
+
+    return result
+
 
 # ---------------------------------------------------------------------------
 # Derived helpers
@@ -212,6 +277,7 @@ def generate(docs_dir: Path, force: bool = False) -> None:
             except ValueError as e:
                 print(f"  WARNING: {e} — skipping {slug}.md")
                 continue
+            content = _rewrite_site_links(content, slug)
             dest.write_text(content, encoding="utf-8")
             print(f"  wrote {dest.relative_to(docs_dir.parent)}")
 

@@ -31,7 +31,7 @@ fig = tidal.generate_tidal_joint_probability(df, sigma_layer=4)
 For bulk downloads or programmatic access to the raw parquet files, the data is available via HSDS and AWS S3.
 
 <div class="btn-right">
-<a href="../tidal/high_resolution_hindcast/data-access/" class="md-button md-button--site">Full tidal data access documentation</a>
+<a href="../tidal/high-resolution-hindcast/data-access/" class="md-button md-button--site">Full tidal data access documentation</a>
 <a href="https://mhkdr.openei.org/submissions/632" class="md-button md-button--site">Download Tidal Dataset on MHKDR</a>
 </div>
 

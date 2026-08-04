@@ -304,9 +304,9 @@ IEC/TS 62600-101 [@iec_62600_101] defines three levels of wave resource assessme
 
 | IEC class | What you are doing | Hindcast supports? | Best access path |
 |:---|:---|:---|:---|
-| **Class 1 — Reconnaissance** | Screening regions, comparing broad areas, identifying candidate sites | ✅ Yes | [Marine Energy Atlas][atlas-wave-all-datasets] |
-| **Class 2 — Feasibility** | Site time series, seasonal profiles, scatter diagrams, early extreme-value inputs | ✅ With caveats | MHKiT or raw H5 |
-| **Class 3 — Design** | Device engineering, array layout, certification-grade assessment | ❌ Not alone | Site measurements + validated local modeling |
+| **Class 1: Reconnaissance** | Screening regions, comparing broad areas, identifying candidate sites | Yes | [Marine Energy Atlas][atlas-wave-all-datasets] |
+| **Class 2: Feasibility** | Site time series, seasonal profiles, scatter diagrams, early extreme-value inputs | With caveats | MHKiT or raw H5 |
+| **Class 3: Design** | Device engineering, array layout, certification-grade assessment | Not alone | Site measurements and validated local modeling |
 
 ### Class 1: Reconnaissance
 
