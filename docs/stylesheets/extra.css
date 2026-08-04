@@ -203,14 +203,9 @@
   margin: 0 auto;
 }
 
-/* Hide the logo icon and remove its reserved space */
-.md-header__button.md-logo {
-  display: none !important;
-}
-
 .md-header__title {
   margin-left: 0 !important;
-  padding-left: 0 !important;
+  cursor: pointer;
 }
 
 /* --- Glightbox overrides --- */
@@ -671,6 +666,89 @@
   padding-left: 0;
 }
 
+/* --- Site Notice: Modal --- */
+
+.site-notice-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.site-notice-overlay--hidden {
+  display: none !important;
+}
+
+.site-notice-modal {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+  max-width: 520px;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.site-notice-modal__title {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.15rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--nlr-dark-blue);
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  padding-bottom: 0.5rem;
+}
+
+.site-notice-modal__body p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 0.75em;
+}
+
+.site-notice-modal__body a {
+  color: var(--md-primary-fg-color);
+}
+
+.site-notice-modal__body a:hover {
+  color: var(--md-primary-fg-color--light);
+}
+
+.site-notice-modal__footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.site-notice-modal__btn {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1.5em;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s, box-shadow 0.15s;
+}
+
+.site-notice-modal__btn:hover {
+  filter: brightness(0.88);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.site-notice-modal__btn:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 2px;
+}
+
 /* --- Cite Dataset Widget --- */
 
 .cite-dataset-widget {
@@ -814,4 +892,614 @@
 
 .cite-widget-tabs-container .cite-formats-inner {
   padding: 0;
+}
+
+/* --- Site button variants: filled block CTA and no-fill inline link --- */
+/* Both share the chevron */
+
+.md-button.md-button--site::after,
+.md-button.md-button--inline::after {
+  content: ' ›';
+  font-size: 1.15em;
+  margin-left: 0.1em;
+  font-weight: 400;
+}
+
+/* --site: filled blue block CTA */
+.md-button.md-button--site {
+  background-color: var(--nlr-blue);
+  color: white !important;
+  border-color: var(--nlr-blue);
+}
+
+.md-button.md-button--site:hover,
+.md-button.md-button--site:focus {
+  background-color: var(--nlr-dark-blue);
+  border-color: var(--nlr-dark-blue);
+  color: white !important;
+}
+
+/* --inline: dark filled button with chevron, floats right within paragraph text */
+.md-button.md-button--inline {
+  background-color: var(--nlr-blue);
+  border-color: var(--nlr-blue);
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.85em;
+  padding: 0.2em 0.75em;
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: none;
+  float: right;
+}
+
+/* Clear float so following elements are never truncated by a floated --inline button */
+.md-typeset p:has(> .md-button--inline) + p,
+.md-typeset p:has(> .md-button--inline) + ul,
+.md-typeset li:has(> .md-button--inline) + li,
+.md-typeset ul:has(.md-button--inline) + p {
+  clear: right;
+}
+
+.md-button.md-button--inline:hover,
+.md-button.md-button--inline:focus {
+  background-color: var(--nlr-dark-blue);
+  border-color: var(--nlr-dark-blue);
+  color: white !important;
+  box-shadow: none;
+}
+
+/* Right-align wrapper for block CTAs; supports multiple buttons via gap */
+.btn-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+/* --- How to Access: Stacked row cards (media object pattern) --- */
+
+/* Quick-nav: 3 rows, question left / section name right */
+.access-pathways {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.access-pathways__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  text-decoration: none !important;
+  background: var(--nlr-light-gray);
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.access-pathways__row:hover {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.access-pathways__row:hover .access-pathways__name {
+  color: var(--nlr-blue);
+}
+
+.access-pathways__question {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  font-style: italic;
+}
+
+.access-pathways__name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--nlr-dark-blue);
+  white-space: nowrap;
+  margin-left: 1rem;
+  transition: color 0.15s;
+}
+
+.access-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 1rem 0 1.75rem;
+}
+
+.access-row {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.access-row:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.11);
+  transform: translateY(-1px);
+}
+
+/* Left media column */
+.access-row__media {
+  width: 320px;
+  flex-shrink: 0;
+  background: var(--nlr-light-gray);
+  overflow: hidden;
+}
+
+.access-row__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Logo variant: center on tinted background */
+.access-row__media--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+}
+
+.access-row__media--logo img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 64px;
+  object-fit: contain;
+}
+
+/* Right content column */
+.access-row__body {
+  flex: 1;
+  padding: 1.1rem 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.access-row__label {
+  font-size: 1rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--nlr-dark-blue);
+  margin: 0 !important;
+}
+
+.access-row__title {
+  font-size: 0.875rem !important;
+  font-weight: 500;
+  margin: 0 0 0.25rem !important;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-family: inherit !important;
+}
+
+.access-row__body p {
+  margin: 0 0 0.4rem !important;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+/* Actions: primary button + plain links inline */
+.access-row__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.access-row__actions a:not(.md-button) {
+  font-size: 0.82rem;
+}
+
+/* Wave/Tidal resource split within a card body */
+.access-row__resource-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.access-row__resource-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.access-row__resource-heading {
+  font-size: 0.78rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--nlr-dark-blue);
+  margin: 0 0 0.2rem !important;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 600px) {
+  .access-row {
+    flex-direction: column;
+  }
+
+  .access-row__media {
+    width: 100%;
+    height: 150px;
+  }
+
+  .access-row__body {
+    padding: 1rem;
+  }
+
+  .access-row__resource-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .access-row__resource-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================================
+   ACCESS PATHWAY CARDS — "Choose Your Path" Layout
+   Redesigned for clear user self-classification with numbered steps,
+   top-banner images, and full-width content for Wave/Tidal splits.
+   ============================================================================ */
+
+/* Section intro text */
+.access-intro {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 1.25rem !important;
+  font-style: italic;
+}
+
+/* Card container — vertical stack */
+.access-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+/* Individual pathway card */
+.access-card {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.access-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Top media banner */
+.access-card__media {
+  width: 100%;
+  height: 180px;
+  background: var(--nlr-light-gray);
+  overflow: hidden;
+}
+
+.access-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+}
+
+/* Card body — full width content */
+.access-card__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+/* Section name — prominent title */
+.access-card__label {
+  font-size: 1.15rem !important;
+  font-weight: 700;
+  color: var(--nlr-dark-blue);
+  margin: 0 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+/* Audience — fine print below label */
+.access-card__audience {
+  font-size: 0.72rem !important;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 0 0 0.85rem !important;
+  font-weight: 400;
+}
+
+/* Description text */
+.access-card__desc {
+  font-size: 0.875rem !important;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0 0 0.75rem !important;
+}
+
+/* Primary actions row */
+.access-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Buttons should NOT stretch */
+.access-card__actions .md-button {
+  width: auto !important;
+  flex-shrink: 0;
+}
+
+/* ---- Wave/Tidal Resource Split (full-width below intro) ---- */
+
+.access-card__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.access-card__resource {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Resource heading with icon */
+.access-card__resource-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nlr-dark-blue);
+  margin: 0 0 0.4rem !important;
+}
+
+/* Resource description */
+.access-card__resource-desc {
+  font-size: 0.84rem !important;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0 0 0.6rem !important;
+  flex-grow: 1;
+}
+
+/* Resource actions — button + links */
+.access-card__resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: auto;
+}
+
+.access-card__resource-actions .md-button {
+  width: auto !important;
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  padding: 0.45em 1em;
+}
+
+/* Plain text links in resource actions */
+.access-card__link {
+  font-size: 0.8rem;
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.access-card__link:hover {
+  text-decoration: underline;
+  color: var(--md-primary-fg-color--light);
+}
+
+/* ---- Responsive: Tablet (<900px) ---- */
+@media (max-width: 900px) {
+  .access-card__split {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .access-card__resource + .access-card__resource {
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* ---- Responsive: Mobile (<600px) ---- */
+@media (max-width: 600px) {
+  .access-card__media {
+    height: 140px;
+  }
+
+  .access-card__step {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.8rem;
+    top: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .access-card__body {
+    padding: 1rem 1.125rem 1.25rem;
+  }
+
+  .access-card__label {
+    font-size: 1rem !important;
+  }
+
+  .access-card__resource-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+
+
+/* ============================================================================
+   PLOT PAIR — side-by-side figure layout for plots like JPD + contour
+   ============================================================================ */
+
+.plot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.plot-pair figure {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .plot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Inline caret for table/prose links */
+.md-typeset a.link-caret::after {
+  content: ' ›';
+  font-size: 1.1em;
+  margin-left: 0.1em;
+  font-weight: 400;
+}
+
+/* ── Region Cards ──────────────────────────────────────────── */
+.region-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+/* Top row: thumbnail left + name/citation right */
+.region-card__top {
+  display: flex;
+  align-items: stretch;
+}
+
+/* md_in_html wraps the image in a <p>; strip it from flex flow */
+.region-card__top > p {
+  margin: 0;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.region-card__img {
+  width: 200px;
+  min-width: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+/* Name + citation column */
+.region-card__header {
+  padding: 0.75rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+.region-card__header > p,
+.region-card__header p {
+  margin: 0;
+}
+
+.region-card__header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  color: var(--md-default-fg-color);
+}
+
+/* Bottom row: stats + button, full width */
+.region-card__body {
+  padding: 0.5rem 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.region-card__body > p,
+.region-card__body p {
+  margin: 0;
+}
+
+/* Tighten the stats bullet list */
+.region-card__body ul {
+  margin: 0.1rem 0 0.25rem;
+  padding-left: 1.25rem;
+}
+
+.region-card__body li {
+  margin: 0;
+}
+
+/* Collapse accordion margins inside body */
+.region-card__body .md-typeset details,
+.region-card__body details {
+  margin: 0.25rem 0 !important;
+}
+
+/* Chicago inline citation — normal body text color */
+.cite-chicago-inline {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color);
+  line-height: 1.4;
+}
+
+.cite-chicago-inline a {
+  color: var(--md-default-fg-color);
+}
+
+/* Wrapper link for DOI — inherits color, underlines on hover */
+.cite-chicago-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cite-chicago-link:hover {
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
 }
