@@ -160,8 +160,8 @@ Marine energy resource data supports a wide range of applications spanning initi
 <p class="access-card__resource-heading">Tidal Energy</p>
 <p class="access-card__resource-desc">The full high-resolution tidal hindcast (46.6 TB) is freely available via the <a href="https://data.openei.org/s3_viewer?bucket=marine-energy-data&prefix=us-tidal%2F">OpenEI AWS S3 data lake</a> (<code>aws s3 ls --no-sign-request s3://marine-energy-data/us-tidal/</code>). Variable definitions and dataset documentation are maintained in this site. Use the MHKDR record as the authoritative citation when referencing this dataset.</p>
 <div class="access-card__resource-actions">
-<a href="tidal/high_resolution_hindcast/data-access/" class="md-button md-button--site">Tidal Data Access</a>
-<a href="tidal/high_resolution_hindcast/variables/" class="md-button md-button--site">Tidal Variables</a>
+<a href="tidal/high-resolution-hindcast/data-access/" class="md-button md-button--site">Tidal Data Access</a>
+<a href="tidal/high-resolution-hindcast/variables/" class="md-button md-button--site">Tidal Variables</a>
 <a href="https://mhkdr.openei.org/submissions/632" class="md-button md-button--site">Tidal Dataset on MHKDR</a>
 </div>
 </div>

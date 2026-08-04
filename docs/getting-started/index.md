@@ -6,7 +6,7 @@ The Marine Energy Resource Characterization project provides two categories of p
 
 | Dataset | Energy Type | Coverage | Duration | Resolution |
 | ------- | ----------- | -------- | -------- | ---------- |
-| [High Resolution Tidal Hindcast](../tidal/high_resolution_hindcast/index.md) | Tidal | 5 U.S. coastal locations | 1 year each | Hourly / Half-hourly |
+| [High Resolution Tidal Hindcast](../tidal/high-resolution-hindcast/index.md) | Tidal | 5 U.S. coastal locations | 1 year each | Hourly / Half-hourly |
 | [Ocean Surface Wave Hindcast](../wave/hindcast/index.md) | Wave | U.S. Exclusive Economic Zone | 40 years (1979–2020) | 3-hourly |
 
 ## Quick Start
@@ -44,5 +44,5 @@ with ResourceX(wave_file, hsds=True) as f:
 - **[HSDS Setup](hsds-setup.md)** - Configure programmatic data access (required for code examples)
 - **[AWS S3 Downloads](aws-s3.md)** - Browse and download data directly
 - **[Marine Energy Atlas](marine-energy-atlas.md)** - Visualize summary data interactively
-- **[Tidal Dataset Documentation](../tidal/high_resolution_hindcast/index.md)** - Full tidal hindcast documentation
+- **[Tidal Dataset Documentation](../tidal/high-resolution-hindcast/index.md)** - Full tidal hindcast documentation
 - **[Wave Dataset Documentation](../wave/hindcast/index.md)** - Full wave hindcast documentation

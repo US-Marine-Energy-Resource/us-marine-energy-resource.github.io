@@ -47,7 +47,7 @@ us-tidal 60.73,-151.43 --info
 ```
 
 !!! tip "Prerequisites"
-    See [Getting Started](../getting-started/index.md) for installation and setup instructions. Full `us-tidal` CLI reference is in [Data Access](high_resolution_hindcast/data-access.md#us-tidal-cli).
+    See [Getting Started](../getting-started/index.md) for installation and setup instructions. Full `us-tidal` CLI reference is in [Data Access](high-resolution-hindcast/data-access.md#us-tidal-cli).
 
 ### Layout Design (IEC 62600-201 Stage 2)
 
@@ -64,13 +64,13 @@ For power performance assessment, IEC 62600-200 [@iec_62600_200] provides more s
 | Use case                                                                        | Interface                                                    | Reference                                                                               |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
 | Spatial resource exploration and point statistics                               | [Marine Energy Atlas][marine-energy-atlas]                   | [Atlas guide](../getting-started/marine-energy-atlas.md)                                |
-| Query tidal hindcast data by point, transect, or area, with built-in tools to visualize and analyze the results | [`us-marine-energy-resource` Python library][python-library] (includes `us-tidal` CLI) | [Data Access](high_resolution_hindcast/data-access.md) |
+| Query tidal hindcast data by point, transect, or area, with built-in tools to visualize and analyze the results | [`us-marine-energy-resource` Python library][python-library] (includes `us-tidal` CLI) | [Data Access](high-resolution-hindcast/data-access.md) |
 | Bulk and raw data access                                                        | HSDS or AWS S3                                               | [HSDS Setup](../getting-started/hsds-setup.md) · [AWS S3](../getting-started/aws-s3.md) |
-| Variable definitions and units                                                  | Variable documentation                                       | [Tidal Variables](high_resolution_hindcast/variables/index.md)                          |
+| Variable definitions and units                                                  | Variable documentation                                       | [Tidal Variables](high-resolution-hindcast/variables.md)                          |
 
 ## Example Site
 
-The visualizations below use data from a single grid point in Upper Cook Inlet, Alaska (60.74°N, 151.43°W), near Nikiski. Cook Inlet has some of the strongest tidal currents in the U.S. The map shows the model domain boundary and the example point. See [Regional Coverage](high_resolution_hindcast/coverage-maps.md) for all five dataset extents.
+The visualizations below use data from a single grid point in Upper Cook Inlet, Alaska (60.74°N, 151.43°W), near Nikiski. Cook Inlet has some of the strongest tidal currents in the U.S. The map shows the model domain boundary and the example point. See [Regional Coverage](high-resolution-hindcast/coverage-maps.md) for all five dataset extents.
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -155,7 +155,7 @@ A 3-day window shows individual tidal cycles and the vertical shear between the 
   <figcaption>Three-day window of current direction across all 10 sigma layers. Reversals between flood (~$030^\circ$) and ebb (~$210^\circ$) are sharp. Direction is nearly uniform with depth, confirming the current is rectilinear with little rotational component.</figcaption>
 </figure>
 
-For background on sigma coordinates see [Sigma Layers](high_resolution_hindcast/sigma-layers.md).
+For background on sigma coordinates see [Sigma Layers](high-resolution-hindcast/sigma-layers.md).
 
 ## Joint Probability Distribution
 
@@ -180,7 +180,7 @@ Tidal asymmetry - where the flood and ebb half-cycles differ in speed or duratio
 An exceedance curve shows what fraction of the year the current exceeds a given speed. Because power scales with the cube of speed (see [Spring-Neap Cycle](#the-spring-neap-cycle)), the exceedance curve directly characterizes the annual energy available at a given sigma layer.
 
 !!! note
-Sigma layers follow the shape of the seafloor and water surface, so the depth each layer represents varies across the model domain. See [Sigma Layers](high_resolution_hindcast/sigma-layers.md).
+Sigma layers follow the shape of the seafloor and water surface, so the depth each layer represents varies across the model domain. See [Sigma Layers](high-resolution-hindcast/sigma-layers.md).
 
 Exceedance curves are a standard output for IEC 62600-201 Stage 1 feasibility studies [@iec_62600_201]:
 
@@ -195,33 +195,33 @@ The datasets are produced with the Finite Volume Community Ocean Model (FVCOM) [
 
 **Governing equations.** FVCOM solves the 3D Reynolds-averaged Navier-Stokes equations for horizontal velocities $u$, $v$ and sea surface elevation $\eta$ on a triangular mesh. Tidal forcing is applied at open boundaries from a global ocean tidal atlas.
 
-**Unstructured grid.** FVCOM uses a triangular mesh that can be refined around complex coastlines and narrow passages. Grid resolution at the five U.S. sites ranges from ~10 m in narrow channels to ~500 m offshore. See [Unstructured Grid](high_resolution_hindcast/unstructured-grid.md).
+**Unstructured grid.** FVCOM uses a triangular mesh that can be refined around complex coastlines and narrow passages. Grid resolution at the five U.S. sites ranges from ~10 m in narrow channels to ~500 m offshore. See [Unstructured Grid](high-resolution-hindcast/unstructured-grid.md).
 
-**Sigma coordinates.** The water column is divided into vertical layers that scale with local depth, so the seafloor and surface are resolved at any water depth. The dataset provides 10 sigma layers per grid point. See [Sigma Layers](high_resolution_hindcast/sigma-layers.md).
+**Sigma coordinates.** The water column is divided into vertical layers that scale with local depth, so the seafloor and surface are resolved at any water depth. The dataset provides 10 sigma layers per grid point. See [Sigma Layers](high-resolution-hindcast/sigma-layers.md).
 
-**Boundary conditions.** Tidal constituents from a global ocean tidal atlas are applied at the open boundaries of each regional domain. The model runs for a full hindcast year. See [Model Configuration](high_resolution_hindcast/model-configuration.md).
+**Boundary conditions.** Tidal constituents from a global ocean tidal atlas are applied at the open boundaries of each regional domain. The model runs for a full hindcast year. See [Model Configuration](high-resolution-hindcast/model-configuration.md).
 
-**Validation.** Model output is compared against tide gauge observations and, where available, ADCP current measurements using standard skill metrics (RMSE, bias, $R^2$). See [Validation](high_resolution_hindcast/validation.md).
+**Validation.** Model output is compared against tide gauge observations and, where available, ADCP current measurements using standard skill metrics (RMSE, bias, $R^2$). See [Validation](high-resolution-hindcast/validation.md).
 
 ## Datasets
 
-The [H2O High Resolution Tidal Hindcast](high_resolution_hindcast/index.md) provides 3D tidal current data at five U.S. coastal locations. Each dataset includes depth-resolved current speed, direction, power density, water depth, and tidal range derived from FVCOM simulations.
+The [H2O High Resolution Tidal Hindcast](high-resolution-hindcast/index.md) provides 3D tidal current data at five U.S. coastal locations. Each dataset includes depth-resolved current speed, direction, power density, water depth, and tidal range derived from FVCOM simulations.
 
 | Location                                                  | Period    | Sampling    | Grid Points |
 | --------------------------------------------------------- | --------- | ----------- | ----------- |
-| [Aleutian Islands, AK](high_resolution_hindcast/index.md) | 2010-2011 | Hourly      | 797,978     |
-| [Cook Inlet, AK](high_resolution_hindcast/index.md)       | 2005      | Hourly      | 392,002     |
-| [Piscataqua River, NH](high_resolution_hindcast/index.md) | 2007      | Half-hourly | 292,927     |
-| [Salish Sea, WA](high_resolution_hindcast/index.md)       | 2015      | Half-hourly | 1,734,765   |
-| [Western Passage, ME](high_resolution_hindcast/index.md)  | 2017      | Half-hourly | 231,208     |
+| [Aleutian Islands, AK](high-resolution-hindcast/index.md) | 2010-2011 | Hourly      | 797,978     |
+| [Cook Inlet, AK](high-resolution-hindcast/index.md)       | 2005      | Hourly      | 392,002     |
+| [Piscataqua River, NH](high-resolution-hindcast/index.md) | 2007      | Half-hourly | 292,927     |
+| [Salish Sea, WA](high-resolution-hindcast/index.md)       | 2015      | Half-hourly | 1,734,765   |
+| [Western Passage, ME](high-resolution-hindcast/index.md)  | 2017      | Half-hourly | 231,208     |
 
 Click a location to view documentation including model configuration, variable descriptions, and data access.
 
 ## Next Steps
 
 - **Browse the datasets** - click a location in the table above to view model configuration, variable descriptions, and data access.
-- **Access the data** - see [Data Access](high_resolution_hindcast/data-access.md) for installation, Python library usage, CLI reference, and bulk download options.
-- **Read the technical background** - see [Sigma Layers](high_resolution_hindcast/sigma-layers.md), [Unstructured Grid](high_resolution_hindcast/unstructured-grid.md), and [Model Configuration](high_resolution_hindcast/model-configuration.md) for model details.
+- **Access the data** - see [Data Access](high-resolution-hindcast/data-access.md) for installation, Python library usage, CLI reference, and bulk download options.
+- **Read the technical background** - see [Sigma Layers](high-resolution-hindcast/sigma-layers.md), [Unstructured Grid](high-resolution-hindcast/unstructured-grid.md), and [Model Configuration](high-resolution-hindcast/model-configuration.md) for model details.
 
 --8<-- "docs/tidal/index-cite.md"
 --8<-- "docs/includes/links.md"

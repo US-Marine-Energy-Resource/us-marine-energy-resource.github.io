@@ -39,6 +39,6 @@ The atlas provides **visual exploration** - this documentation provides **techni
 | Need | Where to Go |
 | ---- | ----------- |
 | "Where is the tidal resource strongest?" | [Marine Energy Atlas](https://maps.nlr.gov/marine-energy-atlas) |
-| "What variables are available?" | [Wave Variables](../wave/hindcast/variables.md) or [Tidal Variables](../tidal/high_resolution_hindcast/variables/index.md) |
-| "How was this data produced?" | [Tidal Methodology](../tidal/high_resolution_hindcast/methodology.md) |
+| "What variables are available?" | [Wave Variables](../wave/hindcast/variables.md) or [Tidal Variables](../tidal/high-resolution-hindcast/variables.md) |
+| "How was this data produced?" | [Tidal Methodology](../tidal/high-resolution-hindcast/methodology.md) |
 | "I need the full time series" | [HSDS Setup](hsds-setup.md) or [AWS S3](aws-s3.md) |

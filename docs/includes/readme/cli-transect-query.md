@@ -1,8 +1,8 @@
-`--coord` defines a waypoint; repeat it to build a multi-segment path.
+`--coord` defines a waypoint. Repeat it to build a multi-segment path.
 All faces whose triangles geometrically intersect the path are returned.
 
 ``` bash
-us-tidal --coord 60.72,-151.43 --coord 60.75,-151.44 --dry-run
+mer tidal --coord 60.72,-151.43 --coord 60.75,-151.44 --dry-run
 ```
 
     Matched 39 faces  ·  AK_cook_inlet
