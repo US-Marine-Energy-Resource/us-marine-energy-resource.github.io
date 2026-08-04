@@ -4,3 +4,4 @@ __pycache__/
 .mkdocs.pr-preview.yml
 .DS_Store
 .venv/
+*.bk
