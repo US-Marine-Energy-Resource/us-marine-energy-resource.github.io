@@ -48,6 +48,7 @@ def on_pre_build(config, **kwargs):
 
     locations: dict = json.loads(_LOCATIONS_FILE.read_text(encoding="utf-8"))
     known_tags = {k: v for k, v in locations.items() if not k.startswith("_")}
+    meta_keywords = set(locations.get("_meta_keywords", []))
 
     bib_files = sorted(_BIB_DIR.glob("*.bib"))
     if not bib_files:
@@ -60,7 +61,7 @@ def on_pre_build(config, **kwargs):
     for bib_path in bib_files:
         used = _extract_keywords_from_bib(bib_path)
         all_used_tags |= used
-        missing = used - set(known_tags)
+        missing = used - set(known_tags) - meta_keywords
         for tag in sorted(missing):
             errors.append(f"  '{tag}' in {bib_path.name} is not defined in locations.json")
 
