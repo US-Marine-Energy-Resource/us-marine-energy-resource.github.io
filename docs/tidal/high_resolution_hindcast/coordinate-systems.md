@@ -12,9 +12,9 @@ Some FVCOM model domains were originally configured in projected coordinate syst
 | ---------------- | -------------------- | -------------- |
 | Aleutian Islands | Geographic (lat/lon) | None           |
 | Cook Inlet       | Geographic (lat/lon) | None           |
-| Western Passage  | UTM Zone 19 (NAD83)  | → WGS84        |
-| Piscataqua River | UTM Zone 19 (NAD83)  | → WGS84        |
-| Salish Sea       | UTM Zone 10 (NAD83)  | → WGS84        |
+| Western Passage  | UTM Zone 19 (NAD83)  | to WGS84       |
+| Piscataqua River | UTM Zone 19 (NAD83)  | to WGS84       |
+| Salish Sea       | UTM Zone 10 (NAD83)  | to WGS84       |
 
 ## Transformation Details
 
