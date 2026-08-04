@@ -5,7 +5,7 @@
 uv add us-marine-energy-resource
 ```
 
-**pip** (may be slow — pip’s dependency resolver backtracks extensively
+**pip** (can be slow, as pip’s dependency resolver backtracks extensively
 on this package’s transitive dependencies):
 
 ``` bash
