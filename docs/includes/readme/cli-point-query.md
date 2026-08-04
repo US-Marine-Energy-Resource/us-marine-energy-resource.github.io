@@ -1,8 +1,8 @@
-`us-tidal` accepts a positional `lat,lon` argument. Start with
+`mer tidal` accepts a positional `lat,lon` argument. Start with
 `--dry-run` to check the size before committing to a download.
 
 ``` bash
-us-tidal 60.73,-151.43 --dry-run
+mer tidal 60.73,-151.43 --dry-run
 ```
 
     face_id    00126601                                                            

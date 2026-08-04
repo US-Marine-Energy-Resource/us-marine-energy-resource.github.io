@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate CLI reference snippet for docs/tidal/high_resolution_hindcast/data-access.md.
+"""Generate CLI reference snippet for docs/tidal/high-resolution-hindcast/data-access.md.
 
 Runs ``us-tidal --help`` and writes the output as a fenced bash code block to
 ``docs/includes/us-tidal-help.md``.  The MkDocs hook ``hooks/generate_cli_docs.py``
