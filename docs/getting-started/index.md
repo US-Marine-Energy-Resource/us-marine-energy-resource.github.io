@@ -25,7 +25,7 @@ with ResourceX(tidal_file, hsds=True) as f:
 ```
 
 !!! tip "Prerequisites"
-    You'll need `rex` and `h5pyd` installed and configured. See [HSDS Setup](hsds-setup.md) for step-by-step instructions.
+    You'll need [`rex`](https://github.com/NatLabRockies/rex) and `h5pyd` installed and configured. See [HSDS Setup](hsds-setup.md) for step-by-step instructions.
 
 Access wave data:
 

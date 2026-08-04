@@ -23,16 +23,27 @@ s3://marine-energy-data/
 
 ### Wave Data
 
+The latest version differs by domain: `v1.0.1` (1979-2020) exists only for West Coast,
+Atlantic, Alaska, and Gulf of Mexico / Puerto Rico. Hawaii and CNMI/Guam are published
+only as `v1.0.0`, which also runs to 2020.
+
 ```
-s3://wpto-pds-US_wave/
-└── v1.0.0/
+s3://wpto-pds-us-wave/
+├── v1.0.0/
+│   ├── West_Coast/                       # superseded by v1.0.1
+│   ├── Atlantic/                         # superseded by v1.0.1
+│   ├── Alaska/                           # superseded by v1.0.1
+│   ├── Gulf_of_Mexico_and_Puerto_Rico/   # superseded by v1.0.1
+│   ├── Hawaii/                           # latest for this domain
+│   ├── CNMI_and_Guam/                    # latest for this domain
+│   └── virtual_buoy/
+│       ├── West_Coast/                   # 1-hour, 1979-2010
+│       └── Atlantic_deprecated/
+└── v1.0.1/
     ├── West_Coast/
     ├── Atlantic/
-    ├── Hawaii/
-    └── virtual_buoy/
-        ├── West_Coast/
-        ├── Atlantic/
-        └── Hawaii/
+    ├── Alaska/
+    └── Gulf_of_Mexico_and_Puerto_Rico/   # files are named GOM_PR_<year>.h5
 ```
 
 ## Download via AWS CLI
@@ -52,11 +63,17 @@ aws s3 sync s3://marine-energy-data/US_tidal/Cook_Inlet/ ./Cook_Inlet/ --no-sign
 
 ```bash
 # List wave datasets
-aws s3 ls s3://wpto-pds-US_wave/v1.0.0/ --no-sign-request
+aws s3 ls s3://wpto-pds-us-wave/v1.0.1/ --no-sign-request
 
 # Download a specific wave file
-aws s3 cp s3://wpto-pds-US_wave/v1.0.0/West_Coast/West_Coast_wave_2010.h5 . --no-sign-request
+aws s3 cp s3://wpto-pds-us-wave/v1.0.1/West_Coast/West_Coast_wave_2010.h5 . --no-sign-request
 ```
+
+!!! warning "Bucket name is lowercase and hyphenated"
+
+    The bucket is `wpto-pds-us-wave`. `wpto-pds-US_wave` — the spelling used in the
+    upstream openEDI documentation — does not resolve, and any command using it fails
+    with `NoSuchBucket`.
 
 ## Dataset Paths
 

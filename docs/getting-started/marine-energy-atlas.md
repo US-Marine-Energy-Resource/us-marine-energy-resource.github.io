@@ -4,7 +4,7 @@ The [NLR Marine Energy Atlas](https://maps.nlr.gov/marine-energy-atlas) is an in
 
 ## What Is the Atlas?
 
-The Marine Energy Atlas provides a visual interface for browsing summary statistics from the tidal and wave hindcast datasets. Users can explore spatial patterns, compare locations, and download point data without writing code.
+The Marine Energy Atlas provides a visual interface for browsing summary statistics from the wave and tidal hindcast datasets. Users can explore spatial patterns, compare locations, and download point data without writing code.
 
 ## Browse Data
 
@@ -26,8 +26,8 @@ The atlas includes a point query tool for extracting data at specific locations:
 
 The Marine Energy Atlas displays summary-level data (processing level `b5_vap_atlas_summary_parquet`) derived from the full hindcast datasets. These summaries include:
 
-- Mean and 95th percentile current speed and power density (tidal)
 - Significant wave height, wave power, and period statistics (wave)
+- Mean and 95th percentile current speed and power density (tidal)
 - Water depth, tidal range, and grid resolution (tidal)
 
 For full time-series data, use [HSDS](hsds-setup.md) or [AWS S3](aws-s3.md) to access the complete datasets.
@@ -39,6 +39,6 @@ The atlas provides **visual exploration** - this documentation provides **techni
 | Need | Where to Go |
 | ---- | ----------- |
 | "Where is the tidal resource strongest?" | [Marine Energy Atlas](https://maps.nlr.gov/marine-energy-atlas) |
-| "What variables are available?" | [Tidal Variables](../tidal/high_resolution_hindcast/variables/index.md) or [Wave Variables](../wave/hindcast/variables.md) |
+| "What variables are available?" | [Wave Variables](../wave/hindcast/variables.md) or [Tidal Variables](../tidal/high_resolution_hindcast/variables/index.md) |
 | "How was this data produced?" | [Tidal Methodology](../tidal/high_resolution_hindcast/methodology.md) |
 | "I need the full time series" | [HSDS Setup](hsds-setup.md) or [AWS S3](aws-s3.md) |

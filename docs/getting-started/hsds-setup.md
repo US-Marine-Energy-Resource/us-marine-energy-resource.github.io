@@ -4,7 +4,7 @@ The Highly Scalable Data Service (HSDS) provides programmatic access to all mari
 
 ## Prerequisites
 
-- Python 3.8+
+- Python 3.11+
 - pip
 
 ## Installation
@@ -12,7 +12,7 @@ The Highly Scalable Data Service (HSDS) provides programmatic access to all mari
 Install the required packages:
 
 ```bash
-pip install rex h5pyd
+pip install NLR-rex
 ```
 
 ## Configuration
@@ -61,7 +61,7 @@ with ResourceX(wave_file, hsds=True) as f:
 
 ## Direct h5pyd Access
 
-For lower-level access without `rex`:
+For lower-level access without [`rex`](https://github.com/NatLabRockies/rex):
 
 ```python
 import h5pyd
