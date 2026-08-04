@@ -77,4 +77,4 @@ with h5pyd.File('/nlr/US_tidal/Cook_Inlet/Cook_Inlet_2005.h5', mode='r') as f:
 ```
 
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

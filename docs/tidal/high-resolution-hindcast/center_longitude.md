@@ -2,19 +2,19 @@
 <!-- Source of truth: src/variable_registry.py (VARIABLE_REGISTRY) -->
 <!-- To update: edit the registry, then run `python generate_variable_docs.py` -->
 
-# Center Latitude [degrees_north]
+# Center Longitude [degrees_east]
 
-*Latitude of the triangular element centroid (WGS84)*
+*Longitude of the triangular element centroid (WGS84)*
 
 ## Description
 
-Latitude of the triangular element centroid (WGS84)
+Longitude of the triangular element centroid (WGS84)
 
 ## Properties
 
 | Property | Value |
 | --- | --- |
-| Internal Name | `lat_center` |
-| Units | degrees_north |
+| Internal Name | `lon_center` |
+| Units | degrees_east |
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

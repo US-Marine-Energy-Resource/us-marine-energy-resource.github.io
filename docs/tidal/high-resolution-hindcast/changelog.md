@@ -38,4 +38,4 @@ Initial public release of the H2O High Resolution Tidal Hindcast dataset.
 - See [Quality Assurance](quality-assurance.md) for excluded files
 
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

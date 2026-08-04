@@ -27,4 +27,4 @@ $$
 | Internal Name | `vap_grid_resolution` |
 | Units | m |
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

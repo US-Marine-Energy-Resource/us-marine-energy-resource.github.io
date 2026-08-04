@@ -28,7 +28,7 @@ Raw outputs are standardized with:
 
 ## VAP Derivation (Level b1)
 
-Value-Added Products (VAPs) are computed from the standardized data. Each variable in the [Variables](variables/index.md) section documents its specific derivation equation. General methods include:
+Value-Added Products (VAPs) are computed from the standardized data. Each variable in the [Variables](variables.md) section documents its specific derivation equation. General methods include:
 
 ### Depth-Averaging
 
@@ -76,4 +76,4 @@ A subset of summary statistics formatted for the [Marine Energy Atlas](https://m
 
 Quality control is applied at each processing stage. See [Quality Assurance](quality-assurance.md) for verification details.
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

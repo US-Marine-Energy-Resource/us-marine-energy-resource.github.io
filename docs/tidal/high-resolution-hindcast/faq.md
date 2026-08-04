@@ -43,6 +43,6 @@ FVCOM [@fvcom] uses similar tidal constituents but solves the full hydrodynamic 
 
 <div class="bibliography"></div>
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"
 
 See [References](references.md) for location-specific validation publications.

@@ -20,7 +20,7 @@ Grid resolution varies across the domain based on local requirements:
 - **In narrow channels and near coastlines** where currents are strongest and bathymetry changes rapidly, triangles are smaller (higher resolution)
 - **In open water regions** where conditions vary more gradually, triangles are larger (coarser resolution), reducing computational cost without sacrificing accuracy
 
-The [grid resolution variable](variables/grid-resolution.md) in the dataset reports the average edge length of each triangular element.
+The [grid resolution variable](grid-resolution.md) in the dataset reports the average edge length of each triangular element.
 
 ### IEC Resolution Requirements
 
@@ -43,4 +43,4 @@ All velocity and power density values in this dataset represent **free-stream (u
 
 Array yield calculations require site-specific wake modeling and cannot be derived directly from free-stream resource data.
 
---8<-- "docs/tidal/high_resolution_hindcast/\_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/\_cite-widget.md"

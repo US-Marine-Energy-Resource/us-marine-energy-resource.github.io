@@ -257,4 +257,4 @@ Spatial footprint of each tidal hindcast location. Each polygon shows the exact 
 | Salish Sea, Washington | 1,734,765 | 2015-01-01 – 2015-12-30 | Half-Hourly |
 | Western Passage, Maine | 231,208 | 2017-01-01 – 2017-12-31 | Half-Hourly |
 
---8<-- "docs/tidal/high_resolution_hindcast/\_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/\_cite-widget.md"

@@ -28,4 +28,4 @@ $$
 | Internal Name | `vap_distance_to_shore` |
 | Units | NM |
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

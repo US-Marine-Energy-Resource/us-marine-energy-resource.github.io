@@ -17,4 +17,4 @@ Direct link (HTTPS)  to download the one-year hindcast time series (parquet) for
 | Internal Name | `full_year_data_https_url` |
 | Units |  |
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

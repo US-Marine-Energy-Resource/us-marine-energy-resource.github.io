@@ -2,19 +2,19 @@
 <!-- Source of truth: src/variable_registry.py (VARIABLE_REGISTRY) -->
 <!-- To update: edit the registry, then run `python generate_variable_docs.py` -->
 
-# Center Longitude [degrees_east]
+# Face ID
 
-*Longitude of the triangular element centroid (WGS84)*
+*Location specific unique integer identifier for each triangular grid element*
 
 ## Description
 
-Longitude of the triangular element centroid (WGS84)
+Location specific unique integer identifier for each triangular grid element
 
 ## Properties
 
 | Property | Value |
 | --- | --- |
-| Internal Name | `lon_center` |
-| Units | degrees_east |
+| Internal Name | `face_id` |
+| Units |  |
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

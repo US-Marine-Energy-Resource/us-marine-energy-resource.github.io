@@ -25,4 +25,4 @@ Summary of all variables in the High Resolution Tidal Hindcast dataset. Click a 
 | [S3 URI for Full Year Time Series Data](full_year_s3_uri.md) | `full_year_data_s3_uri` |  | direct link (S3 URI) to download the one-year hindcast time series (parquet) for this location. Includes speed, direction, for 10 uniform sigma levels at half-hourly (lower 48) or hourly (Alaska) intervals. |
 | [HTTPS URL for Full Year Time Series Data](full_year_https_url.md) | `full_year_data_https_url` |  | direct link (HTTPS)  to download the one-year hindcast time series (parquet) for this location. Includes speed, direction, for 10 uniform sigma levels at half-hourly (lower 48) or hourly (Alaska) intervals |
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

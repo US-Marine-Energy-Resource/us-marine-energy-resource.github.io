@@ -28,4 +28,4 @@ $$
 | Internal Name | `vap_surface_elevation_low_tide_min` |
 | Units | m (relative to model MSL) |
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

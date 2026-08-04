@@ -31,4 +31,4 @@ $$
 | Internal Name | `vap_water_column_95th_percentile_sea_water_speed` |
 | Units | m/s |
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

@@ -69,5 +69,5 @@ For bulk downloads or programmatic access to the raw parquet files, the data is 
 
 Dataset citation: [@mhkdr_tidal_hindcast_submission]
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"
 --8<-- "docs/includes/links.md"

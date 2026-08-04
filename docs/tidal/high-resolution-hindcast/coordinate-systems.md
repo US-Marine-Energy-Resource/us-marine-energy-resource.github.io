@@ -31,4 +31,4 @@ UTM-to-WGS84 transformations were performed using [pyproj](https://pyproj4.githu
 - **Convention**: Sea surface elevation ($\zeta$) is positive upward relative to NAVD88; bathymetry ($h$) is positive downward below NAVD88
 
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

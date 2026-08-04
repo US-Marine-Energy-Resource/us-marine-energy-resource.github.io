@@ -43,4 +43,4 @@ Surface wind stress is applied using ERA5 or CFSv2 reanalysis data, depending on
 
 See [Limitations](limitations.md) for documentation detailing model limitations.
 
---8<-- "docs/tidal/high_resolution_hindcast/\_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/\_cite-widget.md"

@@ -37,4 +37,4 @@ See [Quality Assurance](quality-assurance.md) for details on data verification.
 All velocity and power density values represent free-stream (undisturbed) conditions. They should **not** be used directly for turbine array yield estimation. See [Unstructured Grid](unstructured-grid.md#free-stream-velocity) for details on blockage and wake effects.
 
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

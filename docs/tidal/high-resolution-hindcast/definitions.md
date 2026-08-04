@@ -59,4 +59,4 @@ Technical terms, mathematical symbols, and acronyms used throughout this documen
 | VAP            | Value-Added Product                                                              |
 
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

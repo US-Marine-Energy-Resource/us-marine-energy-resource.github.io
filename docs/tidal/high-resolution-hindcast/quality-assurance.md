@@ -47,4 +47,4 @@ Derived variables were checked against physically reasonable bounds:
 - **Tidal range** - Positive, within expected range for tidal regime classification
 
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"

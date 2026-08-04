@@ -41,4 +41,4 @@ The **depth-maximum** is the maximum value of a quantity across all vertical lay
 The 95th percentile variables in this dataset use depth-maximum values to capture extreme conditions.
 
 
---8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
+--8<-- "docs/tidal/high-resolution-hindcast/_cite-widget.md"
