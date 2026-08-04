@@ -1,5 +1,5 @@
 The [full variable
-reference](https://us-marine-energy-resource.github.io/tidal/high_resolution_hindcast/variables/)
+reference](../../tidal/high-resolution-hindcast/variables.md)
 documents every field in the dataset. The table and metadata below are
 generated directly from the parquet schema of the downloaded file.
 
