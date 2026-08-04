@@ -1,40 +1,19 @@
 # Team & Partners
 
-## Pacific Northwest National Laboratory (PNNL)
+## Contributing Laboratories
 
-The [Ocean Dynamics and Modeling Group](https://www.pnnl.gov/projects/ocean-dynamics-modeling) at PNNL developed and ran the FVCOM tidal hydrodynamic models that form the basis of the tidal hindcast datasets. PNNL scientists designed the model domains, configured boundary forcing, and validated model outputs against observational data at each location.
+### Pacific Northwest National Laboratory (PNNL)
 
-**Key Contributors:**
+The [Ocean Dynamics and Modeling Group](https://www.pnnl.gov/projects/ocean-dynamics-modeling) at PNNL develops and runs the hydrodynamic models underlying the hindcast datasets, including model domain design, boundary forcing, and validation against observational data.
 
-- Zhaoqing Yang - Principal Investigator, tidal model development
-- Mithun Deb - Model validation and turbulence analysis
-- Taiping Wang - Model configuration and boundary forcing
-- Preston Spicer - Tidal energy extraction modeling
+### Sandia National Laboratories (SNL)
 
-## National Laboratory of the Rockies (NLR)
+Sandia's [Marine Energy Resource Characterization](https://energy.sandia.gov/programs/renewable-energy/water-power/research-capabilities/resource-characterization/) program contributes wave model development and data generation, and catalogs the statistics needed to assess energy conversion opportunities, constraints, and risks at wave and tidal energy sites.
 
-The [Marine Energy Resource Characterization Team](https://www.nlr.gov/water/resource-characterization) at NLR processes raw model outputs into standardized, publicly accessible datasets. NLR manages data quality control, value-added product derivation, documentation, and distribution through AWS S3 and the Marine Energy Atlas.
+### National Laboratory of the Rockies (NLR)
 
-**Key Contributors:**
+The [Marine Energy Resource Characterization Team](https://www.nlr.gov/water/resource-characterization) at NLR processes raw model outputs into standardized, publicly accessible datasets, and manages quality control, value-added product derivation, documentation, and distribution through AWS S3 and the Marine Energy Atlas.
 
-- Andrew Simms - Data processing, standardization, and documentation
-- Ethan Young - Data processing and quality control
-- Mike Lawson - Project management
+## Funding
 
-**Technical Guidance:**
-
-- Levi Kilcher, Caroline Draxl, Katie Peterson (NLR)
-
-## Sandia National Laboratories (SNL)
-
-Sandia contributes wave model development and data generation for the wave hindcast datasets.
-
-## U.S. Department of Energy
-
-The [Hydropower and Hydrokinetic Office (H2O)](https://www.energy.gov/cmei/water/hydropower-and-hydrokinetic-office) funds and oversees this project.
-
-**DOE Project Support:**
-
-- Heather Spence - H2O Program Manager
-- Jim McNally - H2O Program Manager
-- Mary Serafin (NLR) - Project support
+The U.S. Department of Energy [Hydropower and Hydrokinetic Office (H2O)](https://www.energy.gov/cmei/water/hydropower-and-hydrokinetic-office) supports this project.

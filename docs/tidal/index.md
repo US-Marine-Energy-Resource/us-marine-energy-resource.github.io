@@ -14,20 +14,15 @@ IEC TS 62600-201 defines two stages for tidal resource assessment: a feasibility
 
 The [Marine Energy Atlas][marine-energy-atlas] displays time- and depth-averaged current speed and power density across all five hindcast domains. Grid cells are color-coded by magnitude. The point-query tool returns summary statistics for a selected location.
 
-<!-- TODO: insert atlas walkthrough gif -->
-
-!!! info "Atlas walkthrough coming soon"
-A short animated walkthrough of the Marine Energy Atlas, selecting a tidal layer, zooming to a region, and querying a grid cell, will appear here.
-
 ### Feasibility Study (IEC 62600-201 Stage 1)
 
 A Stage 1 feasibility study investigates the scale and attributes of the energy resource within a study area. The hindcast provides current speed and direction at 10 depth layers over the full model duration, from which the following can be derived:
 
-- **Mean current speed** - time-averaged speed at each depth layer
-- **95th-percentile current speed** - upper bound on current speed for a given location
-- **Mean power density** - time-averaged kinetic energy flux per unit rotor area (W m⁻²)
-- **Velocity exceedance curve** - the fraction of time current speed exceeds a given threshold
-- **Joint probability distribution** - the joint distribution of current speed and direction
+- **Mean current speed**: time-averaged speed at each depth layer
+- **95th-percentile current speed**: upper bound on current speed for a given location
+- **Mean power density**: time-averaged kinetic energy flux per unit rotor area (W/m²)
+- **Velocity exceedance curve**: the fraction of time current speed exceeds a given threshold
+- **Joint probability distribution**: the joint distribution of current speed and direction
 
 The [Marine Energy Atlas][marine-energy-atlas] provides a point-and-click interface for summary statistics at any model grid point. The [`us-marine-energy-resource` Python library][python-library] (which includes the `us-tidal` command line tool) can query tidal hindcast data by point, transect, or area, with built-in tools to visualize and analyze the results:
 
@@ -46,7 +41,7 @@ fig = tidal.generate_tidal_joint_probability(df, sigma_layer=4)
 ```
 
 ```bash
-# Query from the command line — no Python required.
+# Query from the command line, no Python required.
 # See Data Access for the full CLI reference.
 us-tidal 60.73,-151.43 --info
 ```
