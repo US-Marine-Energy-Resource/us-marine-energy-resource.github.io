@@ -3,7 +3,7 @@
 Worked examples showing practical analysis workflows with the tidal hindcast data.
 
 !!! tip "Prerequisites"
-    These examples assume you have completed [HSDS Setup](../../getting-started/hsds-setup.md) and have `rex` and `h5pyd` installed.
+    These examples assume you have completed [HSDS Setup](../../getting-started/hsds-setup.md) and have [`rex`](https://github.com/NatLabRockies/rex) and `h5pyd` installed.
 
 ## Compare Mean Current Speed Across Locations
 

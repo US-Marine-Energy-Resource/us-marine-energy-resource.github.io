@@ -76,4 +76,4 @@ A subset of summary statistics formatted for the [Marine Energy Atlas](https://m
 
 Quality control is applied at each processing stage. See [Quality Assurance](quality-assurance.md) for verification details.
 
---8<-- "docs/tidal/high_resolution_hindcast/\_cite-widget.md"
+--8<-- "docs/tidal/high_resolution_hindcast/_cite-widget.md"
