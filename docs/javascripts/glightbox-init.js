@@ -14,6 +14,7 @@
   };
 
   var lb = null;
+  var citeObserver = null;
 
   // Copy figcaption text into data-description on each .glightbox anchor
   // so GLightbox can display it below the image.
@@ -29,10 +30,36 @@
     });
   }
 
+  // Re-attach captions and reload GLightbox element data once cite.js has
+  // finished rendering inline citations (signalled by the "cite-ready" class
+  // being added to document.body).  This ensures the lightbox caption shows
+  // the rendered citation number (e.g. "[1]") rather than the raw [@key].
+  function watchForCiteReady() {
+    if (citeObserver) citeObserver.disconnect();
+    if (document.body.classList.contains("cite-ready")) {
+      attachCaptions();
+      if (lb) lb.reload();
+      return;
+    }
+    citeObserver = new MutationObserver(function (mutations) {
+      for (var i = 0; i < mutations.length; i++) {
+        if (document.body.classList.contains("cite-ready")) {
+          citeObserver.disconnect();
+          citeObserver = null;
+          attachCaptions();
+          if (lb) lb.reload();
+          return;
+        }
+      }
+    });
+    citeObserver.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+  }
+
   function init() {
     if (typeof GLightbox !== "undefined") {
       attachCaptions();
       lb = GLightbox(OPTS);
+      watchForCiteReady();
     }
   }
 
