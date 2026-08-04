@@ -83,6 +83,36 @@
   const CITE_RE = /\[@([a-zA-Z0-9_:.-]+(?:\s*;\s*@[a-zA-Z0-9_:.-]+)*)\]/g;
   const FULL_CITE_RE =
     /\[!@([a-zA-Z0-9_:.-]+(?:\s*;\s*!@[a-zA-Z0-9_:.-]+)*)\]/g;
+  // [chicago@key] — renders a Chicago-style full citation inline (no widget)
+  const CHICAGO_INLINE_RE = /\[chicago@([a-zA-Z0-9_:.-]+)\]/g;
+
+  /**
+   * Like String.replace(regex, replacer) but only replaces matches that fall
+   * in text content — i.e. between HTML tags — never inside tag attribute values.
+   * This prevents citation patterns in data-description (or similar attributes)
+   * from being replaced with raw HTML, which would break the attribute syntax.
+   */
+  function replaceOutsideTags(html, regex, replacer) {
+    var result = "";
+    var lastIndex = 0;
+    var tagRe = /<[^>]*>/g;
+    var tagMatch;
+    while ((tagMatch = tagRe.exec(html)) !== null) {
+      var textSegment = html.slice(lastIndex, tagMatch.index);
+      if (textSegment) {
+        regex.lastIndex = 0;
+        result += textSegment.replace(regex, replacer);
+      }
+      result += tagMatch[0];
+      lastIndex = tagMatch.index + tagMatch[0].length;
+    }
+    var remaining = html.slice(lastIndex);
+    if (remaining) {
+      regex.lastIndex = 0;
+      result += remaining.replace(regex, replacer);
+    }
+    return result;
+  }
 
   function parseCiteKeys(match) {
     return match
@@ -577,15 +607,25 @@
   /**
    * Find all BibTeX keys whose CSL `keyword` field contains the given location tag.
    * Supports multi-location entries (e.g. keywords = {ak_cook, wa_puget}).
+   * If filterKeyword is provided, only returns keys that also have that keyword.
    */
-  function findKeysForLocation(locationTag, cite) {
+  function findKeysForLocation(locationTag, cite, filterKeyword) {
     var tag = locationTag.toLowerCase().trim();
     return cite.data
       .filter(function (entry) {
         var kw = (entry.keyword || "").toLowerCase();
-        return kw.split(/[\s,]+/).some(function (t) {
+        var tags = kw.split(/[\s,]+/);
+        var hasLocation = tags.some(function (t) {
           return t === tag;
         });
+        if (!hasLocation) return false;
+        if (filterKeyword) {
+          var filter = filterKeyword.toLowerCase().trim();
+          return tags.some(function (t) {
+            return t === filter;
+          });
+        }
+        return true;
       })
       .map(function (entry) {
         return entry.id;
@@ -628,10 +668,12 @@
 
     if (!locationsJson || typeof locationsJson !== "object") return;
 
+    var filterKeyword = widgetEl.getAttribute("data-filter-keyword") || null;
+
     // Build tag → { label, keys } mapping, only for tags with actual bib entries
     var locationEntries = [];
     Object.keys(locationsJson).forEach(function (tag) {
-      var keys = findKeysForLocation(tag, cite).filter(function (k) {
+      var keys = findKeysForLocation(tag, cite, filterKeyword).filter(function (k) {
         return availableKeys.has(k);
       });
       if (keys.length > 0) {
@@ -722,8 +764,11 @@
     var tabsContainer = widgetEl.querySelector(".cite-widget-tabs-container");
     var selectAllCb = widgetEl.querySelector("#cite-widget-select-all");
 
+    var datasetKey =
+      widgetEl.getAttribute("data-key") || "mhkdr_tidal_hindcast_submission";
+
     function getSelectedKeys() {
-      var keys = ["mhkdr_tidal_hindcast_submission"];
+      var keys = [datasetKey];
       locationEntries.forEach(function (loc) {
         var cb = widgetEl.querySelector(
           'input[data-prefix="' + loc.prefix + '"]',
@@ -913,10 +958,13 @@
     CITE_RE.lastIndex = 0;
     var hasFullCites = FULL_CITE_RE.test(html);
     FULL_CITE_RE.lastIndex = 0;
+    var hasChicagoInline = CHICAGO_INLINE_RE.test(html);
+    CHICAGO_INLINE_RE.lastIndex = 0;
     var hasWidget = !!content.querySelector("#cite-dataset-widget");
     if (
       !hasCites &&
       !hasFullCites &&
+      !hasChicagoInline &&
       !content.querySelector(".bibliography") &&
       !hasWidget
     ) {
@@ -928,14 +976,20 @@
     // so the user never sees unstyled [@key] brackets
     if (hasFullCites) {
       FULL_CITE_RE.lastIndex = 0;
-      content.innerHTML = content.innerHTML.replace(FULL_CITE_RE, function () {
+      content.innerHTML = replaceOutsideTags(content.innerHTML, FULL_CITE_RE, function () {
         return '<span class="cite-placeholder-block"></span>';
       });
     }
     if (hasCites) {
       CITE_RE.lastIndex = 0;
-      content.innerHTML = content.innerHTML.replace(CITE_RE, function () {
+      content.innerHTML = replaceOutsideTags(content.innerHTML, CITE_RE, function () {
         return '<span class="cite-placeholder">\u00a0\u00a0\u00a0</span>';
+      });
+    }
+    if (hasChicagoInline) {
+      CHICAGO_INLINE_RE.lastIndex = 0;
+      content.innerHTML = replaceOutsideTags(content.innerHTML, CHICAGO_INLINE_RE, function () {
+        return '<span class="cite-placeholder">\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</span>';
       });
     }
 
@@ -1043,6 +1097,14 @@
         }
       }
     }
+    CHICAGO_INLINE_RE.lastIndex = 0;
+    while ((match = CHICAGO_INLINE_RE.exec(html)) !== null) {
+      const key = match[1].trim();
+      if (!seenKeys.has(key)) {
+        seenKeys.add(key);
+        citedKeys.push(key);
+      }
+    }
 
     // Build key → number map and key → plain text citation for tooltips
     var keyToNum = {};
@@ -1100,7 +1162,8 @@
 
     // Replace [!@key] with full bibliography-style citations + format tabs
     FULL_CITE_RE.lastIndex = 0;
-    content.innerHTML = content.innerHTML.replace(
+    content.innerHTML = replaceOutsideTags(
+      content.innerHTML,
       FULL_CITE_RE,
       function (fullMatch, inner) {
         const keys = parseCiteKeys(inner);
@@ -1147,9 +1210,53 @@
       },
     );
 
+    // Replace [chicago@key] with Chicago-formatted inline citation (no widget)
+    if (hasChicagoInline && extraTemplatesLoaded.chicago) {
+      CHICAGO_INLINE_RE.lastIndex = 0;
+      content.innerHTML = replaceOutsideTags(
+        content.innerHTML,
+        CHICAGO_INLINE_RE,
+        function (fullMatch, key) {
+          key = key.trim();
+          if (!availableKeys.has(key)) {
+            console.warn("[cite] Unknown chicago@ key:", key);
+            return '<span class="cite-error" title="Unknown citation key">' + fullMatch + "</span>";
+          }
+          try {
+            var h = cite.format("bibliography", {
+              template: "chicago",
+              lang: config.lang,
+              format: "html",
+              entry: [key],
+              hyperlinks: true,
+            });
+            h = stripCslNumbering(h);
+            h = h.replace(/<\/?div[^>]*>/g, "").trim();
+
+            // Extract DOI href and remove the visible DOI URL from the text
+            var doiMatch = h.match(/<a[^>]+href="(https?:\/\/doi\.org\/[^"]+)"[^>]*>/i);
+            var doiHref = doiMatch ? doiMatch[1] : null;
+            if (doiHref) {
+              h = h.replace(/<a[^>]+href="https?:\/\/doi\.org\/[^"]*"[^>]*>[^<]*<\/a>\.?\s*/gi, "").trim();
+            }
+
+            var inner = '<span class="cite-chicago-inline">' + h + "</span>";
+            if (doiHref) {
+              return '<a href="' + doiHref + '" class="cite-chicago-link" target="_blank" rel="noopener">' + inner + "</a>";
+            }
+            return inner;
+          } catch (e) {
+            console.warn("[cite] Error formatting chicago@ citation:", key, e);
+            return fullMatch;
+          }
+        },
+      );
+    }
+
     // Replace [@key] with short inline citations
     CITE_RE.lastIndex = 0;
-    content.innerHTML = content.innerHTML.replace(
+    content.innerHTML = replaceOutsideTags(
+      content.innerHTML,
       CITE_RE,
       function (fullMatch, inner) {
         const keys = parseCiteKeys(inner);
