@@ -1,11 +1,12 @@
 site_name: U.S. Marine Energy Resource
 site_url: https://us-marine-energy-resource.github.io/
 site_description: United States marine energy resource characterization research sponsored by the U.S. Department of Energy Hydropower and Hydrokinetic Office (H2O)
-repo_url: https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource.github.io
+# repo_url: https://github.com/US-Marine-Energy-Resource/us-marine-energy-resource.github.io
 repo_name: US-Marine-Energy-Resource/us-marine-energy-resource.github.io
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: custom
@@ -23,6 +24,7 @@ theme:
     - search.highlight
     - content.code.copy
     - navigation.footer
+    - announce.dismiss
   favicon: assets/images/favicon.svg
   icon:
     logo: material/water
@@ -34,6 +36,13 @@ extra_css:
 nav:
   - Home:
     - index.md
+    - U.S. Marine Energy Potential By Region: us-marine-energy-potential-by-region.md
+    - Types of Marine Energy Conversion: types-of-marine-energy-conversion.md
+    - Resource Characterization: resource-characterization.md
+    - Datasets: datasets.md
+    - Data Access: data-access.md
+    - Contact: contact.md
+    - References: references.md
     # About pages not yet committed
     # - About:
     #   - Project: about/project.md
@@ -48,6 +57,12 @@ nav:
   #     - Marine Energy Atlas: getting-started/marine-energy-atlas.md
   #   - Data Formats: getting-started/data-formats.md
   #   - Contributing: getting-started/contributing.md
+  - Wave:
+    - wave/index.md
+    - Hindcast:
+      - wave/hindcast/index.md
+      - Variables: wave/hindcast/variables.md
+      - References: wave/hindcast/references.md
   - Tidal:
     - tidal/index.md
     - High Resolution Hindcast:
@@ -87,17 +102,17 @@ nav:
       - Definitions: tidal/high_resolution_hindcast/definitions.md
       # - Changelog: tidal/high_resolution_hindcast/changelog.md
       - References: tidal/high_resolution_hindcast/references.md
-  # - Wave:
-    # - wave/index.md
-    # - Hindcast:
-    #   - wave/hindcast/index.md
-    #   - Model Description: wave/hindcast/model-description.md
-    #   - Variables: wave/hindcast/variables.md
-    #   - Validation: wave/hindcast/validation.md
-    #   - Data Access: wave/hindcast/data-access.md
-    #   - Usage Examples: wave/hindcast/usage-examples.md
-    #   - FAQ: wave/hindcast/faq.md
-    #   - References: wave/hindcast/references.md
+  - OTEC:
+    - otec/index.md
+  - Ocean Current:
+    - ocean-current/index.md
+  - River:
+    - river/index.md
+  - About:
+    - about/project.md
+    - about/team.md
+    - about/funding.md
+    - Contact: about/contact.md
 
 plugins:
   - search
@@ -113,6 +128,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -123,11 +140,13 @@ markdown_extensions:
       generic: true
   - toc:
       permalink: true
+      title: On this page
   - attr_list
   - md_in_html
   - def_list
 
 extra_javascript:
+  - javascripts/notice.js
   - javascripts/navpane.js
   - javascripts/toc-fix.js
   - javascripts/glightbox-init.js
@@ -137,6 +156,7 @@ extra_javascript:
   - javascripts/cite.js
 
 extra:
+  homepage: /
   social:
     - icon: material/water
       link: https://github.com/US-Marine-Energy-Resource/documentation
