@@ -106,6 +106,9 @@ nav:
     - ocean-current/index.md
   - River:
     - river/index.md
+  - Conferences:
+    - conferences/index.md
+    - UMERC 2026: conferences/umerc-2026.md
   - About:
     - about/project.md
     - about/team.md
