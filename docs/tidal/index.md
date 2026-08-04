@@ -86,10 +86,10 @@ The most significant variation in tidal energy over time is the spring-neap cycl
 
 | Phase  | Condition                               | Relative Current Speed | Relative Power Density |
 | ------ | --------------------------------------- | ---------------------- | ---------------------- |
-| Spring | Moon and Sun aligned (new or full moon) | ~1.4× mean             | ~2.7× mean             |
-| Neap   | Moon at first/third quarter             | ~0.7× mean             | ~0.3× mean             |
+| Spring | Moon and Sun aligned (new or full moon) | ~$1.4\times$ mean     | ~$2.7\times$ mean     |
+| Neap   | Moon at first/third quarter             | ~$0.7\times$ mean     | ~$0.3\times$ mean     |
 
-Power density is calculated as $P = \frac{1}{2}\rho U^3$, where $\rho \approx 1025\ \text{kg m}^{-3}$. At 1 m/s this gives ~512 W m⁻²; at 2 m/s ~4,100 W m⁻²; at 3 m/s ~13,800 W m⁻². The cubic relationship means small changes in current speed produce large changes in available power [@noc_tidal_modeling].
+Power density is calculated as $P = \frac{1}{2}\rho U^3$, where $\rho \approx 1025\ \text{kg m}^{-3}$. At 1 m/s this gives ~512 W/m²; at 2 m/s ~4,100 W/m²; at 3 m/s ~13,800 W/m². The cubic relationship means small changes in current speed produce large changes in available power [@noc_tidal_modeling].
 
 ### Tidal Harmonics and Constituents
 
@@ -113,7 +113,7 @@ where $Z_0$ is mean water level, $A_n$ is amplitude, $\omega_n$ is angular frequ
 In constricted, shallow channels such as Tacoma Narrows and the Piscataqua River, shallow-water overtides ($M_4$, $M_6$) can reach amplitudes of 10-50% of $M_2$, producing [tidal asymmetry](#joint-probability-distribution): a faster flood or ebb half-cycle. This affects net turbine energy output over a tidal cycle. See [Definitions](high_resolution_hindcast/definitions.md).
 
 !!! example "Harmonic analysis visualization - coming soon"
-A figure showing the observed vs. reconstructed current speed (RMSE, R²), FFT amplitude spectrum with constituent frequencies marked, and constituent amplitude bar chart will be added here. Pending a refactor of `plot_tidal_harmonic_analysis()` in the `us-marine-energy-resource` library to support individual panel output.
+A figure showing the observed vs. reconstructed current speed (RMSE, $R^2$), FFT amplitude spectrum with constituent frequencies marked, and constituent amplitude bar chart will be added here. Pending a refactor of `plot_tidal_harmonic_analysis()` in the `us-marine-energy-resource` library to support individual panel output.
 
 ## Example Site
 
@@ -184,7 +184,7 @@ The direction plot shows the flood-ebb reversal and any rotational signal in the
 
 <figure markdown="span">
   ![Cook Inlet - sigma layer direction, full year](../assets/tidal/cook_inlet_sigma_layers_direction_full.png){ width="100%" }
-  <figcaption>Current direction across all 10 sigma layers at Cook Inlet, AK, full hindcast year. Direction is in degrees clockwise from True North. Alternations between ~030° (flood, NE) and ~210° (ebb, SW) reflect the channel orientation. Color is nearly uniform with depth, indicating that directional turning with depth is small at this site.</figcaption>
+  <figcaption>Current direction across all 10 sigma layers at Cook Inlet, AK, full hindcast year. Direction is in degrees clockwise from True North. Alternations between ~$030^\circ$ (flood, NE) and ~$210^\circ$ (ebb, SW) reflect the channel orientation. Color is nearly uniform with depth, indicating that directional turning with depth is small at this site.</figcaption>
 </figure>
 
 A 3-day window shows individual tidal cycles and the vertical shear between the surface and bottom layers.
@@ -196,7 +196,7 @@ A 3-day window shows individual tidal cycles and the vertical shear between the 
 
 <figure markdown="span">
   ![Cook Inlet - sigma layer direction, 3-day zoom](../assets/tidal/cook_inlet_sigma_layers_direction_zoom.png){ width="100%" }
-  <figcaption>Three-day window of current direction across all 10 sigma layers. Reversals between flood (~030°) and ebb (~210°) are sharp. Direction is nearly uniform with depth, confirming the current is rectilinear with little rotational component.</figcaption>
+  <figcaption>Three-day window of current direction across all 10 sigma layers. Reversals between flood (~$030^\circ$) and ebb (~$210^\circ$) are sharp. Direction is nearly uniform with depth, confirming the current is rectilinear with little rotational component.</figcaption>
 </figure>
 
 For background on sigma coordinates see [Sigma Layers](high_resolution_hindcast/sigma-layers.md).
@@ -209,7 +209,7 @@ The plot below uses sigma layer 4 (mid-column) at Cook Inlet, AK. The reversing 
 
 <figure markdown="span">
   ![Cook Inlet - joint probability distribution, sigma layer 4](../assets/tidal/cook_inlet_jpd.png){ width="80%" }
-  <figcaption>Speed and direction at sigma layer 4 (~17.8 m depth), Cook Inlet, AK, full hindcast year. Each point is one hourly observation; color encodes joint probability [%]. The bidirectional pattern along ~030°/210° reflects a rectilinear, reversing current with little rotational component. The distribution is nearly symmetric about the flood-ebb axis, with peak speeds near 3 m/s and the highest probability density at 1-2 m/s.</figcaption>
+  <figcaption>Speed and direction at sigma layer 4 (~17.8 m depth), Cook Inlet, AK, full hindcast year. Each point is one hourly observation; color encodes joint probability [%]. The bidirectional pattern along ~$030^\circ$/$210^\circ$ reflects a rectilinear, reversing current with little rotational component. The distribution is nearly symmetric about the flood-ebb axis, with peak speeds near 3 m/s and the highest probability density at 1-2 m/s.</figcaption>
 </figure>
 
 Tidal asymmetry - where the flood and ebb half-cycles differ in speed or duration - can have a significant effect on energy estimates. The comparison below shows the bottom sigma layer JPD for Tacoma Narrows, Admiralty Inlet, and the Piscataqua River.
