@@ -17,17 +17,17 @@ The datasets documented here support assessment of the theoretical and technical
 
 Each marine resource type is characterized by a different physical quantity that describes how energy moves through the environment.
 
-**Kinetic resources (tidal, ocean current, river current)** are characterized by **power density**, the kinetic energy flux per unit cross-sectional area of the flow:
-
-$$P/A = \frac{1}{2} \rho v^3$$
-
-where $\rho$ is water density (~1,025 kg/m³ for seawater) and $v$ is current speed. Because power scales with the cube of velocity, small changes in current speed produce large changes in power density: a location with 2 m/s currents has 8 times the power density of a 1 m/s location. This nonlinearity makes accurate, high-resolution current speed data critical for resource assessment.
-
 **Wave energy** is characterized by **wave energy flux**, the rate of energy transport per unit width of wave front (W/m). In deep water, wave energy flux is approximated by:
 
 $$J \approx \frac{\rho g^2}{64\pi} H_s^2 T_e$$
 
 where $H_s$ is significant wave height and $T_e$ is energy period. Wave energy flux depends on both wave height and period, so regions with long-period swell can carry substantial energy even when wave heights are moderate.
+
+**Kinetic resources (tidal, ocean current, river current)** are characterized by **power density**, the kinetic energy flux per unit cross-sectional area of the flow:
+
+$$P/A = \frac{1}{2} \rho v^3$$
+
+where $\rho$ is water density (~1,025 kg/m³ for seawater) and $v$ is current speed. Because power scales with the cube of velocity, small changes in current speed produce large changes in power density: a location with 2 m/s currents has 8 times the power density of a 1 m/s location. This nonlinearity makes accurate, high-resolution current speed data critical for resource assessment.
 
 **Ocean thermal energy** is characterized by the temperature differential between the warm surface layer and cold deep water. A larger differential means a higher thermodynamic efficiency ceiling. The Carnot limit sets the maximum theoretical conversion efficiency: $\eta_\text{max} = 1 - T_\text{cold}/T_\text{warm}$ (temperatures in Kelvin). For a typical 20°C differential, $\eta_\text{max} \approx 7\%$, so practical OTEC systems capture a small fraction of the available thermal energy, but the absolute resource volume is large because the temperature differential is sustained over vast ocean areas.
 
