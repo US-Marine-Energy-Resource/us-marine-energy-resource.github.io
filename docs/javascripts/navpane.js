@@ -10,3 +10,12 @@ function load_navpane() {
 }
 
 document.addEventListener("DOMContentLoaded", load_navpane);
+
+document.addEventListener("DOMContentLoaded", function () {
+  var title = document.querySelector(".md-header__title");
+  if (title) {
+    title.addEventListener("click", function () {
+      window.location.href = "/";
+    });
+  }
+});
