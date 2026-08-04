@@ -169,7 +169,10 @@ Spatial footprint of each tidal hindcast location. Each polygon shows the exact 
     legendEl.appendChild(item);
   });
 
-  var assetBase = window.location.origin + "/assets/tidal/";
+  // Resolve against MkDocs' own base URL so this works at any deploy path
+  // (site root in production, /pr-preview/<name>/ in previews).
+  var assetBase = JSON.parse(document.getElementById("__config").textContent)
+    .base.replace(/\/$/, "") + "/assets/tidal/";
 
   regions.forEach(function (region, i) {
     var color = colors[i % colors.length];
