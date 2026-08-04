@@ -6,4 +6,6 @@
 
 <div id="cite-dataset-widget" class="cite-dataset-widget"
      data-title="Wave Hindcast"
+     data-key="general_yang2020_wave_hindcast"
+     data-filter-keyword="model_validation"
      data-locations-url="assets/locations.json"></div>
