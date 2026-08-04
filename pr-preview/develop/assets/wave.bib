@@ -1,0 +1,544 @@
+% Wave energy dataset, location-specific validation studies, and wave-specific standards.
+% General model references and cross-cutting standards are also in general.bib.
+%
+% Convention: keywords field contains comma-separated location tags matching
+% keys in docs/assets/locations.json
+
+% IEC Standards
+
+@techreport{iec_62600_101_ed1,
+  title        = "{Marine energy -- Wave, tidal and other water current converters --
+Part 101: Wave energy resource assessment and characterization}",
+  author       = {{International Electrotechnical Commission}},
+  institution  = "International Electrotechnical Commission",
+  number       = "IEC/TS 62600-101 Ed. 1.0",
+  address      = "Geneva, Switzerland",
+  year         = 2015,
+  edition      = {1.0},
+  url          = {https://webstore.iec.ch/publication/22593},
+}
+
+@techreport{iec_62600_101,
+  title        = "{Marine energy – Wave, tidal and other water current converters –
+Part 101: Wave energy resource assessment and characterization}",
+  author       = {{International Electrotechnical Commission}},
+  institution  = "International Electrotechnical Commission",
+  number       = "IEC/TS 62600-101 Ed. 2.0",
+  address      = "Geneva, Switzerland",
+  month        = dec,
+  year         = 2024,
+  edition      = {2.0},
+  url          = {https://webstore.iec.ch/en/publication/66062},
+}
+
+% SWAN Model References (cited in SNL SWAN Hindcast Metadata)
+% TODO: verify URLs/DOIs before publishing
+
+@techreport{swan_user_manual,
+  author      = {{The SWAN Team}},
+  title       = {{SWAN} Cycle {III} Version 41.45{A} User Manual},
+  institution = {Delft University of Technology},
+  address     = {Delft, the Netherlands},
+  year        = {2023},
+}
+
+@techreport{swan_sci_tech,
+  author      = {{The SWAN Team}},
+  title       = {{SWAN} Cycle {III} Version 41.45 Scientific and Technical Documentation},
+  institution = {Delft University of Technology},
+  address     = {Delft, the Netherlands},
+  year        = {2023},
+}
+
+@book{holthuijsen2007,
+  author    = {Holthuijsen, Leo H.},
+  title     = {Waves in Oceanic and Coastal Waters},
+  publisher = {Cambridge University Press},
+  address   = {Cambridge, UK},
+  year      = {2007},
+  doi       = {10.1017/cbo9780511618536},
+}
+
+% Dataset Citations
+
+% West Coast - PNNL
+@article{wu2020_west_coast,
+  author   = {Wu, Wei-Cheng and Wang, Taiping and Yang, Zhaoqing and García-Medina, Gabriel},
+  title    = {Development and validation of a high-resolution regional wave hindcast model for U.S. West Coast wave resource characterization},
+  journal  = {Renewable Energy},
+  volume   = {152},
+  pages    = {736--753},
+  year     = {2020},
+  doi      = {10.1016/j.renene.2020.01.077},
+  url      = {https://www.osti.gov/biblio/1599105},
+  keywords = {us_west_coast, model_validation}
+}
+
+@article{yang2020_west_coast,
+  author   = {Yang, Z. and Garcia-Medina, G. and Wu, W. and Wang, T.},
+  year     = {2020},
+  title    = {Characteristics and variability of the nearshore wave resource on the U.S. West Coast},
+  journal  = {Energy},
+  doi      = {10.1016/j.energy.2020.117818},
+  keywords = {us_west_coast}
+}
+
+@techreport{yang2018_west_coast_hindcast,
+  author      = {Yang, Zhaoqing and Garcia-Medina, Gabriel and Wu, Wei-Cheng and Wang, Taiping},
+  title       = {High-Resolution Regional Wave Hindcast for the US West Coast},
+  institution = {Pacific Northwest National Lab. (PNNL), Richland, WA (United States)},
+  number      = {PNNL-28107},
+  year        = {2018},
+  doi         = {10.2172/1573061},
+  keywords    = {us_west_coast, model_validation}
+}
+
+@article{ahn2021_east_coast,
+  author   = {Ahn, S. and Neary, V.S. and Allahdadi, N. and He, R.},
+  title    = {Nearshore wave energy resource characterization along the East Coast of the United States},
+  journal  = {Renewable Energy},
+  volume   = {172},
+  year     = {2021},
+  doi      = {10.1016/j.renene.2021.03.037},
+  keywords = {us_east_coast}
+}
+
+@article{yang2020_wave_hindcast,
+  author   = {Yang, Z. and Neary, V.S.},
+  title    = {High-resolution hindcasts for U.S. wave energy resource characterization},
+  journal  = {International Marine Energy Journal},
+  volume   = {3},
+  pages    = {65--71},
+  year     = {2020},
+  doi      = {10.36688/imej.3.65-71},
+  keywords = {us_west_coast, us_east_coast, model_validation}
+}
+
+@article{allahdadi2019_east_coast_whitecapping,
+  author   = {Allahdadi, M.N. and He, R. and Neary, V.S.},
+  title    = {Predicting ocean waves along the US East Coast during energetic winter storms: sensitivity to whitecapping parameterizations},
+  journal  = {Ocean Science},
+  volume   = {15},
+  pages    = {691--715},
+  year     = {2019},
+  doi      = {10.5194/os-15-691-2019},
+  keywords = {us_east_coast}
+}
+
+@article{li2021_hawaii,
+  author   = {Li, Ning and Garcia-Medina, Gabriel and Cheung, Kwok Fai and Yang, Zhaoqing},
+  title    = {Wave energy resources assessment for the multi-modal sea state of {Hawaii}},
+  journal  = {Renewable Energy},
+  volume   = {174},
+  pages    = {1026--1047},
+  year     = {2021},
+  doi      = {10.1016/j.renene.2021.03.116},
+  keywords = {us_hawaii, model_validation}
+}
+
+@techreport{garcia_medina2019_hawaii,
+  author      = {Garcia-Medina, Gabriel and Yang, Zhaoqing and Li, Ning and Cheung, Kwok Fai and Wang, Taiping and Wu, Wei-Cheng},
+  title       = {High-Resolution Regional Wave Hindcast for {Hawaii}},
+  institution = {Pacific Northwest National Lab. (PNNL), Richland, WA (United States)},
+  number      = {PNNL-29370},
+  year        = {2019},
+  doi         = {10.2172/1572913},
+  url         = {https://www.osti.gov/biblio/1572913},
+  keywords    = {us_hawaii, model_validation}
+}
+@article{allahdadi2019_east_coast_model,
+  author   = {Allahdadi, M.N. and Gunawan, B. and Lai, J. and He, R. and Neary, V.S.},
+  title    = {Development and validation of a regional-scale high-resolution unstructured model for wave energy resource characterization along the US East Coast},
+  journal  = {Renewable Energy},
+  volume   = {136},
+  pages    = {500--511},
+  year     = {2019},
+  doi      = {10.1016/j.renene.2019.01.020},
+  keywords = {us_east_coast, model_validation}
+}
+
+% --- us_alaska ---
+
+@techreport{yang2019_us_alaska,
+  author        = {Yang, Zhaoqing and Wu, Wei-Cheng and Wang, Taiping and Garcia Medina, Gabriel and Castrucci, Luca},
+  title         = {{High-Resolution Regional Wave Hindcast for the U.S. Alaska Coast}},
+  institution   = {Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)},
+  number        = {PNNL--29479},
+  year          = {2019},
+  doi           = {10.2172/1579259},
+  url           = {https://www.osti.gov/biblio/1579259},
+  keywords      = {us_alaska, model_validation}
+}
+
+@techreport{yang2020_us_alaska,
+  author        = {Yang, Zhaoqing and Branch, Ruth A. and Garcia Medina, Gabriel and Wang, Taiping},
+  title         = {{Sea-Ice Effects on the Alaskan Wave Climate}},
+  institution   = {Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)},
+  number        = {PNNL--30235},
+  year          = {2020},
+  doi           = {10.2172/1770721},
+  url           = {https://www.osti.gov/biblio/1770721},
+  keywords      = {us_alaska}
+}
+
+@article{garcia_medina2021_us_alaska,
+  author        = {Garcia Medina, Gabriel and Yang, Zhaoqing and Wu, Wei-Cheng and Wang, Taiping},
+  title         = {{Wave resource characterization at regional and nearshore scales for the U.S. Alaska coast based on a 32-year high-resolution hindcast}},
+  journal       = {Renewable Energy},
+  volume        = {170},
+  year          = {2021},
+  doi           = {10.1016/j.renene.2021.02.005},
+  url           = {https://www.osti.gov/biblio/1770160},
+  keywords      = {us_alaska, model_validation}
+}
+
+@article{branch2021_us_alaska,
+  author        = {Branch, Ruth and García-Medina, Gabriel and Yang, Zhaoqing and Wang, Taiping and Ticona Rollano, Fadia and Hosekova, Lucia},
+  title         = {{Modeling Sea Ice Effects for Wave Energy Resource Assessments}},
+  journal       = {Energies (Basel)},
+  volume        = {14},
+  number        = {12},
+  year          = {2021},
+  doi           = {10.3390/en14123482},
+  url           = {https://www.osti.gov/biblio/1787956},
+  keywords      = {us_alaska}
+}
+
+
+% --- us_east_coast ---
+
+@misc{yang2020_us_east_coast,
+  author        = {Yang, Zhaoqing and Neary, Vince and Kilcher, Levi},
+  title         = {{High Resolution Ocean Surface Wave Hindcast (US Wave) Data}},
+  year          = {2020},
+  doi           = {10.15473/1647329},
+  url           = {https://www.osti.gov/biblio/1647329},
+  keywords      = {us_east_coast, us_hawaii, us_gulf_of_mexico, model_validation}
+}
+
+@techreport{meuris2024_us_east_coast,
+  author        = {Meuris, Brek Joseph and Neary, Vincent Sinclair},
+  title         = {{Met-Ocean Characterization for the Atlantic Marine Energy Center’s (AMEC’s) Gulf of Maine Wave Test Sites}},
+  institution   = {Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)},
+  number        = {SAND--2024-16973},
+  year          = {2024},
+  doi           = {10.2172/2516885},
+  url           = {https://www.osti.gov/biblio/2516885},
+  keywords      = {us_east_coast}
+}
+
+@inproceedings{meuris2024_us_east_coast_b,
+  author        = {Meuris, Brek Joseph and Neary, Vincent Sinclair},
+  title         = {{Characterization of wave energy resource and wave load conditions at Atlantic Marine Energy Center wave energy converter test sites}},
+  year          = {2024},
+  doi           = {10.2172/2586300},
+  url           = {https://www.osti.gov/biblio/2586300},
+  keywords      = {us_east_coast}
+}
+
+@article{huang2026_us_east_coast,
+  author        = {Huang, Yicheng and Yang, Zhaoqing and Liu, Jinliang and Gaudet, Brian J. and Krishnamurthy, Raghavendra},
+  title         = {{Evaluating the effect of meso/submesoscale current–wave interactions on wave energy resource characterization at northeast U.S. coast}},
+  journal       = {Renewable Energy},
+  volume        = {267},
+  year          = {2026},
+  doi           = {10.1016/j.renene.2026.125751},
+  url           = {https://www.osti.gov/biblio/3232183},
+  keywords      = {us_east_coast}
+}
+
+
+% --- us_guam_and_cnmi ---
+
+@misc{yang2020_us_guam_and_cnmi,
+  author        = {Yang, Zhaoqing and Garcia Medina, Gabriel and Liu, Jinliang},
+  title         = {{Wave and Offshore Wind Resource in the U.S. Pacific Ocean Minor Outlying Islands}},
+  year          = {2020},
+  doi           = {10.15473/2203433},
+  url           = {https://www.osti.gov/biblio/2203433},
+  keywords      = {us_guam_and_cnmi, model_validation}
+}
+
+@article{li2023_us_guam_and_cnmi,
+  author        = {Li, Ning and García Medina, Gabriel and Yang, Zhaoqing and Cheung, Kwok Fai and Hitzl, David and Chen, Yi-Leng},
+  title         = {{Wave climate and energy resources in the Mariana Islands from a 42-year high-resolution hindcast}},
+  journal       = {Renewable Energy},
+  volume        = {215},
+  year          = {2023},
+  doi           = {10.1016/j.renene.2023.05.093},
+  url           = {https://www.osti.gov/biblio/1988413},
+  keywords      = {us_guam_and_cnmi, model_validation}
+}
+
+@article{garcia_medina2023_us_guam_and_cnmi,
+  author        = {García Medina, Gabriel and Yang, Zhaoqing and Li, Ning and Cheung, Kwok Fai and Lutu-McMoore, Elinor},
+  title         = {{Wave climate and energy resources in American Samoa from a 42-year high-resolution hindcast}},
+  journal       = {Renewable Energy},
+  volume        = {210},
+  year          = {2023},
+  doi           = {10.1016/j.renene.2023.03.031},
+  url           = {https://www.osti.gov/biblio/1983642},
+  keywords      = {us_guam_and_cnmi, model_validation}
+}
+
+
+% --- us_gulf_of_mexico ---
+
+@article{allahdadi2021_us_gulf_of_mexico,
+  author        = {Allahdadi, Mohammad Nabi and He, Ruoying and Ahn, Seongho and Chartrand, Chris and Neary, Vincent S.},
+  title         = {{Development and calibration of a high-resolution model for the Gulf of Mexico, Puerto Rico, and the U.S. Virgin Islands: Implication for wave energy resource characterization}},
+  journal       = {Ocean Engineering},
+  volume        = {235},
+  number        = {C},
+  year          = {2021},
+  doi           = {10.1016/j.oceaneng.2021.109304},
+  url           = {https://www.osti.gov/biblio/1798409},
+  keywords      = {us_gulf_of_mexico, model_validation}
+}
+
+@techreport{ahn2021_us_gulf_of_mexico,
+  author        = {Ahn, Seongho and Neary, Vincent and Chartrand, Chris and Pluemer, Sean},
+  title         = {{Assessing and mapping extreme wave height along the Gulf of Mexico coast}},
+  institution   = {Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)},
+  number        = {SAND--2021-11825},
+  year          = {2021},
+  doi           = {10.2172/2004881},
+  url           = {https://www.osti.gov/biblio/2004881},
+  keywords      = {us_gulf_of_mexico}
+}
+
+@inproceedings{ahn2022_us_gulf_of_mexico,
+  author        = {Ahn, Seongho and Neary, Vincent and Allahdadi, M. N. and He, Ruoying},
+  title         = {{High-resolution wave model hindcast of the Gulf of Mexico for investigating wave energy climate and non-stationary trends.}},
+  year          = {2022},
+  doi           = {10.2172/2001722},
+  url           = {https://www.osti.gov/biblio/2001722},
+  keywords      = {us_gulf_of_mexico}
+}
+
+@article{ahn2022_us_gulf_of_mexico_b,
+  author        = {Ahn, Seongho and Neary, Vincent Sinclair and Allahdadi, Mohammad Nabi and He, Ruoying},
+  title         = {{A framework for feasibility-level validation of high-resolution wave hindcast models}},
+  journal       = {Ocean Engineering},
+  volume        = {263},
+  number        = {1},
+  year          = {2022},
+  doi           = {10.1016/j.oceaneng.2022.112193},
+  url           = {https://www.osti.gov/biblio/2311615},
+  keywords      = {us_gulf_of_mexico, model_validation}
+}
+
+
+% --- us_hawaii ---
+
+@article{zhao2025_us_hawaii,
+  author        = {Zhao, Sen and Li, Ning and Jin, Fei‐Fei and Cheung, Kwok Fai and Yang, Zhaoqing},
+  title         = {{Contrast and Predictability of Island‐Scale El Niño Influences on Hawaii Wave Climate}},
+  journal       = {Geophysical Research Letters},
+  volume        = {52},
+  number        = {8},
+  year          = {2025},
+  doi           = {10.1029/2024gl113127},
+  url           = {https://www.osti.gov/biblio/2562941},
+  keywords      = {us_hawaii}
+}
+
+
+% --- us_west_coast ---
+
+@techreport{kilcher2016_us_west_coast,
+  author        = {Kilcher, Levi and Thresher, Robert},
+  title         = {{Marine Hydrokinetic Energy Site Identification and Ranking Methodology Part I: Wave Energy}},
+  institution   = {National Renewable Energy Lab. (NREL), Golden, CO (United States)},
+  number        = {NREL/TP--5000-66038},
+  year          = {2016},
+  doi           = {10.2172/1330617},
+  url           = {https://www.osti.gov/biblio/1330617},
+  keywords      = {us_west_coast, us_east_coast, us_alaska, us_hawaii, us_gulf_of_mexico, us_guam_and_cnmi}
+}
+
+@article{yang2019_us_west_coast,
+  author        = {Yang, Zhaoqing and García-Medina, Gabriel and Wu, Wei-Cheng and Wang, Taiping and Leung, L. Ruby and Castrucci, Luca and Mauger, Guillaume},
+  title         = {{Modeling analysis of the swell and wind-sea climate in the Salish Sea}},
+  journal       = {Estuarine Coastal and Shelf Science},
+  volume        = {224},
+  number        = {C},
+  year          = {2019},
+  doi           = {10.1016/j.ecss.2019.04.043},
+  url           = {https://www.osti.gov/biblio/1636377},
+  keywords      = {us_west_coast}
+}
+
+@article{ahn2020_us_west_coast,
+  author        = {Ahn, Seongho and Haas, Kevin and Neary, Vincent},
+  title         = {{Dominant Wave Energy Systems and Conditional Wave Resource Characterization for Coastal Waters of the United States}},
+  journal       = {Energies},
+  volume        = {13},
+  number        = {12},
+  year          = {2020},
+  doi           = {10.3390/en13123041},
+  url           = {https://www.osti.gov/biblio/2202334},
+  keywords      = {us_west_coast, us_east_coast, us_alaska, us_hawaii, us_gulf_of_mexico}
+}
+
+@article{ahn2021_us_west_coast,
+  author        = {Ahn, Seongho and Neary, Vincent S.},
+  title         = {{Wave energy resource characterization employing joint distributions in frequency-direction-time domain}},
+  journal       = {Applied Energy},
+  volume        = {285},
+  year          = {2021},
+  doi           = {10.1016/j.apenergy.2020.116407},
+  url           = {https://www.osti.gov/biblio/1769931},
+  keywords      = {us_west_coast, us_alaska}
+}
+
+@inproceedings{coe2022_us_west_coast,
+  author        = {Coe, Ryan and Lavidas, George and Bacelli, Giorgio and Kobos, Peter and Neary, Vincent},
+  title         = {{Minimizing cost in a 100% renewable electricity grid: A case study of wave energy in California.}},
+  year          = {2022},
+  doi           = {10.1115/omae2022-80731},
+  url           = {https://www.osti.gov/biblio/2003007},
+  keywords      = {us_west_coast}
+}
+
+@article{robertson2022_us_west_coast,
+  author        = {Robertson, Bryson and Dunkle, Gabrielle and Mundon, Tim and Kilcher, Levi},
+  title         = {{Wave resource spatial and temporal variability dependence on WEC size}},
+  journal       = {International Marine Energy Journal},
+  volume        = {5},
+  number        = {1},
+  year          = {2022},
+  doi           = {10.36688/imej.5.113-121},
+  url           = {https://www.osti.gov/biblio/1877083},
+  keywords      = {us_west_coast, us_hawaii}
+}
+
+@article{kilcher2023_us_west_coast,
+  author        = {Kilcher, Levi and García Medina, Gabriel and Yang, Zhaoqing},
+  title         = {{A scalable wave resource assessment methodology: Application to U.S. waters}},
+  journal       = {Renewable Energy},
+  volume        = {217},
+  year          = {2023},
+  doi           = {10.1016/j.renene.2023.119094},
+  url           = {https://www.osti.gov/biblio/1998636},
+  keywords      = {us_west_coast, us_east_coast, us_alaska, us_hawaii, us_gulf_of_mexico}
+}
+
+
+% --- unassigned ---
+
+% REVIEW: no region detected — assign keywords manually
+@misc{haas2016_unassigned,
+  author        = {Haas, Kevin},
+  title         = {{Wave Classification Statistical Data for US Waters}},
+  year          = {2016},
+  doi           = {10.15473/1460407},
+  url           = {https://www.osti.gov/biblio/1460407}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@misc{neary2017_unassigned,
+  author        = {Neary, Vincent and Haas, Kevin and Ahn, Seongho and Bredin, Sara and Coe, Ryan and Bacelli, Giorgio and Nevarez, Victor and Cruz, Joao and Debruyne, Yannick},
+  title         = {{Development of Classification Systems for Wave Energy Resources and WEC Technologies}},
+  year          = {2017},
+  doi           = {10.15473/1498794},
+  url           = {https://www.osti.gov/biblio/1498794}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@article{neary2020_unassigned,
+  author        = {Neary, Vincent S. and Ahn, Seongho and Seng, Bibiana E. and Allahdadi, Mohammad Nabi and Wang, Taiping and Yang, Zhaoqing and He, Ruoying},
+  title         = {{Characterization of Extreme Wave Conditions for Wave Energy Converter Design and Project Risk Assessment}},
+  journal       = {Journal of Marine Science and Engineering},
+  volume        = {8},
+  number        = {4},
+  year          = {2020},
+  doi           = {10.3390/jmse8040289},
+  url           = {https://www.osti.gov/biblio/2377870}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@article{ahn2020_unassigned,
+  author        = {Ahn, Seongho and Haas, Kevin A. and Neary, Vincent S.},
+  title         = {{Wave energy resource characterization and assessment for coastal waters of the United States}},
+  journal       = {Applied Energy},
+  volume        = {267},
+  number        = {C},
+  year          = {2020},
+  doi           = {10.1016/j.apenergy.2020.114922},
+  url           = {https://www.osti.gov/biblio/1631179}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@article{coe2021_unassigned,
+  author        = {Coe, Ryan G. and Ahn, Seongho and Neary, Vincent S. and Kobos, Peter H. and Bacelli, Giorgio},
+  title         = {{Maybe less is more: Considering capacity factor, saturation, variability, and filtering effects of wave energy devices}},
+  journal       = {Applied Energy},
+  volume        = {291},
+  number        = {C},
+  year          = {2021},
+  doi           = {10.1016/j.apenergy.2021.116763},
+  url           = {https://www.osti.gov/biblio/1772139}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@inproceedings{neary2021_unassigned,
+  author        = {Neary, Vincent Sinclair and Haas, Kevin and Colby, Jonathan},
+  title         = {{Type-Classification for Tidal and Wave Energy Converters.}},
+  year          = {2021},
+  doi           = {10.2172/1861975},
+  url           = {https://www.osti.gov/biblio/1861975}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@article{ahn2022_unassigned,
+  author        = {Ahn, Seongho and Neary, Vincent S. and Haas, Kevin A.},
+  title         = {{Global wave energy resource classification system for regional energy planning and project development}},
+  journal       = {Renewable and Sustainable Energy Reviews},
+  volume        = {162},
+  year          = {2022},
+  doi           = {10.1016/j.rser.2022.112438},
+  url           = {https://www.osti.gov/biblio/1877175}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@article{yang2023_unassigned,
+  author        = {Yang, Zhaoqing and Garcia Medina, Gabriel and Neary, Vincent S. and Ahn, Seongho and Kilcher, Levi and Bharath, Aidan},
+  title         = {{Multi-Decade High-Resolution Regional Hindcasts for Wave Energy Resource Characterization in U.S. Coastal Waters}},
+  journal       = {Renewable Energy},
+  volume        = {212},
+  year          = {2023},
+  doi           = {10.1016/j.renene.2023.03.100},
+  url           = {https://www.osti.gov/biblio/1986069}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@article{ahn2023_unassigned,
+  author        = {Ahn, Seongho and Neary, Vincent Sinclair and Ha, Taemin},
+  title         = {{A practical method for modeling temporally-averaged ocean wave frequency-directional spectra for characterizing wave energy climates}},
+  journal       = {Renewable Energy},
+  volume        = {207},
+  number        = {1},
+  year          = {2023},
+  doi           = {10.1016/j.renene.2023.03.034},
+  url           = {https://www.osti.gov/biblio/2311617}
+}
+
+% REVIEW: no region detected — assign keywords manually
+@inproceedings{coe2024_unassigned,
+  author        = {Coe, Ryan Geoffrey and Devin, Michael Carl and Michelen Strofer, Carlos Alejandro and Bacelli, Giorgio and Lee, Jantzen Timothy and Keow, Alicia Li Jen and Gaebele, Daniel Tim and Grasberger, Jeffrey Thomas and Spencer, Steven James and Spinneken, Johannes and Neary, Vincent Sinclair and Meuris, Brek Joseph},
+  title         = {{Co-design of a wave energy converter for autonomous power}},
+  year          = {2024},
+  doi           = {10.1016/j.ifacol.2024.10.094},
+  url           = {https://www.osti.gov/biblio/3000685}
+}
+
+@misc{yang2020_us_wave_hindcast,
+  title        = {High Resolution Ocean Surface Wave Hindcast (US Wave) Data},
+  author       = {Yang, Zhaoqing and Neary, Vince and Kilcher, Levi and Lawson, Mike},
+  year         = {2020},
+  howpublished = {Marine and Hydrokinetic Data Repository, National Renewable Energy Laboratory, https://doi.org/10.15473/1647329},
+  url          = {https://mhkdr.openei.org/submissions/326},
+  note         = {Accessed: 2026-05-19},
+  doi          = {10.15473/1647329},
+}
