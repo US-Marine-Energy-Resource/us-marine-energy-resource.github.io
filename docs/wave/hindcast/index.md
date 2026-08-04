@@ -14,8 +14,7 @@ This is the highest resolution publicly available long-term wave hindcast datase
     - **Spatial Resolution**: 200 meters (shallow water) to ~10 km (deep water)
     - **Coverage**: U.S. Exclusive Economic Zone
 
-!!! info "Data Access"
-    See [Getting Started](../../getting-started/index.md) for HSDS/S3 setup and [Data Access](data-access.md) for dataset-specific code examples.
+See [Variables](variables.md) for the parameters available in this dataset.
 
 ## Regional Coverage
 
@@ -32,10 +31,31 @@ This is the highest resolution publicly available long-term wave hindcast datase
     Gulf of Mexico and Puerto Rico files use a shortened prefix: `GOM_PR_{year}.h5`.
     All other domains follow the pattern `{DomainName}_wave_{year}.h5`.
 
+## IEC/TS 62600-101 Resource Parameters
+
+[@iec_62600_101]
+
+The six IEC/TS 62600-101 wave energy resource parameters are included in this dataset:
+
+| IEC/TS 62600-101 Parameter | Included | Notes |
+| --- | --- | --- |
+| Significant wave height ($H_{m0}$) | Yes | All domains |
+| Energy period ($T_e$) | Yes | All domains |
+| Peak period ($T_p$) | Yes | All domains |
+| Mean zero-crossing period ($T_z$) | Yes | All domains |
+| Omni-directional wave power ($J$) | Yes | All domains |
+| Directionality coefficient ($d$) | Yes | All domains |
+
+See [Variables](variables.md) for full descriptions.
+
 ## Citation
 
-Please cite the most relevant publication when referencing this dataset. See [References](references.md) for the full list.
+[!@general_yang2020_wave_hindcast]
+
+Please also cite the most relevant regional publication. See [References](references.md) for the full list.
 
 ## Acknowledgement
 
 This study was funded by the U.S. Department of Energy's [Hydropower and Hydrokinetic Office (H2O)](https://www.energy.gov/cmei/water/hydropower-and-hydrokinetic-office) under Contract DE-AC05-76RL01830 to Pacific Northwest National Laboratory (PNNL).
+
+--8<-- "docs/wave/_cite-widget.md"
