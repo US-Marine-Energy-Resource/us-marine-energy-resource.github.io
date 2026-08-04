@@ -88,7 +88,10 @@ The visualizations below use data from a single grid point in Upper Cook Inlet, 
   }).addTo(map);
 
   var color = "#4C72B0";
-  var assetBase = window.location.origin + "/assets/tidal/";
+  // Resolve against MkDocs' own base URL so this works at any deploy path
+  // (site root in production, /pr-preview/<name>/ in previews).
+  var assetBase = JSON.parse(document.getElementById("__config").textContent)
+    .base.replace(/\/$/, "") + "/assets/tidal/";
 
   fetch(assetBase + "AK_cook_inlet_boundary.geojson")
     .then(function (r) { return r.json(); })
