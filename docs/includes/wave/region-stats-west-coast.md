@@ -2,30 +2,37 @@
 - **Total archive:** ~3.3 TB
 - **Version:** `v1.0.1`
 
-!!! note "2 model products under one version"
-    The `v1.0.1` archive changes variable set at 2011. Read across the break with care.
-
 **2011–2020** (10 files)
 
 - Grid points: 699,904 &nbsp;·&nbsp; ~71.7 GB per year
 
-**1979–2010** (32 files)
+??? note "Variable definitions (9) · 2011–2020"
 
-- Grid points: 699,904 &nbsp;·&nbsp; ~81.9 GB per year
+    | Variable | Description | IEC Name | SWAN name | Units |
+    |:---|:---|:---|:---|:---|
+    | `directionality_coefficient` | Directionality coefficient | $d$ |  |  |
+    | `energy_period` | Energy period | $T_{e}$, $T_{-10}$ | TMM10 | s |
+    | `maximum_energy_direction` | Peak wave direction (nautical convention) |  | PDIR | degr |
+    | `mean_absolute_period` | Mean absolute wave period - equivalent to T_m01 |  | PER | s |
+    | `mean_wave_direction` | Mean wave direction (nautical convention) |  | DIR | degr |
+    | `omni-directional_wave_power` | Omnidirectional wave power | $J$ |  | W/m |
+    | `peak_period` | Relative peak period of the variance density spectrum | $T_{p}$ | RTP | s |
+    | `significant_wave_height` | Significant wave height | $H_{m0}$ | HSIGN | m |
+    | `spectral_width` | Spectral width | $\epsilon_{0}$ |  |  |
 
-??? note "Spatiotemporal variables (9) · 2011–2020"
+??? note "Variable schema (9) · 2011–2020"
 
-    | Variable | Description | IEC name | SWAN name | Units | Dimensions | Type |
-    |:---|:---|:---|:---|:---|:---|:---|
-    | `directionality_coefficient` | Directionality coefficient | d |  |  | 2,928 × 699,904 | `float32` |
-    | `energy_period` | Energy period | T_e,T_-10 | TMM10 | s | 2,928 × 699,904 | `float32` |
-    | `maximum_energy_direction` | Peak wave direction (nautical convention) |  | PDIR | degr | 2,928 × 699,904 | `float32` |
-    | `mean_absolute_period` | Mean absolute wave period - equivalent to T_m01 |  | PER | s | 2,928 × 699,904 | `float32` |
-    | `mean_wave_direction` | Mean wave direction (nautical convention) |  | DIR | degr | 2,928 × 699,904 | `float32` |
-    | `omni-directional_wave_power` | Omnidirectional wave power | J |  | W/m | 2,928 × 699,904 | `float32` |
-    | `peak_period` | Relative peak period of the variance density spectrum | T_p | RTP | s | 2,928 × 699,904 | `float32` |
-    | `significant_wave_height` | Significant wave height | H_m0 | HSIGN | m | 2,928 × 699,904 | `float32` |
-    | `spectral_width` | Spectral width | epsilon_0 |  |  | 2,928 × 699,904 | `float32` |
+    | Variable | Units | Dimensions | Type |
+    |:---|:---|:---|:---|
+    | `directionality_coefficient` |  | 2,928 × 699,904 | `float32` |
+    | `energy_period` | s | 2,928 × 699,904 | `float32` |
+    | `maximum_energy_direction` | degr | 2,928 × 699,904 | `float32` |
+    | `mean_absolute_period` | s | 2,928 × 699,904 | `float32` |
+    | `mean_wave_direction` | degr | 2,928 × 699,904 | `float32` |
+    | `omni-directional_wave_power` | W/m | 2,928 × 699,904 | `float32` |
+    | `peak_period` | s | 2,928 × 699,904 | `float32` |
+    | `significant_wave_height` | m | 2,928 × 699,904 | `float32` |
+    | `spectral_width` |  | 2,928 × 699,904 | `float32` |
 
 ??? note "Metadata (6 fields) · 2011–2020"
 
@@ -38,20 +45,39 @@
     | `timezone` | `int16` |
     | `jurisdiction` | `str[20]` |
 
-??? note "Spatiotemporal variables (10) · 1979–2010"
+**1979–2010** (32 files)
 
-    | Variable | Description | IEC name | SWAN name | Units | Dimensions | Type |
-    |:---|:---|:---|:---|:---|:---|:---|
-    | `directionality_coefficient` | Directionality coefficient | d |  |  | 2,920 × 699,904 | `float32` |
-    | `energy_period` | Energy period | T_e,T_-10 | TMM10 | s | 2,920 × 699,904 | `float32` |
-    | `maximum_energy_direction` | Direction of maximum directionally resolved wave power (nautical convention) | theta_J |  | degr | 2,920 × 699,904 | `float32` |
-    | `mean_absolute_period` | Mean absolute wave period - equivalent to T_m01 |  | PER | s | 2,920 × 699,904 | `float32` |
-    | `mean_wave_direction` | Mean wave direction (nautical convention) |  | DIR | degr | 2,920 × 699,904 | `float32` |
-    | `mean_zero-crossing_period` | Mean absolute zero-crossing period | T_z,T_02 | TM02 | s | 2,920 × 699,904 | `float32` |
-    | `omni-directional_wave_power` | Omnidirectional wave power | J |  | W/m | 2,920 × 699,904 | `float32` |
-    | `peak_period` | Relative peak period of the variance density spectrum | T_p | RTP | s | 2,920 × 699,904 | `float32` |
-    | `significant_wave_height` | Significant wave height | H_m0 | HSIGN | m | 2,920 × 699,904 | `float32` |
-    | `spectral_width` | Spectral width | epsilon_0 |  |  | 2,920 × 699,904 | `float32` |
+- Grid points: 699,904 &nbsp;·&nbsp; ~81.9 GB per year
+
+??? note "Variable definitions (10) · 1979–2010"
+
+    | Variable | Description | IEC Name | SWAN name | Units |
+    |:---|:---|:---|:---|:---|
+    | `directionality_coefficient` | Directionality coefficient | $d$ |  |  |
+    | `energy_period` | Energy period | $T_{e}$, $T_{-10}$ | TMM10 | s |
+    | `maximum_energy_direction` | Direction of maximum directionally resolved wave power (nautical convention) | $\theta_{J}$ |  | degr |
+    | `mean_absolute_period` | Mean absolute wave period - equivalent to T_m01 |  | PER | s |
+    | `mean_wave_direction` | Mean wave direction (nautical convention) |  | DIR | degr |
+    | `mean_zero-crossing_period` | Mean absolute zero-crossing period | $T_{z}$, $T_{02}$ | TM02 | s |
+    | `omni-directional_wave_power` | Omnidirectional wave power | $J$ |  | W/m |
+    | `peak_period` | Relative peak period of the variance density spectrum | $T_{p}$ | RTP | s |
+    | `significant_wave_height` | Significant wave height | $H_{m0}$ | HSIGN | m |
+    | `spectral_width` | Spectral width | $\epsilon_{0}$ |  |  |
+
+??? note "Variable schema (10) · 1979–2010"
+
+    | Variable | Units | Dimensions | Type |
+    |:---|:---|:---|:---|
+    | `directionality_coefficient` |  | 2,920 × 699,904 | `float32` |
+    | `energy_period` | s | 2,920 × 699,904 | `float32` |
+    | `maximum_energy_direction` | degr | 2,920 × 699,904 | `float32` |
+    | `mean_absolute_period` | s | 2,920 × 699,904 | `float32` |
+    | `mean_wave_direction` | degr | 2,920 × 699,904 | `float32` |
+    | `mean_zero-crossing_period` | s | 2,920 × 699,904 | `float32` |
+    | `omni-directional_wave_power` | W/m | 2,920 × 699,904 | `float32` |
+    | `peak_period` | s | 2,920 × 699,904 | `float32` |
+    | `significant_wave_height` | m | 2,920 × 699,904 | `float32` |
+    | `spectral_width` |  | 2,920 × 699,904 | `float32` |
 
 ??? note "Metadata (6 fields) · 1979–2010"
 

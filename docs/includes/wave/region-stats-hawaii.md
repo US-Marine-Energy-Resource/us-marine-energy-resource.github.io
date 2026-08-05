@@ -2,31 +2,39 @@
 - **Total archive:** ~4.4 TB
 - **Version:** `v1.0.0`
 
-!!! note "2 model products under one version"
-    The `v1.0.0` archive changes grid resolution, variable set and metadata fields at 2011. Read across the break with care.
-
 **2011–2020** (10 files)
 
 - Grid points: 1,696,188 &nbsp;·&nbsp; ~189.7 GB per year
 
-**1979–2010** (32 files)
+??? note "Variable definitions (10) · 2011–2020"
 
-- Grid points: 700,414 &nbsp;·&nbsp; ~81.9 GB per year
+    | Variable | Description | IEC Name | SWAN name | Units |
+    |:---|:---|:---|:---|:---|
+    | `depth` | Water depth |  | Depth | m |
+    | `directionality_coefficient` | Directionality coefficient | $d$ |  |  |
+    | `energy_period` | Energy period | $T_{e}$, $T_{-10}$ | TMM10 | s |
+    | `maximum_energy_direction` | Peak wave direction (nautical convention) |  | PDIR | degr |
+    | `mean_absolute_period` | Mean absolute wave period - equivalent to T_m01 |  | PER | s |
+    | `mean_wave_direction` | Mean wave direction (nautical convention) |  | DIR | degr |
+    | `omni-directional_wave_power` | Omnidirectional wave power | $J$ |  | W/m |
+    | `peak_period` | Relative peak period of the variance density spectrum | $T_{p}$ | RTP | s |
+    | `significant_wave_height` | Significant wave height | $H_{m0}$ | HSIGN | m |
+    | `spectral_width` | Spectral width | $\epsilon_{0}$ |  |  |
 
-??? note "Spatiotemporal variables (10) · 2011–2020"
+??? note "Variable schema (10) · 2011–2020"
 
-    | Variable | Description | IEC name | SWAN name | Units | Dimensions | Type |
-    |:---|:---|:---|:---|:---|:---|:---|
-    | `depth` | Water depth |  | Depth | m | 2,928 × 1,696,188 | `float32` |
-    | `directionality_coefficient` | Directionality coefficient | d |  |  | 2,928 × 1,696,188 | `float32` |
-    | `energy_period` | Energy period | T_e,T_-10 | TMM10 | s | 2,928 × 1,696,188 | `float32` |
-    | `maximum_energy_direction` | Peak wave direction (nautical convention) |  | PDIR | degr | 2,928 × 1,696,188 | `float32` |
-    | `mean_absolute_period` | Mean absolute wave period - equivalent to T_m01 |  | PER | s | 2,928 × 1,696,188 | `float32` |
-    | `mean_wave_direction` | Mean wave direction (nautical convention) |  | DIR | degr | 2,928 × 1,696,188 | `float32` |
-    | `omni-directional_wave_power` | Omnidirectional wave power | J |  | W/m | 2,928 × 1,696,188 | `float32` |
-    | `peak_period` | Relative peak period of the variance density spectrum | T_p | RTP | s | 2,928 × 1,696,188 | `float32` |
-    | `significant_wave_height` | Significant wave height | H_m0 | HSIGN | m | 2,928 × 1,696,188 | `float32` |
-    | `spectral_width` | Spectral width | epsilon_0 |  |  | 2,928 × 1,696,188 | `float32` |
+    | Variable | Units | Dimensions | Type |
+    |:---|:---|:---|:---|
+    | `depth` | m | 2,928 × 1,696,188 | `float32` |
+    | `directionality_coefficient` |  | 2,928 × 1,696,188 | `float32` |
+    | `energy_period` | s | 2,928 × 1,696,188 | `float32` |
+    | `maximum_energy_direction` | degr | 2,928 × 1,696,188 | `float32` |
+    | `mean_absolute_period` | s | 2,928 × 1,696,188 | `float32` |
+    | `mean_wave_direction` | degr | 2,928 × 1,696,188 | `float32` |
+    | `omni-directional_wave_power` | W/m | 2,928 × 1,696,188 | `float32` |
+    | `peak_period` | s | 2,928 × 1,696,188 | `float32` |
+    | `significant_wave_height` | m | 2,928 × 1,696,188 | `float32` |
+    | `spectral_width` |  | 2,928 × 1,696,188 | `float32` |
 
 ??? note "Metadata (7 fields) · 2011–2020"
 
@@ -40,20 +48,39 @@
     | `eez` | `str[13]` |
     | `jurisdiction` | `str[14]` |
 
-??? note "Spatiotemporal variables (10) · 1979–2010"
+**1979–2010** (32 files)
 
-    | Variable | Description | IEC name | SWAN name | Units | Dimensions | Type |
-    |:---|:---|:---|:---|:---|:---|:---|
-    | `directionality_coefficient` | Fraction of total wave energy travelling in the "direction of maximum wave power" direction | d |  |  | 2,920 × 700,414 | `float32` |
-    | `energy_period` | Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak | T_e | TM02 | s | 2,920 × 700,414 | `float32` |
-    | `maximum_energy` | Maximum directionally resolved wave energy | J_sigma_jdmax | jdmax | W/m | 2,920 × 700,414 | `float32` |
-    | `maximum_energy_direction` | The direction from which the most wave energy is travelling | Jsigma_Jmax |  | deg | 2,920 × 700,414 | `float32` |
-    | `mean_absolute_period` | Resolved Spectral Moment (m_0/m_1) | T_p | PER | s | 2,920 × 700,414 | `float32` |
-    | `mean_wave_direction` | Direction Normal to the Wave Crests | Sigma | DIR | deg | 2,920 × 700,414 | `float32` |
-    | `omni-directional_wave_power` | Total wave energy flux from all directions | J |  | W/m | 2,920 × 700,414 | `float32` |
-    | `peak_period` | The period associated with the maximum value of the wave energy spectrum | T_p | RTP | s | 2,920 × 700,414 | `float32` |
-    | `significant_wave_height` | Calculated as the zeroth spectral moment (i.e., H_m0) | H_s | HSIGN | m | 2,920 × 700,414 | `float32` |
-    | `spectral_width` | Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak | epsilon_o |  |  | 2,920 × 700,414 | `float32` |
+- Grid points: 700,414 &nbsp;·&nbsp; ~81.9 GB per year
+
+??? note "Variable definitions (10) · 1979–2010"
+
+    | Variable | Description | IEC Name | SWAN name | Units |
+    |:---|:---|:---|:---|:---|
+    | `directionality_coefficient` | Fraction of total wave energy travelling in the "direction of maximum wave power" direction | $d$ |  |  |
+    | `energy_period` | Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak | $T_{e}$ | TM02 | s |
+    | `maximum_energy` | Maximum directionally resolved wave energy | $J_{\sigma,jdmax}$ | jdmax | W/m |
+    | `maximum_energy_direction` | The direction from which the most wave energy is travelling | $Jsigma_{Jmax}$ |  | deg |
+    | `mean_absolute_period` | Resolved Spectral Moment (m_0/m_1) | $T_{p}$ | PER | s |
+    | `mean_wave_direction` | Direction Normal to the Wave Crests | $\Sigma$ | DIR | deg |
+    | `omni-directional_wave_power` | Total wave energy flux from all directions | $J$ |  | W/m |
+    | `peak_period` | The period associated with the maximum value of the wave energy spectrum | $T_{p}$ | RTP | s |
+    | `significant_wave_height` | Calculated as the zeroth spectral moment (i.e., H_m0) | $H_{s}$ | HSIGN | m |
+    | `spectral_width` | Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak | $\epsilon_{0}$ |  |  |
+
+??? note "Variable schema (10) · 1979–2010"
+
+    | Variable | Units | Dimensions | Type |
+    |:---|:---|:---|:---|
+    | `directionality_coefficient` |  | 2,920 × 700,414 | `float32` |
+    | `energy_period` | s | 2,920 × 700,414 | `float32` |
+    | `maximum_energy` | W/m | 2,920 × 700,414 | `float32` |
+    | `maximum_energy_direction` | deg | 2,920 × 700,414 | `float32` |
+    | `mean_absolute_period` | s | 2,920 × 700,414 | `float32` |
+    | `mean_wave_direction` | deg | 2,920 × 700,414 | `float32` |
+    | `omni-directional_wave_power` | W/m | 2,920 × 700,414 | `float32` |
+    | `peak_period` | s | 2,920 × 700,414 | `float32` |
+    | `significant_wave_height` | m | 2,920 × 700,414 | `float32` |
+    | `spectral_width` |  | 2,920 × 700,414 | `float32` |
 
 ??? note "Metadata (6 fields) · 1979–2010"
 
