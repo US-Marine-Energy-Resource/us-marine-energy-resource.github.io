@@ -1,12 +1,12 @@
 # FAQ
 
-## Can I use this data for turbine design?
+## Can I Use This Data for Turbine Design?
 
 Where the grid resolution is less than 500 meters these datasets are suitable for **Stage 1 (reconnaissance-level)** site assessment per IEC 62600-201. It provides free-stream resource characterization, current speed, power density, and site conditions, useful for initial site screening and comparing locations.
 
-For detailed turbine design or array layout, **Stage 2 and Stage 3 assessments** require higher-resolution modeling with device-specific wake and blockage effects, which are included at specific locations in this dataset (Tacoma Narrows, Western Pasage). The marine energy atlas provides a Grid Resolution layer that follows this specification for determination of grid resolution. See [Limitations](limitations.md) and [Unstructured Grid](unstructured-grid.md#free-stream-velocity).
+For detailed turbine design or array layout, **Stage 2 and Stage 3 assessments** require higher-resolution modeling with device-specific wake and blockage effects, which are included at specific locations in this dataset (Tacoma Narrows, Western Passage). The marine energy atlas provides a Grid Resolution layer that follows this specification for determination of grid resolution. See [Limitations](limitations.md) and [Unstructured Grid](unstructured-grid.md#free-stream-velocity).
 
-## Why only one year of data per location?
+## Why Only One Year of Data per Location?
 
 The tidal hindcast covers one year per location because:
 
@@ -16,12 +16,12 @@ The tidal hindcast covers one year per location because:
 
 Interannual variability in tidal currents is generally small compared to the tidal signal itself. However, meteorological effects (storms, river discharge) that vary between years are not fully captured.
 
-## What's the difference between depth-averaged and 95th percentile speed?
+## What's the Difference Between Depth-Averaged and 95th Percentile Speed?
 
 - **Depth-averaged speed** averages across all 10 sigma layers, providing a representative value for the entire water column. Used for mean current speed and mean power density.
 - **95th percentile speed** takes the 95th percentile of the maximum across all sigma layers over time, capturing the a representative extreme flow anywhere in the water column without being influenced by extreme outliers.
 
-## Why do some grid cells have very low or zero values?
+## Why Do Some Grid Cells Have Very Low or Zero Values?
 
 Several possible reasons:
 
@@ -29,7 +29,7 @@ Several possible reasons:
 - **Open water boundary** - Cells near domain edges may have reduced accuracy
 - **Protected embayments** - Some areas within the domain have naturally weak tidal currents
 
-## How does this compare to NOAA tidal predictions?
+## How Does This Compare to NOAA Tidal Predictions?
 
 NOAA tidal predictions provide water level forecasts at specific stations based on harmonic analysis. This dataset provides:
 
@@ -39,7 +39,7 @@ NOAA tidal predictions provide water level forecasts at specific stations based 
 
 FVCOM [@fvcom] uses similar tidal constituents but solves the full hydrodynamic equations on a 3D unstructured grid, producing spatially continuous fields rather than point predictions.
 
-## How do I cite this dataset?
+## How Do I Cite This Dataset?
 
 <div class="bibliography"></div>
 

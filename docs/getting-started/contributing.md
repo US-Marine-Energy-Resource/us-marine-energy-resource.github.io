@@ -38,7 +38,7 @@ mkdocs build
 
 Output is written to the `site/` directory.
 
-### Build with Strict Mode
+### Build With Strict Mode
 
 Check for warnings and errors:
 
@@ -139,6 +139,13 @@ Use standard markdown tables:
 | -------- | -------- |
 | Value 1  | Value 2  |
 ```
+
+### Headings
+
+All headings use **Title Case** (e.g. `## What Is a Hindcast?`, not `## What is a hindcast?`).
+Exceptions: version tags (`v1.0.0`), data-processing level codes (`Level a1`), unit
+suffixes (`[m/s]`), and code identifiers (`` `rex` ``, `h5pyd`) keep their natural
+casing rather than being title-cased.
 
 ## Generating Variable Documentation
 

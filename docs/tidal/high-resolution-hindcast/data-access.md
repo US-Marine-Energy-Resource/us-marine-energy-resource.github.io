@@ -16,7 +16,7 @@ The [`us-marine-energy-resource` Python library][python-library] (which includes
 
 --8<-- "docs/includes/readme/installation.md"
 
-### Python quick start
+### Python Quick Start
 
 ```python
 import us_marine_energy_resource.tidal_hindcast as tidal
@@ -32,29 +32,29 @@ fig, stats = tidal.plot_velocity_exceedance(df)
 fig = tidal.generate_tidal_joint_probability(df, sigma_layer=4)
 ```
 
-### `us-tidal` CLI reference { #us-tidal-cli }
+### `us-tidal` CLI Reference { #us-tidal-cli }
 
 The `us-tidal` command line tool is included with the library install. It supports point, transect, bounding box, and polygon queries without writing Python.
 
 --8<-- "docs/includes/us-tidal-help.md"
 
-#### Point query
+#### Point Query
 
 --8<-- "docs/includes/readme/cli-point-query.md"
 
-#### Area query
+#### Area Query
 
 --8<-- "docs/includes/readme/cli-area-query.md"
 
-#### Transect query
+#### Transect Query
 
 --8<-- "docs/includes/readme/cli-transect-query.md"
 
-#### Export options
+#### Export Options
 
 --8<-- "docs/includes/readme/cli-export-options.md"
 
-### Direct API downloads
+### Direct API Downloads
 
 --8<-- "docs/includes/readme/direct-downloads.md"
 
