@@ -69,12 +69,6 @@ aws s3 ls s3://wpto-pds-us-wave/v1.0.1/ --no-sign-request
 aws s3 cp s3://wpto-pds-us-wave/v1.0.1/West_Coast/West_Coast_wave_2010.h5 . --no-sign-request
 ```
 
-!!! warning "Bucket name is lowercase and hyphenated"
-
-    The bucket is `wpto-pds-us-wave`. `wpto-pds-US_wave` — the spelling used in the
-    upstream openEDI documentation — does not resolve, and any command using it fails
-    with `NoSuchBucket`.
-
 ## Dataset Paths
 
 ### Tidal HSDS Paths
