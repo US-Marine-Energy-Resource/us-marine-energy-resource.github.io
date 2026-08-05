@@ -1,0 +1,275 @@
+# Tidal Energy Datasets
+
+This section provides tidal current datasets for five U.S. coastal sites with some of the highest tidal energy potential in the country. The datasets are produced using the Finite Volume Community Ocean Model (FVCOM) [@fvcom] and are designed to support tidal energy resource assessment, from initial site screening through turbine selection and project planning.
+
+## Tidal Current Energy
+
+Tidal currents in constricted coastal passages (inlets, straits, and river mouths) can reach sustained speeds of 2–4 m/s. A current energy converter (CEC) extracts this kinetic energy by intercepting the flow; the available power per unit rotor area is $P = \frac{1}{2}\rho U^3$, so sites with peak speeds of 2–3 m/s yield 4,100–13,800 W m⁻².
+
+Tidal currents are astronomically forced and deterministic: speed and direction at any location can be predicted years in advance from a small set of harmonic constituents. This allows resource characterization to be expressed in terms of statistical quantities (mean power density, exceedance probability, spring-neap variability) that map directly onto project feasibility criteria and IEC assessment standards.
+
+## Resource Characterization Workflow
+
+Tidal energy resource assessment proceeds through three stages, each requiring a different level of the hindcast data.
+
+### Stage 1: Site Screening
+
+The [Marine Energy Atlas][marine-energy-atlas] displays mean current speed and power density across all five hindcast domains. Grid cells are color-coded by magnitude; the point-query tool returns summary statistics and supports CSV export. Sites where mean current speed exceeds ~1 m/s at hub depth are candidates for further assessment.
+
+<!-- TODO: insert atlas walkthrough gif -->
+!!! info "Atlas walkthrough coming soon"
+    A short animated walkthrough of the Marine Energy Atlas, selecting a tidal layer, zooming to a region, and querying a grid cell, will appear here.
+
+### Stage 2: Feasibility Assessment
+
+Site-level feasibility analysis under [IEC TS 62600-201](high_resolution_hindcast/index.md) Stage 1 requires the following summary statistics:
+
+- **Mean current speed** - time-averaged speed at each sigma layer; basis for annual energy estimates
+- **95th-percentile current speed** - design-load threshold for structural analysis
+- **Mean power density** - time-averaged kinetic energy flux per unit rotor area (W m⁻²)
+- **Velocity exceedance curve** - cumulative distribution of current speed; used to estimate capacity factor
+
+These statistics are available via the Atlas point-query tool or the [us-marine-energy-resource Python library][python-library]:
+
+```python
+import us_marine_energy_resource.tidal_hindcast as tidal
+
+# Fetch the hindcast time series for the nearest grid point to a coordinate.
+# Data is downloaded from S3 and cached locally on first call.
+df = tidal.get_data_at_point(lat=60.73, lon=-151.43)
+
+# Speed columns are named vap_sea_water_speed_layer_{0..9} (m/s).
+# Layer 9 is the surface layer; layer 0 is the bottom layer.
+speed_layer4 = df["vap_sea_water_speed_layer_4"]
+
+mean_speed = speed_layer4.mean()
+p95_speed  = speed_layer4.quantile(0.95)
+
+# Plot the velocity exceedance curve across all sigma layers.
+fig, stats = tidal.plot_velocity_exceedance(df)
+```
+
+!!! tip "Prerequisites"
+    See [Getting Started](../getting-started/index.md) for installation and setup instructions.
+
+### Stage 3: Engineering Design Inputs
+
+Turbine design requires depth-resolved current data. Hub-height selection, blade load estimation, and mooring analysis depend on the vertical shear profile and the distribution of peak speeds through the water column. The full hindcast time series is available via [HSDS](../getting-started/hsds-setup.md) or [AWS S3](../getting-started/aws-s3.md) and supports:
+
+- **Hub-height selection** - identifying the sigma layer with the highest time-mean speed and acceptable shear
+- **Blade load analysis** - quantifying the speed differential across the rotor swept area
+- **Mooring and foundation design** - characterizing peak spring-tide forces
+- **Annual energy production modeling** - applying a turbine power curve to the full speed time series
+
+---
+
+## Data Access
+
+| Use case | Interface | Reference |
+| -------- | --------- | --------- |
+| Spatial resource exploration and point statistics | [Marine Energy Atlas][marine-energy-atlas] | [Atlas guide](../getting-started/marine-energy-atlas.md) |
+| Programmatic access to the complete time series - query by point, line, or area | [`us-marine-energy-resource` Python library][python-library] | [Getting Started](../getting-started/index.md) |
+| Full time-series and depth-resolved data | HSDS or AWS S3 | [HSDS Setup](../getting-started/hsds-setup.md) · [AWS S3](../getting-started/aws-s3.md) |
+| Bulk download of hindcast files | MHKDR | [AWS S3 guide](../getting-started/aws-s3.md) |
+| Variable definitions and units | Variable documentation | [Tidal Variables](high_resolution_hindcast/variables/index.md) |
+
+---
+
+## Tides
+
+Tides are the periodic rise and fall of sea level driven by the gravitational attraction of the Moon and Sun [@noc_tidal_modeling]. Most U.S. coastal locations experience semidiurnal tides: two high waters and two low waters every ~24 hours 50 minutes.
+
+Tidal currents in constricted passages carry kinetic energy that current energy converters (CECs) can extract. A CEC is a device that converts the kinetic energy of moving water into useful work.
+
+## The Spring-Neap Cycle
+
+The most important low-frequency modulation of tidal energy is the spring-neap cycle, a ~14.8-day oscillation driven by the alignment of the Moon and Sun [@noc_tidal_modeling]:
+
+| Phase  | Condition                               | Relative Current Speed | Relative Power Density |
+| ------ | --------------------------------------- | ---------------------- | ---------------------- |
+| Spring | Moon and Sun aligned (new or full moon) | ~1.4× mean             | ~2.7× mean             |
+| Neap   | Moon at first/third quarter             | ~0.7× mean             | ~0.3× mean             |
+
+Power density is calculated as $P = \frac{1}{2}\rho U^3$, where $\rho \approx 1025\ \text{kg m}^{-3}$. At 1 m/s this gives ~512 W m⁻²; at 2 m/s ~4,100 W m⁻²; at 3 m/s ~13,800 W m⁻². The cubic relationship explains why the spring-neap speed swings in the table above produce such large swings in available power [@noc_tidal_modeling].
+
+## Tidal Harmonics and Constituents
+
+The tidal signal at any location can be described as a sum of sinusoidal constituents, each with a fixed astronomical frequency and a locally determined amplitude and phase. Fitting this model to a time series (harmonic analysis) allows the tidal signal to be reconstructed and extrapolated beyond the observation period. The local amplitude and phase reflect coastline geometry, water depth, and basin resonance [@noc_tidal_modeling].
+
+$$Z(t) = Z_0 + \sum_{n} A_n \cos\!\left(\omega_n t + \phi_n\right)$$
+
+where $Z_0$ is mean water level, $A_n$ is amplitude, $\omega_n$ is angular frequency, and $\phi_n$ is the phase of the $n$-th constituent.
+
+| Constituent | Period (h) | Type          | Description                             |
+| ----------- | ---------- | ------------- | --------------------------------------- |
+| $M_2$       | 12.42      | Semidiurnal   | Principal lunar; dominant at most sites |
+| $S_2$       | 12.00      | Semidiurnal   | Principal solar                         |
+| $N_2$       | 12.66      | Semidiurnal   | Larger lunar elliptic                   |
+| $K_1$       | 23.93      | Diurnal       | Lunar-solar diurnal                     |
+| $O_1$       | 25.82      | Diurnal       | Principal lunar diurnal                 |
+| $M_4$       | 6.21       | Shallow-water | Overtide of $M_2$                       |
+| $M_6$       | 4.14       | Shallow-water | Second overtide of $M_2$                |
+
+!!! info "Shallow-water harmonics"
+    In constricted, shallow channels such as Cook Inlet and the Piscataqua River, shallow-water overtides ($M_4$, $M_6$) can reach amplitudes of 10–50% of $M_2$, producing tidal asymmetry: a faster flood or ebb half-cycle. This affects sediment transport and net turbine energy output over a tidal cycle. See [Definitions](high_resolution_hindcast/definitions.md).
+
+Fitting these constituents to the hindcast time series (harmonic analysis) allows the signal to be reconstructed and extrapolated beyond the hindcast period.
+
+!!! example "Harmonic analysis visualization - coming soon"
+    A figure showing the observed vs. reconstructed current speed (RMSE, R²), FFT amplitude spectrum with constituent frequencies marked, and constituent amplitude bar chart will be added here. Pending a refactor of `plot_tidal_harmonic_analysis()` in the `us-marine-energy-resource` library to support individual panel output.
+
+## Example Site
+
+The visualizations below use data from a single grid point in Upper Cook Inlet, Alaska (60.74°N, 151.43°W), near Nikiski. Cook Inlet has some of the strongest tidal currents in the U.S. The map shows the model domain boundary and the example point. See [Regional Coverage](high_resolution_hindcast/coverage-maps.md) for all five dataset extents.
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<div id="site-context-map" style="height: 300px; width: 100%; border-radius: 6px; border: 1px solid #e0e0e0; margin: 1em 0;"></div>
+
+<script>
+(function () {
+  var map = L.map("site-context-map", { zoomControl: true, scrollWheelZoom: false, center: [60.74, -151.43], zoom: 7 });
+
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: "abcd",
+    maxZoom: 19
+  }).addTo(map);
+
+  var color = "#4C72B0";
+  var assetBase = window.location.origin + "/assets/tidal/";
+
+  fetch(assetBase + "AK_cook_inlet_boundary.geojson")
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var boundary = L.geoJSON(data, {
+        style: { color: color, weight: 1.5, opacity: 0.9, fillColor: color, fillOpacity: 0.12 },
+        smoothFactor: 2
+      }).addTo(map);
+
+      // Example point marker
+      var siteLatLon = [60.735016, -151.431396];
+      L.circleMarker(siteLatLon, {
+        radius: 7,
+        fillColor: "#C44E52",
+        color: "#fff",
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.95
+      })
+        .bindTooltip("Near Nikiski, AK (example site)", { permanent: true, direction: "right", offset: [10, 0] })
+        .addTo(map);
+
+      map.fitBounds(boundary.getBounds().pad(0.05));
+      // Ensure tiles fill the container after layout is finalized
+      setTimeout(function () { map.invalidateSize(); }, 100);
+    })
+    .catch(function (err) {
+      console.warn("Could not load Cook Inlet boundary", err);
+      map.setView([60.5, -152], 7);
+    });
+})();
+</script>
+
+## Vertical Current Structure
+
+FVCOM resolves the water column with 10 sigma (terrain-following) layers. Current speed decreases toward the seafloor due to bottom friction, which affects turbine hub-height selection and blade load estimates.
+
+The depth-time plot below shows current speed across all 10 sigma layers for the full hindcast year at Upper Cook Inlet, AK. Each band represents one sigma layer, covering an equal fraction of the water column from surface to seafloor.
+
+<figure markdown="span">
+  ![Cook Inlet - sigma layer current speed, full year](../assets/tidal/cook_inlet_sigma_layers_speed_full.png){ width="100%" }
+  <figcaption>Current speed across all 10 sigma layers at Cook Inlet, AK (60.74°N, 151.43°W), full hindcast year. Each horizontal band is one sigma layer, from Layer 9 (surface, ~1.6 m) at the top to Layer 0 (bottom, ~30.8 m) at the base. The repeating ~14.8-day amplitude modulation is the spring-neap cycle. Peak speeds exceed 3 m/s during spring tides.</figcaption>
+</figure>
+
+The direction plot shows the flood-ebb reversal and any rotational signal in the water column.
+
+<figure markdown="span">
+  ![Cook Inlet - sigma layer direction, full year](../assets/tidal/cook_inlet_sigma_layers_direction_full.png){ width="100%" }
+  <figcaption>Current direction across all 10 sigma layers at Cook Inlet, AK, full hindcast year. Direction is in degrees clockwise from True North. Alternations between ~030° (flood, NE) and ~210° (ebb, SW) reflect the channel orientation. Color is nearly uniform with depth at any given time, indicating that directional turning with depth is small; vertical shear at this site is primarily in speed, not direction.</figcaption>
+</figure>
+
+A 3-day window shows individual tidal cycles and the vertical shear between the surface and bottom layers.
+
+<figure markdown="span">
+  ![Cook Inlet - sigma layer current speed, 3-day zoom](../assets/tidal/cook_inlet_sigma_layers_speed_zoom.png){ width="100%" }
+  <figcaption>Three-day window of current speed across all 10 sigma layers. Each semidiurnal cycle is approximately 12.4 hours ($M_2$). The speed difference between Layer 9 (surface, ~1.6 m) and Layer 0 (bottom, ~30.8 m) is visible during peak flows, reflecting the vertical shear from bottom friction. This shear profile informs turbine hub-height selection and blade load estimates.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Cook Inlet - sigma layer direction, 3-day zoom](../assets/tidal/cook_inlet_sigma_layers_direction_zoom.png){ width="100%" }
+  <figcaption>Three-day window of current direction across all 10 sigma layers. Reversals between flood (~030°) and ebb (~210°) are sharp. Direction is nearly uniform with depth, confirming the current is rectilinear with little rotational component.</figcaption>
+</figure>
+
+For background on sigma coordinates see [Sigma Layers](high_resolution_hindcast/sigma-layers.md).
+
+## Joint Probability Distribution
+
+A joint probability distribution (JPD) is a polar histogram of current speed and direction at a single sigma layer. It shows the dominant flow direction, flood-ebb asymmetry, and the speed distribution across the tidal cycle. These are standard inputs for turbine alignment and site assessment.
+
+The plot below uses sigma layer 4 (mid-column) at Cook Inlet, AK. The reversing tidal current reflects the flood-ebb cycle in the inlet.
+
+<figure markdown="span">
+  ![Cook Inlet - joint probability distribution, sigma layer 4](../assets/tidal/cook_inlet_jpd.png){ width="80%" }
+  <figcaption>Speed and direction at sigma layer 4 (~17.8 m depth), Cook Inlet, AK, full hindcast year. Each point is one hourly observation; color encodes joint probability [%]. The bidirectional pattern along ~030°/210° reflects a rectilinear, reversing current with little rotational component. The distribution is nearly symmetric about the flood-ebb axis, with peak speeds near 3 m/s and the highest probability density at 1–2 m/s.</figcaption>
+</figure>
+
+## Velocity Exceedance
+
+The instantaneous kinetic power density available to a tidal turbine is:
+
+$$P(t) = \frac{1}{2}\,\rho\,U(t)^3 \quad [\text{W m}^{-2}]$$
+
+where $\rho \approx 1025\,\text{kg m}^{-3}$ is seawater density. The cubic relationship means doubling the current speed produces eight times the power.
+
+An exceedance curve shows what fraction of the year the current exceeds a given speed, typically generated to support an IEC 62600-201 Stage 1 feasibility study [@iec_62600_201]:
+
+<figure markdown="span">
+  ![Cook Inlet - velocity exceedance curve](../assets/tidal/cook_inlet_exceedance.png){ width="100%" }
+  <figcaption>Velocity exceedance curves for all 10 sigma layers, Cook Inlet, AK, full hindcast year. Each curve shows the fraction of the year that current speed exceeds a given value, from Layer 9 (surface, ~1.6 m) to Layer 0 (deepest, ~30.8 m). The surface layer exceeds 1.0 m/s for approximately 60% of the year and reaches peak speeds near 3.5 m/s. The spread between layers increases at higher speeds, reflecting the vertical shear profile and informing hub-height selection.</figcaption>
+</figure>
+
+## How FVCOM Models Tidal Currents
+
+The datasets are produced with the Finite Volume Community Ocean Model (FVCOM) [@fvcom], a 3D unstructured-grid coastal ocean model [@noc_tidal_modeling].
+
+**Governing equations.** FVCOM solves the 3D Reynolds-averaged Navier–Stokes equations for horizontal velocities $u$, $v$ and sea surface elevation $\eta$ on a triangular finite-volume mesh. Tidal forcing is prescribed at open boundaries from a global ocean tidal atlas.
+
+**Unstructured grid.** FVCOM uses an unstructured triangular mesh that can be refined around complex coastlines and constricted passages. Grid resolution at the five U.S. sites ranges from ~10 m in narrow channels to ~500 m offshore. See [Unstructured Grid](high_resolution_hindcast/unstructured-grid.md).
+
+**Sigma coordinates.** The water column is divided into a fixed number of vertical layers that scale with local depth, so the bottom boundary layer and the surface layer are resolved at any water depth. The dataset provides 10 sigma layers per grid point. See [Sigma Layers](high_resolution_hindcast/sigma-layers.md).
+
+**Boundary conditions.** Tidal constituents from a global ocean tidal atlas are imposed at the open boundaries of each regional domain. The model runs for a full hindcast year. See [Model Configuration](high_resolution_hindcast/model-configuration.md).
+
+**Validation.** Model output is compared against tide gauge observations and, where available, ADCP current measurements using standard skill metrics (RMSE, bias, $R^2$). See [Validation](high_resolution_hindcast/validation.md).
+
+## Available Datasets
+
+| Dataset                                                       | Locations            | Duration    | Resolution           | Grid Points        |
+| ------------------------------------------------------------- | -------------------- | ----------- | -------------------- | ------------------ |
+| [High Resolution Hindcast](high_resolution_hindcast/index.md) | 5 U.S. coastal sites | 1 year each | Hourly / Half-hourly | 231K–1.7M per site |
+
+## High Resolution Hindcast
+
+The [H2O High Resolution Tidal Hindcast](high_resolution_hindcast/index.md) provides 3D tidal current data at five U.S. coastal locations. These sites were selected because they represent some of the highest tidal current speeds in the country. Each dataset includes depth-resolved current speed, power density, water depth, tidal range, and other variables derived from FVCOM simulations.
+
+| Location                                                  | Period    | Sampling    | Grid Points |
+| --------------------------------------------------------- | --------- | ----------- | ----------- |
+| [Aleutian Islands, AK](high_resolution_hindcast/index.md) | 2010–2011 | Hourly      | 797,978     |
+| [Cook Inlet, AK](high_resolution_hindcast/index.md)       | 2005      | Hourly      | 392,002     |
+| [Piscataqua River, NH](high_resolution_hindcast/index.md) | 2007      | Half-hourly | 292,927     |
+| [Salish Sea, WA](high_resolution_hindcast/index.md)       | 2015      | Half-hourly | 1,734,765   |
+| [Western Passage, ME](high_resolution_hindcast/index.md)  | 2017      | Half-hourly | 231,208     |
+
+Click the dataset name above to view full documentation including model configuration, variable descriptions, data access, and quality assurance.
+
+## Next Steps
+
+- **Explore the data** - click a location in the table above to view model configuration, variable descriptions, and data access information.
+- **Analyze with Python** - the [us-marine-energy-resource Python library][python-library] provides tools for loading, visualizing, and analyzing the hindcast data.
+- **Browse the Marine Energy Atlas** - the [Marine Energy Atlas][marine-energy-atlas] provides a national overview of U.S. marine energy resources, including tidal sites not covered by these hindcasts.
+- **Read the technical background** - see [Sigma Layers](high_resolution_hindcast/sigma-layers.md), [Unstructured Grid](high_resolution_hindcast/unstructured-grid.md), and [Model Configuration](high_resolution_hindcast/model-configuration.md) for model details.
+
+--8<-- "docs/tidal/index-cite.md"
+--8<-- "docs/includes/links.md"
