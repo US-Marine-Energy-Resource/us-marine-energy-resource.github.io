@@ -2754,7 +2754,7 @@
 <p><a href="https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library/layers?vL=68c955d8b12e9eb9d3c3fc55&amp;b=%5B%5B-281.807096%2C-20.488115%5D%2C%5B-16.36049%2C77.801553%5D%5D"><img alt="Wave power resource across all U.S. EEZ domains" src="../assets/images/atlas_wave_complete_dataset_wide.png"></a></p>
 <p>Ocean waves have an estimated <strong>1,400 TWh/yr</strong> of technical energy potential across the U.S. EEZ, equivalent to 34% of U.S. electricity generation [@general_kilcher2021_marine]. The <a href="https://www.energy.gov/cmei/water/hydropower-and-hydrokinetic-office">U.S. Department of Energy's Hydropower and Hydrokinetic Office (H2O)</a> produced a 42-year, high-resolution hindcast covering all U.S. coastal and offshore waters to map that resource in detail. The data are freely accessible through the <a href="https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library/layers?vL=68c955d8b12e9eb9d3c3fc55&amp;b=%5B%5B-281.807096%2C-20.488115%5D%2C%5B-16.36049%2C77.801553%5D%5D">Marine Energy Atlas</a>, a Python API, and raw HDF5 files on AWS S3.</p>
 <details class="question">
-<summary>What is a hindcast?</summary>
+<summary>What Is a Hindcast?</summary>
 <p>A hindcast is a numerical model simulation that estimates past wave conditions over a defined area and time period using historical forcing and boundary conditions. It reconstructs how conditions varied over time and space across a much larger area than can be captured by real-world measurements alone. Hindcasts are particularly valuable for marine energy resource characterization because measured data are often very sparse in both time and location; without a hindcast, the available observations may be too limited to fully describe the resource or operating conditions at a site. By providing a spatially and temporally continuous record, hindcasts help fill those gaps and support resource assessment, site screening, engineering design, and evaluation of long-term variability.</p>
 </details>
 <h2 id="regional-datasets">Regional Datasets<a class="headerlink" href="#regional-datasets" title="Permanent link">¶</a></h2>
@@ -2768,21 +2768,99 @@
 </div>
 <div class="region-card__body">
 <ul>
-<li><strong>Grid points:</strong> 699,904</li>
-<li><strong>File size:</strong> ~71.7 GB per year</li>
-<li><strong>Total archive:</strong> ~2.9 TB</li>
 <li><strong>Period:</strong> 1979–2020 &nbsp;·&nbsp; 42 annual files</li>
+<li><strong>Total archive:</strong> ~3.3 TB</li>
 <li><strong>Version:</strong> <code>v1.0.1</code></li>
 </ul>
+<p><strong>2011–2020</strong> (10 files)</p>
+<ul>
+<li>Grid points: 699,904 &nbsp;·&nbsp; ~71.7 GB per year</li>
+</ul>
 <details class="note">
-<summary>Spatiotemporal variables (9)</summary>
+<summary>Variable definitions (9) · 2011–2020</summary>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">IEC name</th>
+<th style="text-align: left;">IEC Name</th>
 <th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Peak wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PDIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (9) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Units</th>
 <th style="text-align: left;">Dimensions</th>
 <th style="text-align: left;">Type</th>
@@ -2791,81 +2869,54 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>directionality_coefficient</code></td>
-<td style="text-align: left;">Directionality coefficient</td>
-<td style="text-align: left;">d</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>energy_period</code></td>
-<td style="text-align: left;">Energy period</td>
-<td style="text-align: left;">T_e,T_-10</td>
-<td style="text-align: left;">TMM10</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>maximum_energy_direction</code></td>
-<td style="text-align: left;">Peak wave direction (nautical convention)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">PDIR</td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_absolute_period</code></td>
-<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">PER</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_wave_direction</code></td>
-<td style="text-align: left;">Mean wave direction (nautical convention)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">DIR</td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>omni-directional_wave_power</code></td>
-<td style="text-align: left;">Omnidirectional wave power</td>
-<td style="text-align: left;">J</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">W/m</td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>peak_period</code></td>
-<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
-<td style="text-align: left;">T_p</td>
-<td style="text-align: left;">RTP</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>significant_wave_height</code></td>
-<td style="text-align: left;">Significant wave height</td>
-<td style="text-align: left;">H_m0</td>
-<td style="text-align: left;">HSIGN</td>
 <td style="text-align: left;">m</td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>spectral_width</code></td>
-<td style="text-align: left;">Spectral width</td>
-<td style="text-align: left;">epsilon_0</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 699,904</td>
 <td style="text-align: left;"><code>float32</code></td>
@@ -2874,7 +2925,209 @@
 </table>
 </details>
 <details class="note">
-<summary>Metadata (6 fields)</summary>
+<summary>Metadata (6 fields) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>water_depth</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>latitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>longitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distance_to_shore</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>timezone</code></td>
+<td style="text-align: left;"><code>int16</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jurisdiction</code></td>
+<td style="text-align: left;"><code>str[20]</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><strong>1979–2010</strong> (32 files)</p>
+<ul>
+<li>Grid points: 699,904 &nbsp;·&nbsp; ~81.9 GB per year</li>
+</ul>
+<details class="note">
+<summary>Variable definitions (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">IEC Name</th>
+<th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\theta_{J}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
+<td style="text-align: left;">Mean absolute zero-crossing period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{z}\)</span>, <span class="arithmatex">\(T_{02}\)</span></td>
+<td style="text-align: left;">TM02</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Units</th>
+<th style="text-align: left;">Dimensions</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">degr</td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">degr</td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">W/m</td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,920 × 699,904</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Metadata (6 fields) · 1979–2010</summary>
 <table>
 <thead>
 <tr>
@@ -2923,21 +3176,113 @@
 </div>
 <div class="region-card__body">
 <ul>
-<li><strong>Grid points:</strong> 2,635,135</li>
-<li><strong>File size:</strong> ~316.2 GB per year</li>
-<li><strong>Total archive:</strong> ~13.0 TB</li>
 <li><strong>Period:</strong> 1979–2020 &nbsp;·&nbsp; 42 annual files</li>
+<li><strong>Total archive:</strong> ~12.7 TB</li>
 <li><strong>Version:</strong> <code>v1.0.1</code></li>
 </ul>
+<p><strong>2011–2020</strong> (10 files)</p>
+<ul>
+<li>Grid points: 2,635,135 &nbsp;·&nbsp; ~316.2 GB per year</li>
+</ul>
 <details class="note">
-<summary>Spatiotemporal variables (11)</summary>
+<summary>Variable definitions (11) · 2011–2020</summary>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">IEC name</th>
+<th style="text-align: left;">IEC Name</th>
 <th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\theta_{J}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">deg</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">deg</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
+<td style="text-align: left;">Mean absolute zero-crossing period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{z}\)</span>, <span class="arithmatex">\(T_{02}\)</span></td>
+<td style="text-align: left;">TM02</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period_direction</code></td>
+<td style="text-align: left;">Peak wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PDIR</td>
+<td style="text-align: left;">deg</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (11) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Units</th>
 <th style="text-align: left;">Dimensions</th>
 <th style="text-align: left;">Type</th>
@@ -2946,30 +3291,110 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>directionality_coefficient</code></td>
-<td style="text-align: left;">Directionality coefficient</td>
-<td style="text-align: left;">d</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 2,635,135</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>energy_period</code></td>
-<td style="text-align: left;">Energy period</td>
-<td style="text-align: left;">T_e,T_-10</td>
-<td style="text-align: left;">TMM10</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 2,635,135</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>maximum_energy_direction</code></td>
-<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
-<td style="text-align: left;">theta_J</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">deg</td>
 <td style="text-align: left;">2,928 × 2,635,135</td>
 <td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">deg</td>
+<td style="text-align: left;">2,928 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">W/m</td>
+<td style="text-align: left;">2,928 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period_direction</code></td>
+<td style="text-align: left;">deg</td>
+<td style="text-align: left;">2,928 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;">2,928 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,928 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><strong>1979–2010</strong> (32 files)</p>
+<ul>
+<li>Grid points: 2,635,135 &nbsp;·&nbsp; ~308.1 GB per year</li>
+</ul>
+<details class="note">
+<summary>Variable definitions (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">IEC Name</th>
+<th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\theta_{J}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">deg</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_absolute_period</code></td>
@@ -2977,8 +3402,6 @@
 <td style="text-align: left;"></td>
 <td style="text-align: left;">PER</td>
 <td style="text-align: left;">s</td>
-<td style="text-align: left;">2,928 × 2,635,135</td>
-<td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_wave_direction</code></td>
@@ -2986,62 +3409,153 @@
 <td style="text-align: left;"></td>
 <td style="text-align: left;">DIR</td>
 <td style="text-align: left;">deg</td>
-<td style="text-align: left;">2,928 × 2,635,135</td>
-<td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
 <td style="text-align: left;">Mean absolute zero-crossing period</td>
-<td style="text-align: left;">T_Z,T_02</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{z}\)</span>, <span class="arithmatex">\(T_{02}\)</span></td>
 <td style="text-align: left;">TM02</td>
 <td style="text-align: left;">s</td>
-<td style="text-align: left;">2,928 × 2,635,135</td>
-<td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>omni-directional_wave_power</code></td>
 <td style="text-align: left;">Omnidirectional wave power</td>
-<td style="text-align: left;">J</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">W/m</td>
-<td style="text-align: left;">2,928 × 2,635,135</td>
-<td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>peak_period</code></td>
 <td style="text-align: left;">Relative peak period of the variance density spectrum</td>
-<td style="text-align: left;">T_p</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
 <td style="text-align: left;">RTP</td>
 <td style="text-align: left;">s</td>
-<td style="text-align: left;">2,928 × 2,635,135</td>
-<td style="text-align: left;"><code>float32</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>peak_period_direction</code></td>
-<td style="text-align: left;">Peak wave direction (nautical convention)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">PDIR</td>
-<td style="text-align: left;">deg</td>
-<td style="text-align: left;">2,928 × 2,635,135</td>
-<td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>significant_wave_height</code></td>
 <td style="text-align: left;">Significant wave height</td>
-<td style="text-align: left;">H_m0</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
 <td style="text-align: left;">HSIGN</td>
 <td style="text-align: left;">m</td>
-<td style="text-align: left;">2,928 × 2,635,135</td>
-<td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>spectral_width</code></td>
 <td style="text-align: left;">Spectral width</td>
-<td style="text-align: left;">epsilon_0</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">2,928 × 2,635,135</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Units</th>
+<th style="text-align: left;">Dimensions</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
 <td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">deg</td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">deg</td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">W/m</td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,920 × 2,635,135</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Metadata (6 fields) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>latitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>longitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>water_depth</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>timezone</code></td>
+<td style="text-align: left;"><code>int16</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distance</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jurisdiction</code></td>
+<td style="text-align: left;"><code>str[14]</code></td>
 </tr>
 </tbody>
 </table>
@@ -3059,25 +3573,312 @@
 </div>
 <div class="region-card__body">
 <ul>
-<li><strong>Grid points:</strong> 700,414</li>
-<li><strong>File size:</strong> ~81.9 GB per year</li>
-<li><strong>Total archive:</strong> ~2.6 TB</li>
-<li><strong>Period:</strong> 1979–2010 &nbsp;·&nbsp; 32 annual files</li>
+<li><strong>Period:</strong> 1979–2020 &nbsp;·&nbsp; 42 annual files</li>
+<li><strong>Total archive:</strong> ~4.4 TB</li>
 <li><strong>Version:</strong> <code>v1.0.0</code></li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Incomplete archive</p>
-<p>Files for 2011–2020 are not available on AWS S3 or HSDS.</p>
-</div>
+<p><strong>2011–2020</strong> (10 files)</p>
+<ul>
+<li>Grid points: 1,696,188 &nbsp;·&nbsp; ~189.7 GB per year</li>
+</ul>
 <details class="note">
-<summary>Spatiotemporal variables (10)</summary>
+<summary>Variable definitions (10) · 2011–2020</summary>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">IEC name</th>
+<th style="text-align: left;">IEC Name</th>
 <th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>depth</code></td>
+<td style="text-align: left;">Water depth</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Depth</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Peak wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PDIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (10) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Units</th>
+<th style="text-align: left;">Dimensions</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>depth</code></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">degr</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">degr</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">W/m</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Metadata (7 fields) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>latitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>longitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>depth</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distance_to_shore</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>timezone</code></td>
+<td style="text-align: left;"><code>int16</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>eez</code></td>
+<td style="text-align: left;"><code>str[13]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jurisdiction</code></td>
+<td style="text-align: left;"><code>str[14]</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><strong>1979–2010</strong> (32 files)</p>
+<ul>
+<li>Grid points: 700,414 &nbsp;·&nbsp; ~81.9 GB per year</li>
+</ul>
+<details class="note">
+<summary>Variable definitions (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">IEC Name</th>
+<th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Fraction of total wave energy travelling in the "direction of maximum wave power" direction</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span></td>
+<td style="text-align: left;">TM02</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy</code></td>
+<td style="text-align: left;">Maximum directionally resolved wave energy</td>
+<td style="text-align: left;"><span class="arithmatex">\(J_{\sigma,jdmax}\)</span></td>
+<td style="text-align: left;">jdmax</td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">The direction from which the most wave energy is travelling</td>
+<td style="text-align: left;"><span class="arithmatex">\(Jsigma_{Jmax}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">deg</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Resolved Spectral Moment (m_0/m_1)</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Direction Normal to the Wave Crests</td>
+<td style="text-align: left;"><span class="arithmatex">\(\Sigma\)</span></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">deg</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Total wave energy flux from all directions</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">The period associated with the maximum value of the wave energy spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Calculated as the zeroth spectral moment (i.e., H_m0)</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{s}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Units</th>
 <th style="text-align: left;">Dimensions</th>
 <th style="text-align: left;">Type</th>
@@ -3086,90 +3887,60 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>directionality_coefficient</code></td>
-<td style="text-align: left;">Fraction of total wave energy travelling in the "direction of maximum wave power" direction</td>
-<td style="text-align: left;">d</td>
-<td style="text-align: left;">description: Fraction of total wave energy travelling in the "direction of maximum wave power" direction</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>energy_period</code></td>
-<td style="text-align: left;">Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
-<td style="text-align: left;">T_e</td>
-<td style="text-align: left;">TM02</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>maximum_energy</code></td>
-<td style="text-align: left;">Maximum directionally resolved wave energy</td>
-<td style="text-align: left;">J_sigma_jdmax</td>
-<td style="text-align: left;">jdmax</td>
 <td style="text-align: left;">W/m</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>maximum_energy_direction</code></td>
-<td style="text-align: left;">The direction from which the most wave energy is travelling</td>
-<td style="text-align: left;">Jsigma_Jmax</td>
-<td style="text-align: left;">description: The direction from which the most wave energy is travelling</td>
 <td style="text-align: left;">deg</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_absolute_period</code></td>
-<td style="text-align: left;">Resolved Spectral Moment (m_0/m_1)</td>
-<td style="text-align: left;">T_p</td>
-<td style="text-align: left;">PER</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_wave_direction</code></td>
-<td style="text-align: left;">Direction Normal to the Wave Crests</td>
-<td style="text-align: left;">Sigma</td>
-<td style="text-align: left;">DIR</td>
 <td style="text-align: left;">deg</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>omni-directional_wave_power</code></td>
-<td style="text-align: left;">Total wave energy flux from all directions</td>
-<td style="text-align: left;">J</td>
-<td style="text-align: left;">description: Total wave energy flux from all directions</td>
 <td style="text-align: left;">W/m</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>peak_period</code></td>
-<td style="text-align: left;">The period associated with the maximum value of the wave energy spectrum</td>
-<td style="text-align: left;">T_p</td>
-<td style="text-align: left;">RTP</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>significant_wave_height</code></td>
-<td style="text-align: left;">Calculated as the zeroth spectral moment (i.e., H_m0)</td>
-<td style="text-align: left;">H_s</td>
-<td style="text-align: left;">HSIGN</td>
 <td style="text-align: left;">m</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>spectral_width</code></td>
-<td style="text-align: left;">Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
-<td style="text-align: left;">epsilon_o</td>
-<td style="text-align: left;">description: Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
@@ -3178,7 +3949,7 @@
 </table>
 </details>
 <details class="note">
-<summary>Metadata (6 fields)</summary>
+<summary>Metadata (6 fields) · 1979–2010</summary>
 <table>
 <thead>
 <tr>
@@ -3227,21 +3998,99 @@
 </div>
 <div class="region-card__body">
 <ul>
-<li><strong>Grid points:</strong> 3,894,283</li>
-<li><strong>File size:</strong> ~399.1 GB per year</li>
-<li><strong>Total archive:</strong> ~16.4 TB</li>
 <li><strong>Period:</strong> 1979–2020 &nbsp;·&nbsp; 42 annual files</li>
+<li><strong>Total archive:</strong> ~18.1 TB</li>
 <li><strong>Version:</strong> <code>v1.0.1</code></li>
 </ul>
+<p><strong>2011–2020</strong> (10 files)</p>
+<ul>
+<li>Grid points: 3,894,283 &nbsp;·&nbsp; ~399.1 GB per year</li>
+</ul>
 <details class="note">
-<summary>Spatiotemporal variables (9)</summary>
+<summary>Variable definitions (9) · 2011–2020</summary>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">IEC name</th>
+<th style="text-align: left;">IEC Name</th>
 <th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\theta_{J}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (9) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Units</th>
 <th style="text-align: left;">Dimensions</th>
 <th style="text-align: left;">Type</th>
@@ -3250,81 +4099,54 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>directionality_coefficient</code></td>
-<td style="text-align: left;">Directionality coefficient</td>
-<td style="text-align: left;">d</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>energy_period</code></td>
-<td style="text-align: left;">Energy period</td>
-<td style="text-align: left;">T_e,T_-10</td>
-<td style="text-align: left;">TMM10</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>maximum_energy_direction</code></td>
-<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
-<td style="text-align: left;">theta_J</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_absolute_period</code></td>
-<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">PER</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_wave_direction</code></td>
-<td style="text-align: left;">Mean wave direction (nautical convention)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">DIR</td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>omni-directional_wave_power</code></td>
-<td style="text-align: left;">Omnidirectional wave power</td>
-<td style="text-align: left;">J</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">W/m</td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>peak_period</code></td>
-<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
-<td style="text-align: left;">T_p</td>
-<td style="text-align: left;">RTP</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>significant_wave_height</code></td>
-<td style="text-align: left;">Significant wave height</td>
-<td style="text-align: left;">H_m0</td>
-<td style="text-align: left;">HSIGN</td>
 <td style="text-align: left;">m</td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>spectral_width</code></td>
-<td style="text-align: left;">Spectral width</td>
-<td style="text-align: left;">epsilon_0</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 3,894,283</td>
 <td style="text-align: left;"><code>float32</code></td>
@@ -3333,7 +4155,209 @@
 </table>
 </details>
 <details class="note">
-<summary>Metadata (6 fields)</summary>
+<summary>Metadata (6 fields) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>latitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>longitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>timezone</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distance</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jurisdiction</code></td>
+<td style="text-align: left;"><code>str[7]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>water_depth</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><strong>1979–2010</strong> (32 files)</p>
+<ul>
+<li>Grid points: 3,894,283 &nbsp;·&nbsp; ~455.2 GB per year</li>
+</ul>
+<details class="note">
+<summary>Variable definitions (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">IEC Name</th>
+<th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\theta_{J}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
+<td style="text-align: left;">Mean absolute zero-crossing period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{z}\)</span>, <span class="arithmatex">\(T_{02}\)</span></td>
+<td style="text-align: left;">TM02</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Units</th>
+<th style="text-align: left;">Dimensions</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">degr</td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">degr</td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">W/m</td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,920 × 3,894,283</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Metadata (6 fields) · 1979–2010</summary>
 <table>
 <thead>
 <tr>
@@ -3384,19 +4408,95 @@
 <ul>
 <li><strong>Grid points:</strong> 461,465</li>
 <li><strong>File size:</strong> ~47.3 GB per year</li>
-<li><strong>Total archive:</strong> ~1.9 TB</li>
 <li><strong>Period:</strong> 1979–2020 &nbsp;·&nbsp; 42 annual files</li>
+<li><strong>Total archive:</strong> ~1.9 TB</li>
 <li><strong>Version:</strong> <code>v1.0.0</code></li>
 </ul>
 <details class="note">
-<summary>Spatiotemporal variables (9)</summary>
+<summary>Variable definitions (9)</summary>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">IEC name</th>
+<th style="text-align: left;">IEC Name</th>
 <th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\theta_{J}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (9)</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Units</th>
 <th style="text-align: left;">Dimensions</th>
 <th style="text-align: left;">Type</th>
@@ -3405,81 +4505,54 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>directionality_coefficient</code></td>
-<td style="text-align: left;">Directionality coefficient</td>
-<td style="text-align: left;">d</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>energy_period</code></td>
-<td style="text-align: left;">Energy period</td>
-<td style="text-align: left;">T_e,T_-10</td>
-<td style="text-align: left;">TMM10</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>maximum_energy_direction</code></td>
-<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
-<td style="text-align: left;">theta_J</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_absolute_period</code></td>
-<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">PER</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_wave_direction</code></td>
-<td style="text-align: left;">Mean wave direction (nautical convention)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">DIR</td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>omni-directional_wave_power</code></td>
-<td style="text-align: left;">Omnidirectional wave power</td>
-<td style="text-align: left;">J</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">W/m</td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>peak_period</code></td>
-<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
-<td style="text-align: left;">T_p</td>
-<td style="text-align: left;">RTP</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>significant_wave_height</code></td>
-<td style="text-align: left;">Significant wave height</td>
-<td style="text-align: left;">H_m0</td>
-<td style="text-align: left;">HSIGN</td>
 <td style="text-align: left;">m</td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>spectral_width</code></td>
-<td style="text-align: left;">Spectral width</td>
-<td style="text-align: left;">epsilon_0</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 461,465</td>
 <td style="text-align: left;"><code>float32</code></td>
@@ -3536,7 +4609,7 @@
 </div>
 </div>
 <div class="region-card__body">
-<p>Part of the Gulf of America dataset — same grid, variables, and archive period.</p>
+<p>Part of the Gulf of America dataset, using the same grid, variables, and archive period.</p>
 <p><a class="md-button md-button--inline" href="https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library/layers?vL=68c955d8b12e9eb9d3c3fc55&amp;b=%5B%5B-71.707737%2C15.083953%5D%2C%5B-60.15237%2C21.246153%5D%5D">View Puerto Rico on the Marine Energy Atlas</a></p>
 </div>
 </div>
@@ -3552,19 +4625,109 @@
 <ul>
 <li><strong>Grid points:</strong> 4,656,637</li>
 <li><strong>File size:</strong> ~572.8 GB per year</li>
-<li><strong>Total archive:</strong> ~23.5 TB</li>
 <li><strong>Period:</strong> 1979–2020 &nbsp;·&nbsp; 42 annual files</li>
+<li><strong>Total archive:</strong> ~23.5 TB</li>
 <li><strong>Version:</strong> <code>v1.0.1</code></li>
 </ul>
 <details class="note">
-<summary>Spatiotemporal variables (11)</summary>
+<summary>Variable definitions (11)</summary>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">IEC name</th>
+<th style="text-align: left;">IEC Name</th>
 <th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>direction_of_maximum_directionally_resolved_wave_power</code></td>
+<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\theta_{J}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
+<td style="text-align: left;">Mean absolute zero-crossing period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{z}\)</span>, <span class="arithmatex">\(T_{02}\)</span></td>
+<td style="text-align: left;">TM02</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omnidirectional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_wave_direction</code></td>
+<td style="text-align: left;">Peak wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PDIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (11)</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Units</th>
 <th style="text-align: left;">Dimensions</th>
 <th style="text-align: left;">Type</th>
@@ -3573,99 +4736,66 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>direction_of_maximum_directionally_resolved_wave_power</code></td>
-<td style="text-align: left;">Direction of maximum directionally resolved wave power (nautical convention)</td>
-<td style="text-align: left;">theta_J</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>directionality_coefficient</code></td>
-<td style="text-align: left;">Directionality coefficient</td>
-<td style="text-align: left;">d</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>energy_period</code></td>
-<td style="text-align: left;">Energy period</td>
-<td style="text-align: left;">T_e,T_-10</td>
-<td style="text-align: left;">TMM10</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_absolute_period</code></td>
-<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">PER</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_wave_direction</code></td>
-<td style="text-align: left;">Mean wave direction (nautical convention)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">DIR</td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_zero-crossing_period</code></td>
-<td style="text-align: left;">Mean absolute zero-crossing period</td>
-<td style="text-align: left;">T_z,T_02</td>
-<td style="text-align: left;">TM02</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>omnidirectional_wave_power</code></td>
-<td style="text-align: left;">Omnidirectional wave power</td>
-<td style="text-align: left;">J</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">W/m</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>peak_period</code></td>
-<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
-<td style="text-align: left;">T_p</td>
-<td style="text-align: left;">RTP</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>peak_wave_direction</code></td>
-<td style="text-align: left;">Peak wave direction (nautical convention)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">PDIR</td>
 <td style="text-align: left;">degr</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>significant_wave_height</code></td>
-<td style="text-align: left;">Significant wave height</td>
-<td style="text-align: left;">H_m0</td>
-<td style="text-align: left;">HSIGN</td>
 <td style="text-align: left;">m</td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>spectral_width</code></td>
-<td style="text-align: left;">Spectral width</td>
-<td style="text-align: left;">epsilon_0</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,928 × 4,656,637</td>
 <td style="text-align: left;"><code>float32</code></td>
@@ -3723,7 +4853,7 @@
 </ul>
 </div>
 <h2 id="data-access">Data Access<a class="headerlink" href="#data-access" title="Permanent link">¶</a></h2>
-<p>Wave energy resource characteizion data is available in three data products that serve different needs. <strong>Start with the Atlas</strong> for visual exploration, then move to the API or raw files as your analysis deepens.</p>
+<p>Wave energy resource characterization data is available in three data products that serve different needs. <strong>Start with the Atlas</strong> for visual exploration, then move to the API or raw files as your analysis deepens.</p>
 <table>
 <thead>
 <tr>
@@ -3756,7 +4886,7 @@
 </tbody>
 </table>
 <div class="admonition tip">
-<p class="admonition-title">Start at the marine energy atlas</p>
+<p class="admonition-title">Start at the Marine Energy Atlas</p>
 <ul>
 <li><strong>Marine Energy Atlas</strong>: zero setup, browser-only. Best for stakeholders, initial site screening, and non-programmers.</li>
 <li><strong>MHKiT</strong>: 5-line Python queries for point or multi-site time series. Best for feasibility studies and comparing candidate sites.</li>
@@ -3765,7 +4895,7 @@
 </div>
 <hr>
 <h2 id="site-analysis-example-pacwave-south">Site Analysis Example: PacWave South<a class="headerlink" href="#site-analysis-example-pacwave-south" title="Permanent link">¶</a></h2>
-<p>The visualizations below walk through a Class 2 feasibility workflow at a single grid point near the <a href="https://pacwaveenergy.org">PacWave</a> wave energy test site off Newport, Oregon (44.62°N, 124.28°W) — a U.S. DOE-funded open-water test facility on the West Coast.</p>
+<p>The visualizations below walk through a Class 2 feasibility workflow at a single grid point near the <a href="https://pacwaveenergy.org">PacWave</a> wave energy test site off Newport, Oregon (44.62°N, 124.28°W), a U.S. DOE-funded open-water test facility on the West Coast.</p>
 <p><strong>What this example covers:</strong></p>
 <ul>
 <li>Pulling a multi-year site time series with MHKiT</li>
@@ -3822,7 +4952,73 @@
 </figure>
 <details class="example">
 <summary>Show Python code</summary>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">_to_ref_year</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="sd">"""Map one calendar year's data onto REF_YEAR for overlay alignment."""</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">mask</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">year</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">sub</span>  <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">new_idx</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">REF_YEAR</span><span class="p">))</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">new_idx</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">_multiyear_df</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="sd">"""Return a DataFrame with one column per year, index aligned to REF_YEAR."""</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">frames</span> <span class="o">=</span> <span class="p">{</span><span class="n">yr</span><span class="p">:</span> <span class="n">_to_ref_year</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">yr</span><span class="p">)</span> <span class="k">for</span> <span class="n">yr</span> <span class="ow">in</span> <span class="n">YEARS</span><span class="p">}</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">frames</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">def</span><span class="w"> </span><span class="nf">_apply_ts_xaxis</span><span class="p">(</span><span class="n">ax</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">Axes</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="sd">"""Monthly ticks (Jan to Dec labels only; year suppressed for overlay plots)."""</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">MonthLocator</span><span class="p">())</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">"%b"</span><span class="p">))</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Time [UTC]"</span><span class="p">)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">def</span><span class="w"> </span><span class="nf">fig_wave_height_timeseries</span><span class="p">(</span><span class="n">Hm0</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">FIGURES</span><span class="p">[</span><span class="s2">"wave_height_timeseries"</span><span class="p">]</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  skip (exists): </span><span class="si">{</span><span class="n">out</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        <span class="k">return</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="n">df</span>  <span class="o">=</span> <span class="n">_multiyear_df</span><span class="p">(</span><span class="n">Hm0</span><span class="p">)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">FIGSIZE_TS</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    <span class="n">_plot_multiyear</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">COLOR_HM0</span><span class="p">)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="n">_apply_ts_xaxis</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"$H_</span><span class="si">{m0}</span><span class="s2">$ [m]"</span><span class="p">)</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">TITLE_PREFIX</span><span class="si">}</span><span class="s2">Significant Wave Height, $H_</span><span class="se">{{</span><span class="s2">m0</span><span class="se">}}</span><span class="s2">$ [m] | </span><span class="si">{</span><span class="n">LOCATION_NAME</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="n">_savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="k">def</span><span class="w"> </span><span class="nf">fig_energy_period_timeseries</span><span class="p">(</span><span class="n">Te</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">FIGURES</span><span class="p">[</span><span class="s2">"energy_period_timeseries"</span><span class="p">]</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  skip (exists): </span><span class="si">{</span><span class="n">out</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>        <span class="k">return</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="n">df</span>  <span class="o">=</span> <span class="n">_multiyear_df</span><span class="p">(</span><span class="n">Te</span><span class="p">)</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">FIGSIZE_TS</span><span class="p">)</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    <span class="n">_plot_multiyear</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">COLOR_TE</span><span class="p">)</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    <span class="n">_apply_ts_xaxis</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"$T_e$ [s]"</span><span class="p">)</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">TITLE_PREFIX</span><span class="si">}</span><span class="s2">Energy Period, $T_e$ [s] | </span><span class="si">{</span><span class="n">LOCATION_NAME</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    <span class="n">_savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="k">def</span><span class="w"> </span><span class="nf">fig_wave_power_timeseries</span><span class="p">(</span><span class="n">J</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">FIGURES</span><span class="p">[</span><span class="s2">"wave_power_timeseries"</span><span class="p">]</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  skip (exists): </span><span class="si">{</span><span class="n">out</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>        <span class="k">return</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    <span class="n">J_kW</span> <span class="o">=</span> <span class="n">J</span> <span class="o">/</span> <span class="mf">1000.0</span>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    <span class="n">df</span>   <span class="o">=</span> <span class="n">_multiyear_df</span><span class="p">(</span><span class="n">J_kW</span><span class="p">)</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">FIGSIZE_TS</span><span class="p">)</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    <span class="n">_plot_multiyear</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">COLOR_J</span><span class="p">)</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    <span class="n">_apply_ts_xaxis</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"$J$ [kW/m]"</span><span class="p">)</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">TITLE_PREFIX</span><span class="si">}</span><span class="s2">Omni-directional Wave Power, $J$ [kW/m] | </span><span class="si">{</span><span class="n">LOCATION_NAME</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    <span class="n">_savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
 </span></code></pre></div>
 </details>
 <h3 id="monthly-wave-climate">Monthly Wave Climate<a class="headerlink" href="#monthly-wave-climate" title="Permanent link">¶</a></h3>
@@ -3844,7 +5040,44 @@
 </figure>
 <details class="example">
 <summary>Show Python code</summary>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">fig_monthly_barchart_hm0</span><span class="p">(</span><span class="n">Hm0</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">FIGURES</span><span class="p">[</span><span class="s2">"monthly_barchart_hm0"</span><span class="p">]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  skip (exists): </span><span class="si">{</span><span class="n">out</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="k">return</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">FIGSIZE_BAR</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">_monthly_bar</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">Hm0</span><span class="p">,</span> <span class="n">COLOR_HM0</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                 <span class="n">ylabel</span><span class="o">=</span><span class="s2">"$H_</span><span class="si">{m0}</span><span class="s2">$ [m]"</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>                 <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">TITLE_PREFIX</span><span class="si">}</span><span class="s2">Significant Wave Height, $H_</span><span class="se">{{</span><span class="s2">m0</span><span class="se">}}</span><span class="s2">$ [m] | </span><span class="si">{</span><span class="n">LOCATION_NAME</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">_savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">fig_monthly_barchart_te</span><span class="p">(</span><span class="n">Te</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">FIGURES</span><span class="p">[</span><span class="s2">"monthly_barchart_te"</span><span class="p">]</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  skip (exists): </span><span class="si">{</span><span class="n">out</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        <span class="k">return</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">FIGSIZE_BAR</span><span class="p">)</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="n">_monthly_bar</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">Te</span><span class="p">,</span> <span class="n">COLOR_TE</span><span class="p">,</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>                 <span class="n">ylabel</span><span class="o">=</span><span class="s2">"$T_e$ [s]"</span><span class="p">,</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>                 <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">TITLE_PREFIX</span><span class="si">}</span><span class="s2">Energy Period, $T_e$ [s] | </span><span class="si">{</span><span class="n">LOCATION_NAME</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="n">_savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="k">def</span><span class="w"> </span><span class="nf">fig_monthly_barchart_j</span><span class="p">(</span><span class="n">J</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">FIGURES</span><span class="p">[</span><span class="s2">"monthly_barchart_j"</span><span class="p">]</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  skip (exists): </span><span class="si">{</span><span class="n">out</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>        <span class="k">return</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    <span class="n">J_kW</span> <span class="o">=</span> <span class="n">J</span> <span class="o">/</span> <span class="mf">1000.0</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">FIGSIZE_BAR</span><span class="p">)</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>    <span class="n">_monthly_bar</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">J_kW</span><span class="p">,</span> <span class="n">COLOR_J</span><span class="p">,</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>                 <span class="n">ylabel</span><span class="o">=</span><span class="s2">"$J$ [kW/m]"</span><span class="p">,</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>                 <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">TITLE_PREFIX</span><span class="si">}</span><span class="s2">Omni-directional Wave Power, $J$ [kW/m] | </span><span class="si">{</span><span class="n">LOCATION_NAME</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>    <span class="n">_savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
 </span></code></pre></div>
 </details>
 <h3 id="resource-matrix-and-environmental-contours">Resource Matrix and Environmental Contours<a class="headerlink" href="#resource-matrix-and-environmental-contours" title="Permanent link">¶</a></h3>
@@ -3863,12 +5096,100 @@
 </div>
 <details class="example">
 <summary>Show Python code</summary>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">fig_scatter_diagram</span><span class="p">(</span><span class="n">Hm0</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">Te</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">FIGURES</span><span class="p">[</span><span class="s2">"scatter_diagram"</span><span class="p">]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  skip (exists): </span><span class="si">{</span><span class="n">out</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="k">return</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">Hm0_edges</span><span class="p">,</span> <span class="n">Te_edges</span> <span class="o">=</span> <span class="n">_wave_bin_edges</span><span class="p">(</span><span class="n">Hm0</span><span class="p">,</span> <span class="n">Te</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="c1"># Bin using left edges as labels so the matrix index/columns are the bin edges</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">H_bins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">Hm0</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">Hm0_edges</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">Hm0_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">T_bins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">Te</span><span class="p">,</span>  <span class="n">bins</span><span class="o">=</span><span class="n">Te_edges</span><span class="p">,</span>  <span class="n">labels</span><span class="o">=</span><span class="n">Te_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">H_bins</span><span class="p">,</span> <span class="n">T_bins</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="p">(</span><span class="n">matrix</span> <span class="o">/</span> <span class="n">matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>   <span class="c1"># convert counts to %</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">matrix</span><span class="o">.</span><span class="n">index</span>   <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="n">matrix</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="c1"># Re-index to the full grid so pcolormesh sees every bin slot</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">Hm0_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">Te_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="n">Z</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">values</span>   <span class="c1"># shape: (n_Hm0_bins, n_Te_bins)</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="n">n_hours</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Hm0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">FIGSIZE_SQUARE</span><span class="p">)</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    <span class="n">cmap</span> <span class="o">=</span> <span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">haline</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    <span class="n">pcm</span>  <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">Te_edges</span><span class="p">,</span> <span class="n">Hm0_edges</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>    <span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">pcm</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">"Probability of Occurrence [%]"</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="n">_apply_matrix_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">Hm0_edges</span><span class="p">,</span> <span class="n">Te_edges</span><span class="p">,</span> <span class="n">grid_color</span><span class="o">=</span><span class="s2">"0.80"</span><span class="p">)</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">TITLE_PREFIX</span><span class="si">}</span><span class="s2">Joint Probability Distribution [%] | </span><span class="si">{</span><span class="n">LOCATION_NAME</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    <span class="n">_savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>             <span class="sa">f</span><span class="s2">"N</span><span class="se">\u2009</span><span class="s2">=</span><span class="se">\u2009</span><span class="si">{</span><span class="n">n_hours</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> hours  ·  </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">YEARS</span><span class="p">)</span><span class="si">}</span><span class="s2"> years "</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>             <span class="sa">f</span><span class="s2">"(</span><span class="si">{</span><span class="n">YEARS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\u2013</span><span class="si">{</span><span class="n">YEARS</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="k">def</span><span class="w"> </span><span class="nf">fig_environmental_contour</span><span class="p">(</span><span class="n">Hm0</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">Te</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    <span class="n">out</span> <span class="o">=</span> <span class="n">FIGURES</span><span class="p">[</span><span class="s2">"environmental_contour"</span><span class="p">]</span>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>    <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  skip (exists): </span><span class="si">{</span><span class="n">out</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>        <span class="k">return</span>
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    <span class="n">sea_state_duration</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">3600</span>
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>    <span class="n">n_hours</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Hm0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>    <span class="c1"># Pre-compute all contours so we can size the axes to contain them fully</span>
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>    <span class="n">contour_specs</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">25</span><span class="p">,</span> <span class="n">COLOR_C25</span><span class="p">,</span> <span class="s2">"-"</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">COLOR_C50</span><span class="p">,</span> <span class="s2">"-"</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">COLOR_C100</span><span class="p">,</span> <span class="s2">"-"</span><span class="p">)]</span>
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>    <span class="n">contours</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>    <span class="k">for</span> <span class="n">rp</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">ls</span> <span class="ow">in</span> <span class="n">contour_specs</span><span class="p">:</span>
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>        <span class="n">c</span> <span class="o">=</span> <span class="n">environmental_contours</span><span class="p">(</span>
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>            <span class="n">Hm0</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">Te</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>            <span class="n">sea_state_duration</span><span class="o">=</span><span class="n">sea_state_duration</span><span class="p">,</span>
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>            <span class="n">return_period</span><span class="o">=</span><span class="n">rp</span><span class="p">,</span>
+</span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>            <span class="n">method</span><span class="o">=</span><span class="s2">"PCA"</span><span class="p">,</span>
+</span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>        <span class="p">)</span>
+</span><span id="__span-2-57"><a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>        <span class="n">contours</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">rp</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">ls</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">"PCA_x1"</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">"PCA_x2"</span><span class="p">])))</span>
+</span><span id="__span-2-58"><a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>
+</span><span id="__span-2-59"><a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>    <span class="c1"># Expand bin edges so the largest contour envelope is fully inside the axes</span>
+</span><span id="__span-2-60"><a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>    <span class="n">Te_max_c</span>  <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">Te_c</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>  <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span>     <span class="n">Te_c</span>  <span class="ow">in</span> <span class="n">contours</span><span class="p">)</span>
+</span><span id="__span-2-61"><a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>    <span class="n">Hm0_max_c</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">Hm0_c</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">Hm0_c</span><span class="p">,</span> <span class="n">_</span>     <span class="ow">in</span> <span class="n">contours</span><span class="p">)</span>
+</span><span id="__span-2-62"><a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>    <span class="n">Hm0_edges</span><span class="p">,</span> <span class="n">Te_edges</span> <span class="o">=</span> <span class="n">_wave_bin_edges</span><span class="p">(</span>
+</span><span id="__span-2-63"><a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>        <span class="n">Hm0</span><span class="p">,</span> <span class="n">Te</span><span class="p">,</span>
+</span><span id="__span-2-64"><a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>        <span class="n">Te_max_override</span><span class="o">=</span><span class="n">Te_max_c</span><span class="p">,</span>
+</span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>        <span class="n">Hm0_max_override</span><span class="o">=</span><span class="n">Hm0_max_c</span><span class="p">,</span>
+</span><span id="__span-2-66"><a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>    <span class="p">)</span>
+</span><span id="__span-2-67"><a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>
+</span><span id="__span-2-68"><a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">FIGSIZE_SQUARE</span><span class="p">)</span>
+</span><span id="__span-2-69"><a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>
+</span><span id="__span-2-70"><a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>    <span class="c1"># Scatter dots: sns palette[0] with opacity</span>
+</span><span id="__span-2-71"><a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Te</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">Hm0</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">COLOR_HM0</span><span class="p">,</span>
+</span><span id="__span-2-72"><a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>               <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"Sea states (</span><span class="si">{</span><span class="n">YEARS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">YEARS</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">)"</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-2-73"><a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>
+</span><span id="__span-2-74"><a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>    <span class="k">for</span> <span class="n">rp</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">ls</span><span class="p">,</span> <span class="n">Hm0_c</span><span class="p">,</span> <span class="n">Te_c</span> <span class="ow">in</span> <span class="n">contours</span><span class="p">:</span>
+</span><span id="__span-2-75"><a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>        <span class="c1"># Close the contour without re-sorting (sorting scrambles the closed-loop</span>
+</span><span id="__span-2-76"><a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>        <span class="c1"># point order into a zigzag that renders as a filled polygon)</span>
+</span><span id="__span-2-77"><a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Te_c</span><span class="p">,</span> <span class="n">Te_c</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Hm0_c</span><span class="p">,</span> <span class="n">Hm0_c</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+</span><span id="__span-2-78"><a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>                <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="n">ls</span><span class="p">,</span>
+</span><span id="__span-2-79"><a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rp</span><span class="si">}</span><span class="s2">-yr return (PCA)"</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-2-80"><a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>
+</span><span id="__span-2-81"><a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>    <span class="n">_apply_matrix_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">Hm0_edges</span><span class="p">,</span> <span class="n">Te_edges</span><span class="p">,</span> <span class="n">grid_color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">)</span>
+</span><span id="__span-2-82"><a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">TITLE_PREFIX</span><span class="si">}</span><span class="s2">Environmental Contours, $H_</span><span class="se">{{</span><span class="s2">m0</span><span class="se">}}</span><span class="s2">$ vs $T_e$ | </span><span class="si">{</span><span class="n">LOCATION_NAME</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-2-83"><a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>    <span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</span><span id="__span-2-84"><a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>    <span class="n">leg</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s2">"white"</span><span class="p">)</span>
+</span><span id="__span-2-85"><a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>    <span class="n">leg</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+</span><span id="__span-2-86"><a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-2-87"><a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>    <span class="n">_savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span>
+</span><span id="__span-2-88"><a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>             <span class="sa">f</span><span class="s2">"N</span><span class="se">\u2009</span><span class="s2">=</span><span class="se">\u2009</span><span class="si">{</span><span class="n">n_hours</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> hours  ·  </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">YEARS</span><span class="p">)</span><span class="si">}</span><span class="s2"> years "</span>
+</span><span id="__span-2-89"><a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>             <span class="sa">f</span><span class="s2">"(</span><span class="si">{</span><span class="n">YEARS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\u2013</span><span class="si">{</span><span class="n">YEARS</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
 </span></code></pre></div>
 </details>
 <hr>
 <h2 id="resource-characterization-iects-62600-101">Resource Characterization (IEC/TS 62600-101)<a class="headerlink" href="#resource-characterization-iects-62600-101" title="Permanent link">¶</a></h2>
-<p>IEC/TS 62600-101 [@iec_62600_101] defines three levels of wave resource assessment — think of them as progressively deeper stages of a development project:</p>
+<p>IEC/TS 62600-101 [@iec_62600_101] defines three levels of wave resource assessment, which can be thought of as progressively deeper stages of a development project:</p>
 <table>
 <thead>
 <tr>

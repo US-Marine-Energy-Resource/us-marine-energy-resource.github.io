@@ -2689,12 +2689,6 @@ only as <code>v1.0.0</code>, which also runs to 2020.</p>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Download a specific wave file</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>aws<span class="w"> </span>s3<span class="w"> </span>cp<span class="w"> </span>s3://wpto-pds-us-wave/v1.0.1/West_Coast/West_Coast_wave_2010.h5<span class="w"> </span>.<span class="w"> </span>--no-sign-request
 </span></code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Bucket name is lowercase and hyphenated</p>
-<p>The bucket is <code>wpto-pds-us-wave</code>. <code>wpto-pds-US_wave</code> — the spelling used in the
-upstream openEDI documentation — does not resolve, and any command using it fails
-with <code>NoSuchBucket</code>.</p>
-</div>
 <h2 id="dataset-paths">Dataset Paths<a class="headerlink" href="#dataset-paths" title="Permanent link">¶</a></h2>
 <h3 id="tidal-hsds-paths">Tidal HSDS Paths<a class="headerlink" href="#tidal-hsds-paths" title="Permanent link">¶</a></h3>
 <table>

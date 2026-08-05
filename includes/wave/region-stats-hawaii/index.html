@@ -2511,25 +2511,312 @@
   <h1>Region stats hawaii</h1>
 
 <ul>
-<li><strong>Grid points:</strong> 700,414</li>
-<li><strong>File size:</strong> ~81.9 GB per year</li>
-<li><strong>Total archive:</strong> ~2.6 TB</li>
-<li><strong>Period:</strong> 1979–2010 &nbsp;·&nbsp; 32 annual files</li>
+<li><strong>Period:</strong> 1979–2020 &nbsp;·&nbsp; 42 annual files</li>
+<li><strong>Total archive:</strong> ~4.4 TB</li>
 <li><strong>Version:</strong> <code>v1.0.0</code></li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Incomplete archive</p>
-<p>Files for 2011–2020 are not available on AWS S3 or HSDS.</p>
-</div>
+<p><strong>2011–2020</strong> (10 files)</p>
+<ul>
+<li>Grid points: 1,696,188 &nbsp;·&nbsp; ~189.7 GB per year</li>
+</ul>
 <details class="note">
-<summary>Spatiotemporal variables (10)</summary>
+<summary>Variable definitions (10) · 2011–2020</summary>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">IEC name</th>
+<th style="text-align: left;">IEC Name</th>
 <th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>depth</code></td>
+<td style="text-align: left;">Water depth</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Depth</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Directionality coefficient</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Energy period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span>, <span class="arithmatex">\(T_{-10}\)</span></td>
+<td style="text-align: left;">TMM10</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">Peak wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PDIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Mean absolute wave period - equivalent to T_m01</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Mean wave direction (nautical convention)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">degr</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Omnidirectional wave power</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">Relative peak period of the variance density spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Significant wave height</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{m0}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (10) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Units</th>
+<th style="text-align: left;">Dimensions</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>depth</code></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">degr</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">degr</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">W/m</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">m</td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2,928 × 1,696,188</td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Metadata (7 fields) · 2011–2020</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>latitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>longitude</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>depth</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distance_to_shore</code></td>
+<td style="text-align: left;"><code>float32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>timezone</code></td>
+<td style="text-align: left;"><code>int16</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>eez</code></td>
+<td style="text-align: left;"><code>str[13]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jurisdiction</code></td>
+<td style="text-align: left;"><code>str[14]</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><strong>1979–2010</strong> (32 files)</p>
+<ul>
+<li>Grid points: 700,414 &nbsp;·&nbsp; ~81.9 GB per year</li>
+</ul>
+<details class="note">
+<summary>Variable definitions (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">IEC Name</th>
+<th style="text-align: left;">SWAN name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>directionality_coefficient</code></td>
+<td style="text-align: left;">Fraction of total wave energy travelling in the "direction of maximum wave power" direction</td>
+<td style="text-align: left;"><span class="arithmatex">\(d\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>energy_period</code></td>
+<td style="text-align: left;">Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{e}\)</span></td>
+<td style="text-align: left;">TM02</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy</code></td>
+<td style="text-align: left;">Maximum directionally resolved wave energy</td>
+<td style="text-align: left;"><span class="arithmatex">\(J_{\sigma,jdmax}\)</span></td>
+<td style="text-align: left;">jdmax</td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_energy_direction</code></td>
+<td style="text-align: left;">The direction from which the most wave energy is travelling</td>
+<td style="text-align: left;"><span class="arithmatex">\(Jsigma_{Jmax}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">deg</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_absolute_period</code></td>
+<td style="text-align: left;">Resolved Spectral Moment (m_0/m_1)</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">PER</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mean_wave_direction</code></td>
+<td style="text-align: left;">Direction Normal to the Wave Crests</td>
+<td style="text-align: left;"><span class="arithmatex">\(\Sigma\)</span></td>
+<td style="text-align: left;">DIR</td>
+<td style="text-align: left;">deg</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>omni-directional_wave_power</code></td>
+<td style="text-align: left;">Total wave energy flux from all directions</td>
+<td style="text-align: left;"><span class="arithmatex">\(J\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">W/m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>peak_period</code></td>
+<td style="text-align: left;">The period associated with the maximum value of the wave energy spectrum</td>
+<td style="text-align: left;"><span class="arithmatex">\(T_{p}\)</span></td>
+<td style="text-align: left;">RTP</td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>significant_wave_height</code></td>
+<td style="text-align: left;">Calculated as the zeroth spectral moment (i.e., H_m0)</td>
+<td style="text-align: left;"><span class="arithmatex">\(H_{s}\)</span></td>
+<td style="text-align: left;">HSIGN</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>spectral_width</code></td>
+<td style="text-align: left;">Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
+<td style="text-align: left;"><span class="arithmatex">\(\epsilon_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Variable schema (10) · 1979–2010</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Units</th>
 <th style="text-align: left;">Dimensions</th>
 <th style="text-align: left;">Type</th>
@@ -2538,90 +2825,60 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>directionality_coefficient</code></td>
-<td style="text-align: left;">Fraction of total wave energy travelling in the "direction of maximum wave power" direction</td>
-<td style="text-align: left;">d</td>
-<td style="text-align: left;">description: Fraction of total wave energy travelling in the "direction of maximum wave power" direction</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>energy_period</code></td>
-<td style="text-align: left;">Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
-<td style="text-align: left;">T_e</td>
-<td style="text-align: left;">TM02</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>maximum_energy</code></td>
-<td style="text-align: left;">Maximum directionally resolved wave energy</td>
-<td style="text-align: left;">J_sigma_jdmax</td>
-<td style="text-align: left;">jdmax</td>
 <td style="text-align: left;">W/m</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>maximum_energy_direction</code></td>
-<td style="text-align: left;">The direction from which the most wave energy is travelling</td>
-<td style="text-align: left;">Jsigma_Jmax</td>
-<td style="text-align: left;">description: The direction from which the most wave energy is travelling</td>
 <td style="text-align: left;">deg</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_absolute_period</code></td>
-<td style="text-align: left;">Resolved Spectral Moment (m_0/m_1)</td>
-<td style="text-align: left;">T_p</td>
-<td style="text-align: left;">PER</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>mean_wave_direction</code></td>
-<td style="text-align: left;">Direction Normal to the Wave Crests</td>
-<td style="text-align: left;">Sigma</td>
-<td style="text-align: left;">DIR</td>
 <td style="text-align: left;">deg</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>omni-directional_wave_power</code></td>
-<td style="text-align: left;">Total wave energy flux from all directions</td>
-<td style="text-align: left;">J</td>
-<td style="text-align: left;">description: Total wave energy flux from all directions</td>
 <td style="text-align: left;">W/m</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>peak_period</code></td>
-<td style="text-align: left;">The period associated with the maximum value of the wave energy spectrum</td>
-<td style="text-align: left;">T_p</td>
-<td style="text-align: left;">RTP</td>
 <td style="text-align: left;">s</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>significant_wave_height</code></td>
-<td style="text-align: left;">Calculated as the zeroth spectral moment (i.e., H_m0)</td>
-<td style="text-align: left;">H_s</td>
-<td style="text-align: left;">HSIGN</td>
 <td style="text-align: left;">m</td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>spectral_width</code></td>
-<td style="text-align: left;">Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
-<td style="text-align: left;">epsilon_o</td>
-<td style="text-align: left;">description: Spectral width characterizes the relative spreading of energy in the wave spectrum. Large values indicate a wider spectral peak</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">2,920 × 700,414</td>
 <td style="text-align: left;"><code>float32</code></td>
@@ -2630,7 +2887,7 @@
 </table>
 </details>
 <details class="note">
-<summary>Metadata (6 fields)</summary>
+<summary>Metadata (6 fields) · 1979–2010</summary>
 <table>
 <thead>
 <tr>
