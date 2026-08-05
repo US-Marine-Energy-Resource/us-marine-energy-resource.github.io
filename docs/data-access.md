@@ -39,7 +39,7 @@ For bulk downloads or programmatic access to the raw parquet files, the data is 
 
 Wave hindcast data is available via HSDS and AWS S3 using the [`rex`](https://github.com/NatLabRockies/rex) library.
 
-### Quick Start with rex
+### Quick Start With rex
 
 ```python
 from rex import ResourceX

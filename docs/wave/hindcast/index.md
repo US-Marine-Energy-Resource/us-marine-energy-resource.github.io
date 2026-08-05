@@ -27,7 +27,7 @@ See [Variables](variables.md) for the parameters available in this dataset.
 | CNMI and Guam | `CNMI_and_Guam` | v1.0.0 | 1979–2020 | [Browse](https://data.openei.org/s3_viewer?bucket=wpto-pds-us-wave&prefix=v1.0.0%2FCNMI_and_Guam%2F) |
 | Gulf of Mexico and Puerto Rico | `Gulf_of_Mexico_and_Puerto_Rico` | v1.0.1 | 1979–2020 | [Browse](https://data.openei.org/s3_viewer?bucket=wpto-pds-us-wave&prefix=v1.0.1%2FGulf_of_Mexico_and_Puerto_Rico%2F) |
 
-!!! note "File naming"
+!!! note "File Naming"
     Gulf of Mexico and Puerto Rico files use a shortened prefix: `GOM_PR_{year}.h5`.
     All other domains follow the pattern `{DomainName}_wave_{year}.h5`.
 

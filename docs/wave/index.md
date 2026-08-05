@@ -121,7 +121,7 @@ Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential acr
 </div>
 <div class="region-card__body" markdown="1">
 
-Part of the Gulf of America dataset — same grid, variables, and archive period.
+Part of the Gulf of America dataset, using the same grid, variables, and archive period.
 
 [View Puerto Rico on the Marine Energy Atlas][atlas-wave-puerto-rico]{.md-button .md-button--inline}
 
@@ -157,7 +157,7 @@ Part of the Gulf of America dataset — same grid, variables, and archive period
 
 ## Data Access
 
-Wave energy resource characteizion data is available in three data products that serve different needs. **Start with the Atlas** for visual exploration, then move to the API or raw files as your analysis deepens.
+Wave energy resource characterization data is available in three data products that serve different needs. **Start with the Atlas** for visual exploration, then move to the API or raw files as your analysis deepens.
 
 | I want to…                                      | Use this                                                       | Reference                                                                               |
 | :---                                            | :---                                                           | :---                                                                                    |
@@ -166,7 +166,7 @@ Wave energy resource characteizion data is available in three data products that
 | Download or slice the full archive              | HSDS or AWS S3                                                 | [HSDS Setup](../getting-started/hsds-setup.md) · [AWS S3](../getting-started/aws-s3.md) |
 | Look up variable definitions and units          | Variable reference                                             | [Wave Variables](hindcast/variables.md)                                                 |
 
-!!! tip "Start at the marine energy atlas"
+!!! tip "Start at the Marine Energy Atlas"
     - **Marine Energy Atlas**: zero setup, browser-only. Best for stakeholders, initial site screening, and non-programmers.
     - **MHKiT**: 5-line Python queries for point or multi-site time series. Best for feasibility studies and comparing candidate sites.
     - **HSDS / S3 raw files**: direct HDF5 access. Best for bulk extraction, many sites, large regional studies, and reproducible pipelines. Annual files range from ~87 GB (West Coast) to ~600 GB (Gulf of America and Puerto Rico); the full archive is TB-scale.
@@ -175,7 +175,7 @@ Wave energy resource characteizion data is available in three data products that
 
 ## Site Analysis Example: PacWave South
 
-The visualizations below walk through a Class 2 feasibility workflow at a single grid point near the [PacWave](https://pacwaveenergy.org) wave energy test site off Newport, Oregon (44.62°N, 124.28°W) — a U.S. DOE-funded open-water test facility on the West Coast.
+The visualizations below walk through a Class 2 feasibility workflow at a single grid point near the [PacWave](https://pacwaveenergy.org) wave energy test site off Newport, Oregon (44.62°N, 124.28°W), a U.S. DOE-funded open-water test facility on the West Coast.
 
 **What this example covers:**
 
@@ -300,7 +300,7 @@ The joint probability distribution (JPD) maps how often each $H_{m0}$ and $T_e$ 
 
 ## Resource Characterization (IEC/TS 62600-101)
 
-IEC/TS 62600-101 [@iec_62600_101] defines three levels of wave resource assessment — think of them as progressively deeper stages of a development project:
+IEC/TS 62600-101 [@iec_62600_101] defines three levels of wave resource assessment, which can be thought of as progressively deeper stages of a development project:
 
 | IEC class | What you are doing | Hindcast supports? | Best access path |
 |:---|:---|:---|:---|
