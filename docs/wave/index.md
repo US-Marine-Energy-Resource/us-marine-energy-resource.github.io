@@ -188,9 +188,14 @@ The visualizations below walk through a Class 2 feasibility workflow at a single
 <div id="site-context-map" style="height: 300px; width: 100%; border-radius: 6px; border: 1px solid #e0e0e0; margin: 1em 0;"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 <script>
 (function () {
+  --8<-- "docs/includes/js/ready-helpers.md"
+
+  runWhenReady(function () {
   var map = L.map("site-context-map", { zoomControl: true, scrollWheelZoom: false, center: [44.62, -124.28], zoom: 7 });
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
@@ -211,6 +216,7 @@ The visualizations below walk through a Class 2 feasibility workflow at a single
     .addTo(map);
 
   setTimeout(function () { map.invalidateSize(); }, 100);
+  });
 })();
 </script>
 
