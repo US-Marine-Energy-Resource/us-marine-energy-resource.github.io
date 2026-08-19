@@ -3,7 +3,9 @@
 Spatial footprint of each tidal hindcast location. Each polygon shows the exact exterior boundary of the FVCOM unstructured triangular mesh used for that location's simulation. Click a region in the legend to zoom to it.
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 
 <style>
 #coverage-legend {
@@ -57,6 +59,9 @@ Spatial footprint of each tidal hindcast location. Each polygon shows the exact 
 
 <script>
 (function () {
+  --8<-- "docs/includes/js/ready-helpers.md"
+
+  runWhenReady(function () {
   var regions = [
     {
       key: "AK_aleutian_islands",
@@ -169,10 +174,7 @@ Spatial footprint of each tidal hindcast location. Each polygon shows the exact 
     legendEl.appendChild(item);
   });
 
-  // Resolve against MkDocs' own base URL so this works at any deploy path
-  // (site root in production, /pr-preview/<name>/ in previews).
-  var assetBase = JSON.parse(document.getElementById("__config").textContent)
-    .base.replace(/\/$/, "") + "/assets/tidal/";
+  var assetBase = resolveAssetBase("assets/tidal");
 
   regions.forEach(function (region, i) {
     var color = colors[i % colors.length];
@@ -243,6 +245,7 @@ Spatial footprint of each tidal hindcast location. Each polygon shows the exact 
         console.warn("Could not load boundary for " + region.key, err);
         loadCount++;
       });
+  });
   });
 })();
 </script>
