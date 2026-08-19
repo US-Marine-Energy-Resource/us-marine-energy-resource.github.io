@@ -2760,13 +2760,32 @@
 </table>
 <h2 id="example-site">Example Site<a class="headerlink" href="#example-site" title="Permanent link">¶</a></h2>
 <p>The visualizations below use data from a single grid point in Upper Cook Inlet, Alaska (60.74°N, 151.43°W), near Nikiski. Cook Inlet has some of the strongest tidal currents in the U.S. The map shows the model domain boundary and the example point. See <a href="high-resolution-hindcast/coverage-maps/">Regional Coverage</a> for all five dataset extents.</p>
-<p><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></p>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<p><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin=""></p>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer=""></script>
 
 <div id="site-context-map" style="height: 300px; width: 100%; border-radius: 6px; border: 1px solid #e0e0e0; margin: 1em 0;"></div>
 
 <script>
 (function () {
+  function runWhenReady(fn) {
+    if (typeof document$ !== "undefined") {
+      document$.subscribe(fn);
+    } else if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  function resolveAssetBase(subpath) {
+    var base = JSON.parse(document.getElementById("__config").textContent).base;
+    return base.replace(/\/$/, "") + "/" + subpath.replace(/^\/+|\/+$/g, "") + "/";
+  }
+
+
+  runWhenReady(function () {
   var map = L.map("site-context-map", { zoomControl: true, scrollWheelZoom: false, center: [60.74, -151.43], zoom: 7 });
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
@@ -2776,10 +2795,7 @@
   }).addTo(map);
 
   var color = "#4C72B0";
-  // Resolve against MkDocs' own base URL so this works at any deploy path
-  // (site root in production, /pr-preview/<name>/ in previews).
-  var assetBase = JSON.parse(document.getElementById("__config").textContent)
-    .base.replace(/\/$/, "") + "/assets/tidal/";
+  var assetBase = resolveAssetBase("assets/tidal");
 
   fetch(assetBase + "AK_cook_inlet_boundary.geojson")
     .then(function (r) { return r.json(); })
@@ -2810,6 +2826,7 @@
       console.warn("Could not load Cook Inlet boundary", err);
       map.setView([60.5, -152], 7);
     });
+  });
 })();
 </script>
 
@@ -3041,24 +3058,21 @@
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../javascripts/notice.js"></script>
+        <script src="../javascripts/notice.js" defer=""></script>
       
-        <script src="../javascripts/navpane.js"></script>
+        <script src="../javascripts/navpane.js" defer=""></script>
       
-        <script src="../javascripts/toc-fix.js"></script>
+        <script src="../javascripts/toc-fix.js" defer=""></script>
       
-        <script src="../javascripts/glightbox-init.js"></script>
-      
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="../javascripts/citation.min.js"></script>
-      
-        <script src="../javascripts/cite.js"></script>
+        <script src="../javascripts/glightbox-init.js" defer=""></script>
       
     
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+</script><script src="../javascripts/citation.min.js" defer></script>
+<script src="../javascripts/cite.js" defer></script>
+<link rel="preconnect" href="https://unpkg.com" />
+<script src="../javascripts/mathjax.js" defer></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+</body></html>

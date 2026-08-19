@@ -2,334 +2,338 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://us-marine-energy-resource.github.io/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/_general_cite_widget/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/atlas-data-library-copy/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/contact/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/data-access/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/resource-characterization/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/types-of-marine-energy-conversion/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/us-marine-energy-potential-by-region/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/about/contact/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/about/funding/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/about/project/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/about/team/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/conferences/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/conferences/umerc-2026/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/getting-started/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/getting-started/aws-s3/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/getting-started/contributing/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/getting-started/data-formats/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/getting-started/hsds-setup/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/getting-started/marine-energy-atlas/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/hindcast-definition/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/links/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/us-tidal-help/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/wave-s3-summary/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
+    </url>
+    <url>
+         <loc>https://us-marine-energy-resource.github.io/includes/js/ready-helpers/</loc>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/readme/cli-area-query/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/readme/cli-export-options/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/readme/cli-point-query/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/readme/cli-transect-query/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/readme/direct-downloads/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/readme/installation/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/readme/ts-variables/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/wave/region-stats-alaska/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/wave/region-stats-atlantic/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/wave/region-stats-cnmi-guam/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/wave/region-stats-gulf-of-america-and-puerto-rico/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/wave/region-stats-hawaii/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/includes/wave/region-stats-west-coast/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/ocean-current/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/otec/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/river/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/index-cite/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/95th-percentile-current-speed/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/95th-percentile-power-density/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/_cite-widget/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/center_latitude/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/center_longitude/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/changelog/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/coordinate-systems/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/coverage-maps/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/data-access/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/definitions/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/distance-to-shore/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/face_id/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/faq/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/full_year_https_url/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/full_year_s3_uri/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/grid-resolution/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/limitations/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/max-sea-surface-elevation-at-high-tide/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/maximum-water-depth/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/mean-current-speed/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/mean-power-density/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/methodology/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/min-sea-surface-elevation-at-low-tide/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/minimum-water-depth/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/model-configuration/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/quality-assurance/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/references/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/sigma-layers/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/tidal-range/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/time-series-variables/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/unstructured-grid/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/usage-examples/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/validation/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/variables/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/wave/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/wave/_cite-widget/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/wave/hindcast/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/wave/hindcast/references/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/wave/hindcast/s3-inventory/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
     <url>
          <loc>https://us-marine-energy-resource.github.io/wave/hindcast/variables/</loc>
-         <lastmod>2026-08-05</lastmod>
+         <lastmod>2026-08-19</lastmod>
     </url>
 </urlset>

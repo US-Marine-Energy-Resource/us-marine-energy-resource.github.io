@@ -4906,10 +4906,29 @@
 </ul>
 <div id="site-context-map" style="height: 300px; width: 100%; border-radius: 6px; border: 1px solid #e0e0e0; margin: 1em 0;"></div>
 
-<p><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></p>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<p><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin=""></p>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer=""></script>
 <script>
 (function () {
+  function runWhenReady(fn) {
+    if (typeof document$ !== "undefined") {
+      document$.subscribe(fn);
+    } else if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  function resolveAssetBase(subpath) {
+    var base = JSON.parse(document.getElementById("__config").textContent).base;
+    return base.replace(/\/$/, "") + "/" + subpath.replace(/^\/+|\/+$/g, "") + "/";
+  }
+
+
+  runWhenReady(function () {
   var map = L.map("site-context-map", { zoomControl: true, scrollWheelZoom: false, center: [44.62, -124.28], zoom: 7 });
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
@@ -4930,6 +4949,7 @@
     .addTo(map);
 
   setTimeout(function () { map.invalidateSize(); }, 100);
+  });
 })();
 </script>
 
@@ -5384,24 +5404,21 @@
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../javascripts/notice.js"></script>
+        <script src="../javascripts/notice.js" defer=""></script>
       
-        <script src="../javascripts/navpane.js"></script>
+        <script src="../javascripts/navpane.js" defer=""></script>
       
-        <script src="../javascripts/toc-fix.js"></script>
+        <script src="../javascripts/toc-fix.js" defer=""></script>
       
-        <script src="../javascripts/glightbox-init.js"></script>
-      
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="../javascripts/citation.min.js"></script>
-      
-        <script src="../javascripts/cite.js"></script>
+        <script src="../javascripts/glightbox-init.js" defer=""></script>
       
     
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+</script><script src="../javascripts/citation.min.js" defer></script>
+<script src="../javascripts/cite.js" defer></script>
+<link rel="preconnect" href="https://unpkg.com" />
+<script src="../javascripts/mathjax.js" defer></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+</body></html>
