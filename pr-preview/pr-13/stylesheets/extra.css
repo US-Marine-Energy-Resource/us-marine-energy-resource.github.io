@@ -1,0 +1,1365 @@
+/* Google Fonts - Karla for headers */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap');
+
+/* NLR Color Palette */
+:root {
+  /* NLR Mesa Blue */
+  --md-primary-fg-color: #0079C2;
+  --md-primary-fg-color--light: #00A3E4;
+  --md-primary-fg-color--dark: #005a91;
+
+  /* Accent - NLR Rocky Blue */
+  --md-accent-fg-color: #003A69;
+  --md-accent-fg-color--transparent: rgba(0, 163, 228, 0.1);
+
+  /* NLR additional colors for reference */
+
+  --nlr-blue: #0079C2;
+  --nlr-dark-blue: #003A69;
+  /* NLR Golden Sun */
+  --nlr-yellow: #DB9728;
+  --nlr-green: #819E7E;
+  --nlr-gray: #CEC3BA;
+  --nlr-black: #111212
+  --nlr-light-gray: #f6f4f1;
+  --success-green: #388E3C;
+  --danger-red: #D32F2F;
+  --warning-orange: #E64A19;
+}
+
+/* Header font - Karla, all uppercase */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Header styling */
+.md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Navigation tabs */
+.md-tabs {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color--light);
+}
+
+/* Code blocks */
+.md-typeset code {
+  background-color: rgba(0, 121, 194, 0.1);
+}
+
+/* Admonitions - Info */
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary {
+  background-color: rgba(0, 121, 194, 0.1);
+}
+
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Admonitions - Warning */
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--nlr-yellow);
+}
+
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: rgba(255, 196, 35, 0.1);
+}
+
+/* Admonitions - Success */
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  border-color: var(--success-green);
+}
+
+.md-typeset .success > .admonition-title,
+.md-typeset .success > summary {
+  background-color: rgba(125, 165, 68, 0.1);
+}
+
+/* Tables */
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* Footer */
+.md-footer {
+  background-color: var(--nlr-blue);
+}
+
+/* Prev/Next nav section — match the header blue */
+.md-footer-nav {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Search highlight */
+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Override mkdocs-material TOC scroll-spy with our own */
+.md-nav--secondary .md-nav__link--active {
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+
+.md-nav--secondary .toc-active {
+  color: var(--md-primary-fg-color) !important;
+}
+
+/* Make "Table of contents" label darker to match left nav headers */
+.md-nav--secondary > .md-nav__title {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+/* --- Tighten above-the-fold whitespace --- */
+
+/* Reduce gap between tabs bar and content */
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-content__inner {
+  padding-top: 0.5rem;
+}
+
+/* Tighter h1: smaller size, less bottom margin */
+.md-typeset h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4em;
+  margin-top: 0;
+}
+
+/* Tighter h2/h3/h4/h5/h6 spacing */
+.md-typeset h2 {
+  font-size: 1.2rem;
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+}
+
+.md-typeset h3 {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  margin-top: 0.5em;
+  margin-bottom: 0.15em;
+}
+
+/* Reduce paragraph spacing */
+.md-typeset p {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/* Tighten left sidebar top alignment */
+.md-sidebar {
+  padding-top: 0.5rem;
+}
+
+/* Tighten table margins */
+.md-typeset table {
+  margin-top: 0.4em;
+  margin-bottom: 0.6em;
+}
+
+/* --- End tighten whitespace --- */
+
+/* Content max width */
+.md-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.md-header__title {
+  margin-left: 0 !important;
+  cursor: pointer;
+}
+
+/* --- Glightbox overrides --- */
+
+/* Semi-transparent overlay instead of solid black */
+.goverlay {
+  background: rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Constrain image to reasonable viewport size */
+.glightbox-clean .ginner-container {
+  max-width: min(82vw, 1400px) !important;
+  width: auto !important;
+}
+
+.glightbox-clean .gslide-image img {
+  max-height: 72vh !important;
+  max-width: min(82vw, 1400px) !important;
+  width: auto !important;
+}
+
+/* Caption below the image — dark, properly wrapped */
+.glightbox-clean .gslide-description {
+  background: rgba(15, 15, 15, 0.88) !important;
+  max-width: min(82vw, 1400px) !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.glightbox-clean .gdesc-inner {
+  padding: 0.65em 1.25em;
+}
+
+.glightbox-clean .gslide-title {
+  display: none;
+}
+
+.glightbox-clean .gslide-desc,
+.gslide-desc {
+  font-size: 0.925rem !important;
+  font-weight: 700 !important;
+  line-height: 1.5;
+  color: #d8d8d8;
+  white-space: normal !important;
+  word-break: break-word;
+  margin: 0;
+}
+
+/* --- Figure captions --- */
+
+/* Auto-number figures per page */
+.md-typeset {
+  counter-reset: figure-counter;
+}
+
+.md-typeset figure {
+  counter-increment: figure-counter;
+}
+
+.md-typeset figcaption::before {
+  content: "Figure " counter(figure-counter) ": ";
+  font-weight: 700;
+}
+
+.md-typeset figcaption {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  margin-top: 0.35rem;
+  max-width: 90%;
+}
+
+/* --- Citation styles --- */
+
+/* Citation placeholders: styled pills shown while citations load */
+.cite-placeholder {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.06);
+  color: transparent;
+  border-radius: 3px;
+  font-size: 0.85em;
+  padding: 0.05em 0.4em;
+  vertical-align: baseline;
+  min-width: 1.5em;
+  height: 1em;
+  animation: cite-placeholder-pulse 1.2s ease-in-out infinite;
+}
+
+.cite-placeholder-block {
+  display: block;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 0.6em 0.8em;
+  margin: 0.5em 0;
+  height: 1.2em;
+  animation: cite-placeholder-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes cite-placeholder-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Fade in rendered citation elements */
+.cite-inline,
+.cite-full,
+.cite-formats {
+  animation: cite-fade-in 0.2s ease-out forwards;
+}
+
+@keyframes cite-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Inline citation styling */
+.cite-inline {
+  /* Inherits text styling by default */
+}
+
+/* Citation links */
+.cite-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cite-link:hover {
+  color: var(--md-primary-fg-color);
+}
+
+/* Citation hover tooltip (real DOM element for interactive content) */
+.cite-tooltip {
+  position: absolute;
+  z-index: 200;
+  background: #fff;
+  border: 1px solid var(--nlr-light-gray);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.08);
+  padding: 0.65em 0.8em;
+  max-width: 400px;
+  width: max-content;
+  font-size: 1.4em;
+  line-height: 1.5;
+  color: var(--md-default-fg-color);
+  pointer-events: auto;
+  opacity: 0;
+  transition: opacity 0.12s ease-out;
+}
+
+.cite-tooltip.visible {
+  opacity: 1;
+}
+
+/* Arrow */
+.cite-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #fff;
+  border-bottom: none;
+}
+
+.cite-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--nlr-light-gray);
+  border-bottom: none;
+}
+
+/* Links inside tooltip */
+.cite-tooltip a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.cite-tooltip a:hover {
+  text-decoration: underline;
+}
+
+/* Invisible bridge between citation and tooltip so hover doesn't break */
+.cite-tooltip-bridge {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+/* When tooltip is below the link, flip the arrow and bridge */
+.cite-tooltip-below::after {
+  bottom: auto;
+  top: -6px;
+  border-top: none;
+  border-bottom: 6px solid #fff;
+}
+
+.cite-tooltip-below::before {
+  bottom: auto;
+  top: -7px;
+  border-top: none;
+  border-bottom: 6px solid var(--nlr-light-gray);
+}
+
+.cite-tooltip-below .cite-tooltip-bridge {
+  bottom: auto;
+  top: -8px;
+}
+
+/* Error state for unknown citation keys */
+.cite-error {
+  color: #d32f2f;
+  border-bottom: 1px dashed #d32f2f;
+  cursor: help;
+}
+
+/* Full inline citation [!@key] */
+.cite-full {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.cite-full .csl-entry {
+  display: inline;
+}
+
+/* Bibliography container */
+.cite-bibliography {
+  margin-top: 1em;
+}
+
+/* Numbered bibliography list */
+.cite-bib-list {
+  padding-left: 2em;
+  line-height: 1.6;
+}
+
+.cite-bib-list li {
+  margin-bottom: 0.75em;
+  padding-left: 0.5em;
+}
+
+.cite-bibliography .csl-entry {
+  margin-bottom: 0.75em;
+  padding-left: 2em;
+  text-indent: -2em;
+  line-height: 1.5;
+}
+
+/* --- Citation format tabs --- */
+
+/* Collapsible wrapper */
+.cite-formats {
+  margin-top: 0.25em;
+  margin-bottom: 1.25em;
+  border: 1px solid var(--nlr-light-gray);
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.cite-formats summary {
+  cursor: pointer;
+  padding: 0.4em 0.75em;
+  font-weight: 600;
+  color: var(--nlr-black);
+  user-select: none;
+}
+
+/* Remove MkDocs Material admonition icon and native marker; use a right-side chevron */
+.md-typeset .cite-formats > summary::before {
+  display: none !important;
+}
+.md-typeset .cite-formats > summary::after {
+  display: none !important;
+}
+.md-typeset .cite-formats > summary {
+  padding-left: 0.75em;
+  padding-right: 2em;
+  min-height: unset;
+  list-style: none;
+  position: relative;
+}
+.md-typeset .cite-formats > summary::-webkit-details-marker {
+  display: none;
+}
+/* Chevron on the right side, rotates when open */
+.cite-formats > summary .cite-chevron {
+  position: absolute;
+  right: 0.75em;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  color: var(--nlr-black);
+}
+.cite-formats[open] > summary .cite-chevron {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.cite-formats summary:hover {
+  color: var(--md-primary-fg-color);
+}
+
+.cite-formats[open] summary {
+  border-bottom: 1px solid var(--nlr-light-gray);
+}
+
+.cite-formats-inner {
+  padding: 0.5em 0.75em;
+}
+
+/* Tab bar */
+.cite-format-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--nlr-light-gray);
+  margin-bottom: 0.5em;
+}
+
+.cite-format-tab {
+  background: none;
+  border: none;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-family: inherit;
+  color: var(--nlr-black);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.cite-format-tab:hover {
+  color: var(--md-primary-fg-color);
+}
+
+.cite-format-tab.active {
+  color: var(--md-primary-fg-color);
+  border-bottom-color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+/* Tab content panels */
+.cite-format-content {
+  position: relative;
+}
+
+.cite-format-content:not(.active) {
+  display: none;
+}
+
+.cite-format-pre {
+  margin: 0;
+  padding: 0.75em;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.cite-format-content.cite-mono .cite-format-pre {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.85em;
+  white-space: pre;
+}
+
+/* Pre wrapper for inline copy button */
+.cite-format-pre-wrapper {
+  position: relative;
+}
+
+.cite-copy-inline {
+  position: absolute;
+  top: 0.4em;
+  right: 0.4em;
+  opacity: 0.4;
+  transition: opacity 0.15s;
+  padding: 0.25em !important;
+  border: none !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 3px !important;
+  cursor: pointer;
+  color: var(--nlr-black);
+}
+
+.cite-format-pre-wrapper:hover .cite-copy-inline {
+  opacity: 1;
+}
+
+.cite-copy-inline.copied {
+  opacity: 1 !important;
+}
+
+/* Action bar (copy + save buttons) */
+.cite-action-bar {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0.4em;
+  justify-content: flex-end;
+}
+
+/* Action bar buttons — solid filled "buttony" style */
+.cite-action-bar .cite-copy-btn,
+.cite-save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.4em 0.9em;
+  background: var(--md-primary-fg-color);
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.925em;
+  font-family: inherit;
+  color: #fff;
+  font-weight: 500;
+  transition: filter 0.15s, box-shadow 0.15s;
+}
+
+.cite-action-bar .cite-copy-btn:hover,
+.cite-save-btn:hover {
+  filter: brightness(0.88);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  color: #fff;
+}
+
+.cite-action-bar .cite-copy-btn.copied,
+.cite-save-btn.saved {
+  background: var(--success-green);
+  border-color: var(--success-green);
+  color: #fff;
+  filter: none;
+}
+
+/* On pages with a bibliography (e.g. references), show format tabs
+   without the outer box so they blend into the page flow */
+.cite-bib-page .cite-formats {
+  border: none;
+  border-radius: 0;
+}
+
+.cite-bib-page .cite-formats[open] summary {
+  border-bottom: none;
+}
+
+.cite-bib-page .cite-formats-inner {
+  padding-left: 0;
+}
+
+/* --- Site Notice: Modal --- */
+
+.site-notice-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.site-notice-overlay--hidden {
+  display: none !important;
+}
+
+.site-notice-modal {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+  max-width: 520px;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.site-notice-modal__title {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.15rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--nlr-dark-blue);
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  padding-bottom: 0.5rem;
+}
+
+.site-notice-modal__body p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 0.75em;
+}
+
+.site-notice-modal__body a {
+  color: var(--md-primary-fg-color);
+}
+
+.site-notice-modal__body a:hover {
+  color: var(--md-primary-fg-color--light);
+}
+
+.site-notice-modal__footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.site-notice-modal__btn {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1.5em;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s, box-shadow 0.15s;
+}
+
+.site-notice-modal__btn:hover {
+  filter: brightness(0.88);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.site-notice-modal__btn:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 2px;
+}
+
+/* --- Cite Dataset Widget --- */
+
+.cite-dataset-widget {
+  margin-top: 2em;
+}
+
+.cite-widget-details {
+  border: 1px solid var(--nlr-light-gray);
+  border-radius: 6px;
+}
+
+/* Summary bar */
+.cite-widget-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.6em 1em;
+  padding-right: 2.5em;
+  background: rgba(0, 121, 194, 0.06);
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  position: relative;
+  border-radius: 6px;
+}
+
+.cite-widget-details[open] > .cite-widget-summary {
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid var(--nlr-light-gray);
+}
+
+.cite-widget-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Override MkDocs Material admonition styles on the summary */
+.md-typeset .cite-widget-details > summary::before,
+.md-typeset .cite-widget-details > summary::after {
+  display: none !important;
+}
+.md-typeset .cite-widget-details > summary {
+  padding-left: 1em;
+  padding-right: 2.5em;
+  min-height: unset;
+  list-style: none;
+}
+
+.cite-widget-summary .cite-widget-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.cite-widget-summary .cite-chevron {
+  position: absolute;
+  right: 0.75em;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  color: var(--md-primary-fg-color);
+}
+
+.cite-widget-details[open] > .cite-widget-summary .cite-chevron {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Body */
+.cite-widget-body {
+  padding: 1em;
+}
+
+/* Location selector */
+.cite-widget-locations {
+  margin-bottom: 1em;
+}
+
+.cite-widget-locations-label {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cite-widget-select-all-row {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--nlr-light-gray);
+}
+
+.cite-widget-select-all-row .cite-widget-checkbox-label {
+  font-size: 0.85em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cite-widget-location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.25em 1em;
+}
+
+.cite-widget-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.9em;
+  cursor: pointer;
+  padding: 0.15em 0;
+}
+
+.cite-widget-checkbox-label input[type="checkbox"] {
+  accent-color: var(--md-primary-fg-color);
+  cursor: pointer;
+}
+
+/* Hint text below checkboxes */
+.cite-widget-hint {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Format tabs container */
+.cite-widget-tabs-container {
+  min-height: 2em;
+}
+
+/* Override inner format tabs inside the widget — remove wrapper chrome */
+.cite-widget-tabs-container .cite-formats {
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.cite-widget-tabs-container .cite-formats > summary {
+  display: none;
+}
+
+.cite-widget-tabs-container .cite-formats-inner {
+  padding: 0;
+}
+
+/* --- Site button variants: filled block CTA and no-fill inline link --- */
+/* Both share the chevron */
+
+.md-button.md-button--site::after,
+.md-button.md-button--inline::after {
+  content: ' ›';
+  font-size: 1.15em;
+  margin-left: 0.1em;
+  font-weight: 400;
+}
+
+/* --site: filled blue block CTA */
+.md-button.md-button--site {
+  background-color: var(--nlr-blue);
+  color: white !important;
+  border-color: var(--nlr-blue);
+}
+
+.md-button.md-button--site:hover,
+.md-button.md-button--site:focus {
+  background-color: var(--nlr-dark-blue);
+  border-color: var(--nlr-dark-blue);
+  color: white !important;
+}
+
+/* --inline: dark filled button with chevron, floats right within paragraph text */
+.md-button.md-button--inline {
+  background-color: var(--nlr-blue);
+  border-color: var(--nlr-blue);
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.85em;
+  padding: 0.2em 0.75em;
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: none;
+  float: right;
+}
+
+/* Clear float so following elements are never truncated by a floated --inline button */
+.md-typeset p:has(> .md-button--inline) + p,
+.md-typeset p:has(> .md-button--inline) + ul,
+.md-typeset li:has(> .md-button--inline) + li,
+.md-typeset ul:has(.md-button--inline) + p {
+  clear: right;
+}
+
+.md-button.md-button--inline:hover,
+.md-button.md-button--inline:focus {
+  background-color: var(--nlr-dark-blue);
+  border-color: var(--nlr-dark-blue);
+  color: white !important;
+  box-shadow: none;
+}
+
+/* Right-align wrapper for block CTAs; supports multiple buttons via gap */
+.btn-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+/* --- How to Access: quick-nav pathways --- */
+
+/* Quick-nav: 3 rows, question left / section name right */
+.access-pathways {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.access-pathways__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  text-decoration: none !important;
+  background: var(--nlr-light-gray);
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.access-pathways__row:hover {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.access-pathways__row:hover .access-pathways__name {
+  color: var(--nlr-blue);
+}
+
+.access-pathways__question {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  font-style: italic;
+}
+
+.access-pathways__name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--nlr-dark-blue);
+  white-space: nowrap;
+  margin-left: 1rem;
+  transition: color 0.15s;
+}
+
+/* ============================================================================
+   ACCESS PATHWAY CARDS — "Choose Your Path" Layout
+   Redesigned for clear user self-classification with numbered steps,
+   top-banner images, and full-width content for Wave/Tidal splits.
+   ============================================================================ */
+
+/* Section intro text */
+.access-intro {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 1.25rem !important;
+  font-style: italic;
+}
+
+/* Card container — vertical stack */
+.access-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+/* Individual pathway card */
+.access-card {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.access-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Top media banner */
+.access-card__media {
+  width: 100%;
+  height: 180px;
+  background: var(--nlr-light-gray);
+  overflow: hidden;
+}
+
+.access-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+}
+
+/* Card body — full width content */
+.access-card__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+/* Section name — prominent title */
+.access-card__label {
+  font-size: 1.15rem !important;
+  font-weight: 700;
+  color: var(--nlr-dark-blue);
+  margin: 0 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+/* Audience — fine print below label */
+.access-card__audience {
+  font-size: 0.72rem !important;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 0 0 0.85rem !important;
+  font-weight: 400;
+}
+
+/* Description text */
+.access-card__desc {
+  font-size: 0.875rem !important;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0 0 0.75rem !important;
+}
+
+/* Primary actions row */
+.access-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Buttons should NOT stretch */
+.access-card__actions .md-button {
+  width: auto !important;
+  flex-shrink: 0;
+}
+
+/* ---- Wave/Tidal Resource Split (full-width below intro) ---- */
+
+.access-card__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.access-card__resource {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Resource heading with icon */
+.access-card__resource-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nlr-dark-blue);
+  margin: 0 0 0.4rem !important;
+}
+
+/* Resource description */
+.access-card__resource-desc {
+  font-size: 0.84rem !important;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0 0 0.6rem !important;
+  flex-grow: 1;
+}
+
+/* Resource actions — button + links */
+.access-card__resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: auto;
+}
+
+.access-card__resource-actions .md-button {
+  width: auto !important;
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  padding: 0.45em 1em;
+}
+
+/* Plain text links in resource actions */
+.access-card__link {
+  font-size: 0.8rem;
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.access-card__link:hover {
+  text-decoration: underline;
+  color: var(--md-primary-fg-color--light);
+}
+
+/* ---- Responsive: Tablet (<900px) ---- */
+@media (max-width: 900px) {
+  .access-card__split {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .access-card__resource + .access-card__resource {
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* ---- Responsive: Mobile (<600px) ---- */
+@media (max-width: 600px) {
+  .access-pathways__question {
+    display: none;
+  }
+
+  .access-pathways__name {
+    margin-left: 0;
+    white-space: normal;
+  }
+
+  .access-card__media {
+    height: 140px;
+  }
+
+  .access-card__step {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.8rem;
+    top: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .access-card__body {
+    padding: 1rem 1.125rem 1.25rem;
+  }
+
+  .access-card__label {
+    font-size: 1rem !important;
+  }
+
+  .access-card__resource-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+
+
+/* ============================================================================
+   PLOT PAIR — side-by-side figure layout for plots like JPD + contour
+   ============================================================================ */
+
+.plot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.plot-pair figure {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .plot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Inline caret for table/prose links */
+.md-typeset a.link-caret::after {
+  content: ' ›';
+  font-size: 1.1em;
+  margin-left: 0.1em;
+  font-weight: 400;
+}
+
+/* ── Region Cards ──────────────────────────────────────────── */
+.region-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+/* Top row: thumbnail left + name/citation right */
+.region-card__top {
+  display: flex;
+  align-items: stretch;
+}
+
+/* md_in_html wraps the image in a <p>; strip it from flex flow */
+.region-card__top > p {
+  margin: 0;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.region-card__img {
+  width: 200px;
+  min-width: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+/* Name + citation column */
+.region-card__header {
+  padding: 0.75rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+.region-card__header > p,
+.region-card__header p {
+  margin: 0;
+}
+
+.region-card__header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  color: var(--md-default-fg-color);
+}
+
+/* Bottom row: stats + button, full width */
+.region-card__body {
+  padding: 0.5rem 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.region-card__body > p,
+.region-card__body p {
+  margin: 0;
+}
+
+/* Tighten the stats bullet list */
+.region-card__body ul {
+  margin: 0.1rem 0 0.25rem;
+  padding-left: 1.25rem;
+}
+
+.region-card__body li {
+  margin: 0;
+}
+
+/* Collapse accordion margins inside body */
+.region-card__body .md-typeset details,
+.region-card__body details {
+  margin: 0.25rem 0 !important;
+}
+
+/* Chicago inline citation — normal body text color */
+.cite-chicago-inline {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color);
+  line-height: 1.4;
+}
+
+.cite-chicago-inline a {
+  color: var(--md-default-fg-color);
+}
+
+/* Wrapper link for DOI — inherits color, underlines on hover */
+.cite-chicago-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cite-chicago-link:hover {
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
+}
