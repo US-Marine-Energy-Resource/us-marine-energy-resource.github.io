@@ -147,14 +147,20 @@ markdown_extensions:
   - def_list
 
 extra_javascript:
-  - javascripts/notice.js
-  - javascripts/navpane.js
-  - javascripts/toc-fix.js
-  - javascripts/glightbox-init.js
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  - javascripts/citation.min.js
-  - javascripts/cite.js
+  - path: javascripts/notice.js
+    defer: true
+  - path: javascripts/navpane.js
+    defer: true
+  - path: javascripts/toc-fix.js
+    defer: true
+  - path: javascripts/glightbox-init.js
+    defer: true
+  # javascripts/mathjax.js, the MathJax CDN bundle, javascripts/citation.min.js,
+  # and javascripts/cite.js are intentionally NOT listed here -- they are
+  # injected per-page (only on pages that need them) by
+  # hooks/conditional_page_scripts.py. The physical files still ship in
+  # site/javascripts/ because MkDocs copies every file under docs_dir
+  # regardless of this list; see that hook's module docstring.
 
 extra:
   homepage: /
@@ -168,5 +174,7 @@ hooks:
   - hooks/generate_tidal_plots.py
   - hooks/generate_cli_docs.py
   - hooks/extract_readme_sections.py
+  - hooks/conditional_page_scripts.py
+  - hooks/conditional_glightbox.py
 
 copyright: Copyright &copy; 2026 Alliance for Energy Innovation, LLC

@@ -73,12 +73,17 @@ For power performance assessment, IEC 62600-200 [@iec_62600_200] provides more s
 The visualizations below use data from a single grid point in Upper Cook Inlet, Alaska (60.74°N, 151.43°W), near Nikiski. Cook Inlet has some of the strongest tidal currents in the U.S. The map shows the model domain boundary and the example point. See [Regional Coverage](high-resolution-hindcast/coverage-maps.md) for all five dataset extents.
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 
 <div id="site-context-map" style="height: 300px; width: 100%; border-radius: 6px; border: 1px solid #e0e0e0; margin: 1em 0;"></div>
 
 <script>
 (function () {
+  --8<-- "docs/includes/js/ready-helpers.md"
+
+  runWhenReady(function () {
   var map = L.map("site-context-map", { zoomControl: true, scrollWheelZoom: false, center: [60.74, -151.43], zoom: 7 });
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
@@ -88,10 +93,7 @@ The visualizations below use data from a single grid point in Upper Cook Inlet, 
   }).addTo(map);
 
   var color = "#4C72B0";
-  // Resolve against MkDocs' own base URL so this works at any deploy path
-  // (site root in production, /pr-preview/<name>/ in previews).
-  var assetBase = JSON.parse(document.getElementById("__config").textContent)
-    .base.replace(/\/$/, "") + "/assets/tidal/";
+  var assetBase = resolveAssetBase("assets/tidal");
 
   fetch(assetBase + "AK_cook_inlet_boundary.geojson")
     .then(function (r) { return r.json(); })
@@ -122,6 +124,7 @@ The visualizations below use data from a single grid point in Upper Cook Inlet, 
       console.warn("Could not load Cook Inlet boundary", err);
       map.setView([60.5, -152], 7);
     });
+  });
 })();
 </script>
 
