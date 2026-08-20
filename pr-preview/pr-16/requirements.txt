@@ -1,0 +1,5 @@
+mkdocs-material[recommended]
+mkdocs-glightbox
+us-marine-energy-resource
+Pillow
+imagequant
