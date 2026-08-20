@@ -176,5 +176,6 @@ hooks:
   - hooks/extract_readme_sections.py
   - hooks/conditional_page_scripts.py
   - hooks/conditional_glightbox.py
+  - hooks/check_image_sizes.py
 
 copyright: Copyright &copy; 2026 Alliance for Energy Innovation, LLC
