@@ -19,7 +19,7 @@ Ocean currents are large-scale, persistent flows driven by wind patterns, temper
 In tropical and subtropical waters, a temperature differential exists between the warm surface layer and cold deep water. OTEC technology uses this differential to run a thermodynamic cycle and generate electricity. The U.S. OTEC technical potential is **540 TWh/yr** across the 50 states, concentrated in Hawaii and the Gulf Coast [@general_kilcher2021_marine]. U.S. Pacific territories and freely associated states hold an additional **4,100 TWh/yr** of ocean thermal resource [@general_kilcher2021_marine].
 
 <figure markdown="span">
-  ![Ocean thermal energy conversion resource potential by region](assets/images/kilcher_table_pacific_otec.png){ width="100%" }
+  ![Ocean thermal energy conversion resource potential by region](assets/images/kilcher_table_pacific_otec.png){ width="2141" height="1043" loading="lazy" }
   <figcaption>Theoretical and technical ocean thermal energy conversion (OTEC) resources [@general_kilcher2021_marine]</figcaption>
 </figure>
 

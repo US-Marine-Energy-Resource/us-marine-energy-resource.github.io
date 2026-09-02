@@ -7,7 +7,7 @@ Resource characterization is the process of quantifying how much energy is prese
 - **Practical resource**: the portion of the technical resource that remains available after accounting for economic, environmental, regulatory, and competing-use constraints.
 
 <figure markdown="span">
-  ![Classification of marine energy resource assessment](assets/images/figure-01-resource-classification.png){ width="100%" }
+  ![Classification of marine energy resource assessment](assets/images/figure-01-resource-classification.png){ width="900" height="563" loading="lazy" }
   <figcaption>Classification of marine energy resource assessment [@general_kilcher2021_marine]</figcaption>
 </figure>
 
