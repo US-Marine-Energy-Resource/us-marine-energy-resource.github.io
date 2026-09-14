@@ -1,6 +1,6 @@
 # Wave Energy
 
-[![Wave power resource across all U.S. EEZ domains](../assets/images/atlas_wave_complete_dataset_wide.png)][atlas-wave-all-datasets]
+[![Wave power resource across all U.S. EEZ domains](../assets/images/atlas_wave_complete_dataset_wide.png){ width="1441" height="590" }][atlas-wave-all-datasets]
 
 Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential across the U.S. EEZ, equivalent to 34% of U.S. electricity generation [@general_kilcher2021_marine]. The [U.S. Department of Energy's Hydropower and Hydrokinetic Office (H2O)][h2o-office] produced a 42-year, high-resolution hindcast covering all U.S. coastal and offshore waters to map that resource in detail. The data are freely accessible through the [Marine Energy Atlas][atlas-wave-all-datasets], a Python API, and raw HDF5 files on AWS S3.
 
@@ -10,7 +10,7 @@ Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential acr
 
 <div class="region-card" markdown="1">
 <div class="region-card__top" markdown="1">
-[![West Coast](../assets/images/atlas_wave_west_coast_square.png){.region-card__img}][atlas-wave-west-coast]{target=_blank}
+[![West Coast](../assets/images/atlas_wave_west_coast_square.png){.region-card__img width="1402" height="1149" loading="lazy"}][atlas-wave-west-coast]{target=_blank}
 <div class="region-card__header" markdown="1">
 
 ### West Coast
@@ -30,7 +30,7 @@ Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential acr
 
 <div class="region-card" markdown="1">
 <div class="region-card__top" markdown="1">
-[![Atlantic](../assets/images/atlas_wave_east_coast_square.png){.region-card__img}][atlas-wave-atlantic]{target=_blank}
+[![Atlantic](../assets/images/atlas_wave_east_coast_square.png){.region-card__img width="1369" height="1136" loading="lazy"}][atlas-wave-atlantic]{target=_blank}
 <div class="region-card__header" markdown="1">
 
 ### East Coast
@@ -50,12 +50,35 @@ Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential acr
 
 <div class="region-card" markdown="1">
 <div class="region-card__top" markdown="1">
-[![Hawaii](../assets/images/atlas_wave_hawaii.png){.region-card__img}][atlas-wave-hawaii]{target=_blank}
+[![Hawaii](../assets/images/atlas_wave_hawaii.png){.region-card__img width="1235" height="1158" loading="lazy"}][atlas-wave-hawaii]{target=_blank}
 <div class="region-card__header" markdown="1">
 
 ### Hawaii
 
 [chicago@li2021_hawaii]
+
+Covers the full Hawaiian Archipelago EEZ, including every island and atoll in both the Northwestern Hawaiian Islands ([Marine National Monument][nwhi-marine-national-monument]) and the Main Hawaiian Islands:
+
+- **State of Hawaii**
+    - Niihau
+    - Kauai
+    - Oahu
+    - Molokai
+    - Lanai
+    - Kahoolawe
+    - Maui
+    - Hawaii (Big Island)
+- **Northwestern Hawaiian Islands**
+    - Kure Atoll
+    - Midway Atoll
+    - Pearl and Hermes Atoll
+    - Lisianski Island
+    - Laysan Island
+    - Maro Reef
+    - Gardner Pinnacles
+    - French Frigate Shoals
+    - Necker Island
+    - Nihoa
 
 </div>
 </div>
@@ -70,7 +93,7 @@ Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential acr
 
 <div class="region-card" markdown="1">
 <div class="region-card__top" markdown="1">
-[![Alaska](../assets/images/atlas_wave_alaska_square.png){.region-card__img}][atlas-wave-alaska]{target=_blank}
+[![Alaska](../assets/images/atlas_wave_alaska_square.png){.region-card__img width="1370" height="1127" loading="lazy"}][atlas-wave-alaska]{target=_blank}
 <div class="region-card__header" markdown="1">
 
 ### Alaska
@@ -90,7 +113,7 @@ Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential acr
 
 <div class="region-card" markdown="1">
 <div class="region-card__top" markdown="1">
-[![CNMI and Guam](../assets/images/atlas_wave_cnmi_guam.png){.region-card__img}][atlas-wave-cnmi-guam]{target=_blank}
+[![CNMI and Guam](../assets/images/atlas_wave_cnmi_guam.png){.region-card__img width="1056" height="1162" loading="lazy"}][atlas-wave-cnmi-guam]{target=_blank}
 <div class="region-card__header" markdown="1">
 
 ### Guam and Northern Mariana Islands
@@ -110,7 +133,7 @@ Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential acr
 
 <div class="region-card" markdown="1">
 <div class="region-card__top" markdown="1">
-[![Puerto Rico](../assets/images/atlas_wave_puerto_rico.png){.region-card__img}][atlas-wave-puerto-rico]{target=_blank}
+[![Puerto Rico](../assets/images/atlas_wave_puerto_rico.png){.region-card__img width="1354" height="1165" loading="lazy"}][atlas-wave-puerto-rico]{target=_blank}
 <div class="region-card__header" markdown="1">
 
 ### Puerto Rico
@@ -130,7 +153,7 @@ Part of the Gulf of America dataset, using the same grid, variables, and archive
 
 <div class="region-card" markdown="1">
 <div class="region-card__top" markdown="1">
-[![Gulf of America](../assets/images/atlas_wave_gulf_of_america.png){.region-card__img}][atlas-wave-gulf-of-america]{target=_blank}
+[![Gulf of America](../assets/images/atlas_wave_gulf_of_america.png){.region-card__img width="1397" height="853" loading="lazy"}][atlas-wave-gulf-of-america]{target=_blank}
 <div class="region-card__header" markdown="1">
 
 ### Gulf of America
@@ -159,7 +182,7 @@ Part of the Gulf of America dataset, using the same grid, variables, and archive
 
 Wave energy resource characterization data is available in three data products that serve different needs. **Start with the Atlas** for visual exploration, then move to the API or raw files as your analysis deepens.
 
-| I want to…                                      | Use this                                                       | Reference                                                                               |
+| Use Case                                        | Data Product                                                   | Reference                                                                               |
 | :---                                            | :---                                                           | :---                                                                                    |
 | Explore the resource spatially, compare regions | [Marine Energy Atlas][atlas-wave-all-datasets]                 | [Atlas guide](../getting-started/marine-energy-atlas.md)                                |
 | Download time series for up to ~100 sites       | `us-marine-energy-resource-python` or MHKiT `wave.io.hindcast` | [Getting Started](../getting-started/index.md)                                          |
@@ -225,17 +248,17 @@ The visualizations below walk through a Class 2 feasibility workflow at a single
 The three plots below show 3-hour hindcast time series at PacWave for 2016 to 2020. Each year is drawn as a grey trace and the 5-year mean is shown in color. Variables are plotted separately so seasonal patterns are easy to read.
 
 <figure markdown="span">
-  ![PacWave significant wave height time series](../assets/wave/pacwave_wave_height_timeseries.png){ width="100%" }
+  ![PacWave significant wave height time series](../assets/wave/pacwave_wave_height_timeseries.png){ width="1191" height="371" loading="lazy" }
   <figcaption>Significant wave height ($H_{m0}$) at PacWave, Newport OR, 2016 to 2020. The seasonal signal is strong, with the highest and most variable heights occurring November to February.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![PacWave energy period time series](../assets/wave/pacwave_energy_period_timeseries.png){ width="100%" }
+  ![PacWave energy period time series](../assets/wave/pacwave_energy_period_timeseries.png){ width="1191" height="371" loading="lazy" }
   <figcaption>Energy period ($T_e$) at PacWave, 2016 to 2020. Long-period swell dominates the winter months; shorter, locally-generated wind seas are more common in summer.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![PacWave wave power time series](../assets/wave/pacwave_wave_power_timeseries.png){ width="100%" }
+  ![PacWave wave power time series](../assets/wave/pacwave_wave_power_timeseries.png){ width="1191" height="371" loading="lazy" }
   <figcaption>Omni-directional wave power ($J$) at PacWave, Newport OR, 2016 to 2020. Winter storms drive peak power well above 100 kW/m; summer conditions typically stay below 20 kW/m.</figcaption>
 </figure>
 
@@ -256,17 +279,17 @@ The three plots below show 3-hour hindcast time series at PacWave for 2016 to 20
 The bar charts below show the monthly mean and inter-annual spread (error bars = ±1 std across years) for each wave parameter at PacWave, capturing the strong Pacific Northwest seasonal signal.
 
 <figure markdown="span">
-  ![PacWave monthly Hm0 bar chart](../assets/wave/pacwave_monthly_barchart_hm0.png){ width="100%" }
+  ![PacWave monthly Hm0 bar chart](../assets/wave/pacwave_monthly_barchart_hm0.png){ width="1191" height="446" loading="lazy" }
   <figcaption>Monthly mean significant wave height ($H_{m0}$) at PacWave, Newport OR, 2016 to 2020. Winter months (Nov to Feb) average 2 to 3 m; summer months (Jun to Aug) are consistently calmer at 1 to 1.5 m.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![PacWave monthly Te bar chart](../assets/wave/pacwave_monthly_barchart_te.png){ width="100%" }
+  ![PacWave monthly Te bar chart](../assets/wave/pacwave_monthly_barchart_te.png){ width="1192" height="446" loading="lazy" }
   <figcaption>Monthly mean energy period ($T_e$) at PacWave, 2016 to 2020. Long-period swell extends the energy period in winter; short-period wind seas suppress it in summer.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![PacWave monthly J bar chart](../assets/wave/pacwave_monthly_barchart_j.png){ width="100%" }
+  ![PacWave monthly J bar chart](../assets/wave/pacwave_monthly_barchart_j.png){ width="1191" height="446" loading="lazy" }
   <figcaption>Monthly mean omni-directional wave power ($J$) at PacWave, 2016 to 2020. The seasonal contrast is pronounced, with winter power often exceeding summer levels by 5 to 10x.</figcaption>
 </figure>
 
@@ -283,12 +306,12 @@ The joint probability distribution (JPD) maps how often each $H_{m0}$ and $T_e$ 
 <div class="plot-pair" markdown="1">
 
 <figure markdown="span">
-  ![PacWave joint probability distribution](../assets/wave/pacwave_scatter_diagram.png){ width="100%" }
+  ![PacWave joint probability distribution](../assets/wave/pacwave_scatter_diagram.png){ width="1134" height="893" loading="lazy" }
   <figcaption>Joint probability distribution ($H_{m0}$ × $T_e$) at PacWave, Newport OR, 1995 hindcast year. Cells are colored by occurrence (hours/year). The dominant sea states cluster around $H_{m0}$ = 1.5 to 3.5 m and $T_e$ = 8 to 14 s.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![PacWave environmental contours](../assets/wave/pacwave_environmental_contour.png){ width="100%" }
+  ![PacWave environmental contours](../assets/wave/pacwave_environmental_contour.png){ width="1134" height="891" loading="lazy" }
   <figcaption>Environmental contours at PacWave, Newport OR (PCA method, 1995 hindcast). Steel-blue points are the observed sea states; curves show the 25, 50, and 100-year return period envelopes. Sea states on or outside a contour exceed that return period.</figcaption>
 </figure>
 

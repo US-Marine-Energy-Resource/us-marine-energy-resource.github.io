@@ -1,7 +1,7 @@
 # U.S. Marine Energy Resource
 
 <figure markdown="span">
-  ![Map of U.S. marine energy technical potential by region](assets/images/kilcher_map.png){ width="100%" }
+  ![Map of U.S. marine energy technical potential by region](assets/images/kilcher_map.png){ width="2275" height="1240" }
   <figcaption>Map of estimated technical power potential of U.S. marine energy resources [TWh/yr] by region and technlogy type. Source: Kilcher et al. [@general_kilcher2021_marine]</figcaption>
 </figure>
 
@@ -12,7 +12,7 @@ Marine energy resources in the United States and its territories are distributed
 <div style="clear: both;"></div>
 
 <figure markdown="span">
-  ![Technical marine energy resource power potential estimates for all U.S. states](assets/images/kilcher_table_us.png){ width="100%" }
+  ![Technical marine energy resource power potential estimates for all U.S. states](assets/images/kilcher_table_us.png){ width="2198" height="923" loading="lazy" }
   <figcaption>Technical marine energy resource power potential estimates for all U.S. states. Source: Kilcher et al. [@general_kilcher2021_marine]</figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ Marine energy resource data supports a wide range of applications spanning initi
 <!-- Card 1: Reconnaissance -->
 <div class="access-card" id="reconnaissance">
 <div class="access-card__media">
-<img src="assets/images/atlas_wave_screenshot.png" alt="Marine Energy Atlas wave resource view">
+<img src="assets/images/atlas_wave_screenshot.png" alt="Marine Energy Atlas wave resource view" width="1823" height="920" loading="lazy">
 </div>
 <div class="access-card__body">
 <p class="access-card__label">Reconnaissance Level Data Products</p>
@@ -107,7 +107,7 @@ Marine energy resource data supports a wide range of applications spanning initi
 <!-- Card 2: Site Feasibility -->
 <div class="access-card access-card--complex" id="site-feasibility">
 <div class="access-card__media">
-<img src="assets/images/mhkit_matlab_hindcast_two_site_comparison.png" alt="MHKiT hindcast two-site resource comparison">
+<img src="assets/images/mhkit_matlab_hindcast_two_site_comparison.png" alt="MHKiT hindcast two-site resource comparison" width="1160" height="773" loading="lazy">
 </div>
 <div class="access-card__body">
 <p class="access-card__label">Site Feasibility Data Products</p>
@@ -141,7 +141,7 @@ Marine energy resource data supports a wide range of applications spanning initi
 <!-- Card 3: Spatiotemporal Analysis -->
 <div class="access-card access-card--complex" id="spatiotemporal-analysis">
 <div class="access-card__media">
-<img src="assets/images/mhkdr_screenshot.png" alt="Marine and Hydrokinetic Data Repository">
+<img src="assets/images/mhkdr_screenshot.png" alt="Marine and Hydrokinetic Data Repository" width="963" height="730" loading="lazy">
 </div>
 <div class="access-card__body">
 <p class="access-card__label">Spatiotemporal Analysis Data Products</p>
