@@ -57,6 +57,29 @@ Ocean waves have an estimated **1,400 TWh/yr** of technical energy potential acr
 
 [chicago@li2021_hawaii]
 
+Covers the full Hawaiian Archipelago EEZ, including every island and atoll in both the Northwestern Hawaiian Islands ([Marine National Monument][nwhi-marine-national-monument]) and the Main Hawaiian Islands:
+
+- **State of Hawaii**
+    - Niihau
+    - Kauai
+    - Oahu
+    - Molokai
+    - Lanai
+    - Kahoolawe
+    - Maui
+    - Hawaii (Big Island)
+- **Northwestern Hawaiian Islands**
+    - Kure Atoll
+    - Midway Atoll
+    - Pearl and Hermes Atoll
+    - Lisianski Island
+    - Laysan Island
+    - Maro Reef
+    - Gardner Pinnacles
+    - French Frigate Shoals
+    - Necker Island
+    - Nihoa
+
 </div>
 </div>
 <div class="region-card__body" markdown="1">
