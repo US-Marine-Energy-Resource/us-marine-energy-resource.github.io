@@ -135,26 +135,26 @@ FVCOM resolves the water column with 10 sigma (terrain-following) layers. Curren
 The depth-time plot below shows current speed across all 10 sigma layers for the full hindcast year at Upper Cook Inlet, AK. Each band represents one sigma layer, covering an equal fraction of the water column from surface to seafloor.
 
 <figure markdown="span">
-  ![Cook Inlet - sigma layer current speed, full year](../assets/tidal/cook_inlet_sigma_layers_speed_full.png){ width="100%" }
+  ![Cook Inlet - sigma layer current speed, full year](../assets/tidal/cook_inlet_sigma_layers_speed_full.png){ width="1641" height="525" loading="lazy" }
   <figcaption>Current speed across all 10 sigma layers at Cook Inlet, AK (60.74°N, 151.43°W), full hindcast year. Each horizontal band is one sigma layer, from Layer 9 (surface, ~1.6 m) at the top to Layer 0 (bottom, ~30.8 m) at the base. The repeating ~14.8-day amplitude variation is the spring-neap cycle. Peak speeds exceed 3 m/s during spring tides.</figcaption>
 </figure>
 
 The direction plot shows the flood-ebb reversal and any rotational signal in the water column.
 
 <figure markdown="span">
-  ![Cook Inlet - sigma layer direction, full year](../assets/tidal/cook_inlet_sigma_layers_direction_full.png){ width="100%" }
+  ![Cook Inlet - sigma layer direction, full year](../assets/tidal/cook_inlet_sigma_layers_direction_full.png){ width="1713" height="525" loading="lazy" }
   <figcaption>Current direction across all 10 sigma layers at Cook Inlet, AK, full hindcast year. Direction is in degrees clockwise from True North. Alternations between ~$030^\circ$ (flood, NE) and ~$210^\circ$ (ebb, SW) reflect the channel orientation. Color is nearly uniform with depth, indicating that directional turning with depth is small at this site.</figcaption>
 </figure>
 
 A 3-day window shows individual tidal cycles and the vertical shear between the surface and bottom layers.
 
 <figure markdown="span">
-  ![Cook Inlet - sigma layer current speed, 3-day zoom](../assets/tidal/cook_inlet_sigma_layers_speed_zoom.png){ width="100%" }
+  ![Cook Inlet - sigma layer current speed, 3-day zoom](../assets/tidal/cook_inlet_sigma_layers_speed_zoom.png){ width="1478" height="622" loading="lazy" }
   <figcaption>Three-day window of current speed across all 10 sigma layers. Each semidiurnal cycle is approximately 12.4 hours ($M_2$). The speed difference between Layer 9 (surface, ~1.6 m) and Layer 0 (bottom, ~30.8 m) is visible during peak flows, reflecting vertical shear from bottom friction.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Cook Inlet - sigma layer direction, 3-day zoom](../assets/tidal/cook_inlet_sigma_layers_direction_zoom.png){ width="100%" }
+  ![Cook Inlet - sigma layer direction, 3-day zoom](../assets/tidal/cook_inlet_sigma_layers_direction_zoom.png){ width="1551" height="622" loading="lazy" }
   <figcaption>Three-day window of current direction across all 10 sigma layers. Reversals between flood (~$030^\circ$) and ebb (~$210^\circ$) are sharp. Direction is nearly uniform with depth, confirming the current is rectilinear with little rotational component.</figcaption>
 </figure>
 
@@ -167,14 +167,14 @@ A joint probability distribution (JPD) is a polar histogram of current speed and
 The plot below uses sigma layer 4 (mid-column) at Cook Inlet, AK. The reversing tidal current reflects the flood-ebb cycle in the inlet.
 
 <figure markdown="span">
-  ![Cook Inlet - joint probability distribution, sigma layer 4](../assets/tidal/cook_inlet_jpd.png){ width="80%" }
+  ![Cook Inlet - joint probability distribution, sigma layer 4](../assets/tidal/cook_inlet_jpd.png){ width="80%" loading="lazy" }
   <figcaption>Speed and direction at sigma layer 4 (~17.8 m depth), Cook Inlet, AK, full hindcast year. Each point is one hourly observation; color encodes joint probability [%]. The bidirectional pattern along ~$030^\circ$/$210^\circ$ reflects a rectilinear, reversing current with little rotational component. The distribution is nearly symmetric about the flood-ebb axis, with peak speeds near 3 m/s and the highest probability density at 1-2 m/s.</figcaption>
 </figure>
 
 Tidal asymmetry - where the flood and ebb half-cycles differ in speed or duration - can have a significant effect on energy estimates. The comparison below shows the bottom sigma layer JPD for Tacoma Narrows, Admiralty Inlet, and the Piscataqua River.
 
 <figure markdown="span">
-  ![Tidal asymmetry JPD comparison - Tacoma Narrows, Admiralty Inlet, Piscataqua River](../assets/tidal/tidal_asymmetry_jpd.png){ width="100%" }
+  ![Tidal asymmetry JPD comparison - Tacoma Narrows, Admiralty Inlet, Piscataqua River](../assets/tidal/tidal_asymmetry_jpd.png){ width="2080" height="757" loading="lazy" }
   <figcaption>Joint probability distribution at the bottom sigma layer for three high-resource sites: Tacoma Narrows, WA; Admiralty Inlet, WA; and UNH Living Bridge, NH (Piscataqua River). Asymmetry between the flood and ebb lobes indicates that one half-cycle is faster or more energetic than the other.</figcaption>
 </figure>
 
@@ -188,7 +188,7 @@ Sigma layers follow the shape of the seafloor and water surface, so the depth ea
 Exceedance curves are a standard output for IEC 62600-201 Stage 1 feasibility studies [@iec_62600_201]:
 
 <figure markdown="span">
-  ![Cook Inlet - velocity exceedance curve](../assets/tidal/cook_inlet_exceedance.png){ width="100%" }
+  ![Cook Inlet - velocity exceedance curve](../assets/tidal/cook_inlet_exceedance.png){ width="1982" height="994" loading="lazy" }
   <figcaption>Velocity exceedance curves for all 10 sigma layers, Cook Inlet, AK, full hindcast year. Each curve shows the fraction of the year that current speed exceeds a given value, from Layer 9 (surface, ~1.6 m) to Layer 0 (deepest, ~30.8 m). The spread between layers increases at higher speeds, reflecting the vertical shear profile.</figcaption>
 </figure>
 
