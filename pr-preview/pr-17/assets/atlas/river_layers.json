@@ -1,0 +1,566 @@
+{
+  "Theoretical Power": {
+    "id": "603d78b96d9e5c931b2e30bb",
+    "title": "Theoretical Power",
+    "atlas_url": "https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library/layers?vL=603d78b96d9e5c931b2e30bb",
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "River"
+        ]
+      },
+      {
+        "name": "oldOcCountry",
+        "val": [
+          "river_ra"
+        ]
+      }
+    ],
+    "tags": [
+      "River Reach Discharge",
+      "River Reach Power"
+    ],
+    "metaTags": [
+      "Riverine Hydrokinetic Resource",
+      "mhk-atlas",
+      "transferred-layer",
+      "river_ra",
+      "hydrokinetic_final"
+    ],
+    "description": "River Reach Theoretical Power\n\nAnnual average river reach segment power - in gigawatt hours per year. Segment-specific theoretical power is estimated using the standard hydrological engineering equation that relates theoretical hydraulic power to discharge and hydraulic head or change in elevation over the length of the segment. Refer to the technical report for full details on technical approach and results.\n\nPower classes for this map were determined by using standard deviations from the median.\n\nData Source: NHDplus",
+    "description_html": "<p><strong>River Reach Theoretical Power</strong></p>\n\n<hr />\n\n<p>Annual average river reach segment power - in gigawatt hours per year. Segment-specific theoretical power is estimated using the standard hydrological engineering equation that relates theoretical hydraulic power to discharge and hydraulic head or change in elevation over the length of the segment. Refer to the <a href=\"http://www.epri.com/abstracts/Pages/ProductAbstract.aspx?ProductId=000000000001026880\" target=\"_blank\">technical report</a> for full details on technical approach and results.</p>\n\n<p>Power classes for this map were determined by using standard deviations from the median.</p>\n\n<p><strong>Data Source:</strong> <a href=\"http://www.horizon-systems.com/nhdplus/\" target=\"_blank\">NHDplus</a></p>\n",
+    "dimensions": [],
+    "variables": [
+      {
+        "dbColumn": "pwr_gwhryrkm",
+        "title": "River Reach Power",
+        "units": "GWh/year/km",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "gnis_name",
+        "title": "River Reach Name",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "basin",
+        "title": "Hydrologic Basin",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "segment_length_km",
+        "title": "River Reach Length (km)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "maflowu",
+        "title": "River Reach Avg. Discharge (cubic ft/sec)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "q_m3persec",
+        "title": "River Reach Avg. Discharge (cubic m/sec)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "power_w",
+        "title": "River Reach Power (watts)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "pwr_gwhryr",
+        "title": "River Reach Power",
+        "units": "GWh/year",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "final_rf",
+        "title": "Recovery Factor (RF)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "rf_gwhryr",
+        "title": "River Reach Power (gigawatt hours per year w/ RF applied)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "slope",
+        "title": "Slope",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "delta_h_m",
+        "title": "Change in Height",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "legend": {
+      "title": "",
+      "legendItems": [
+        {
+          "label": "1",
+          "symbol": {
+            "type": "line",
+            "color": "#f7f4f9"
+          }
+        },
+        {
+          "label": "10",
+          "symbol": {
+            "type": "line",
+            "color": "#d4b9da"
+          }
+        },
+        {
+          "label": "100",
+          "symbol": {
+            "type": "line",
+            "color": "#df65b0"
+          }
+        },
+        {
+          "label": "1000",
+          "symbol": {
+            "type": "line",
+            "color": "#ce1256"
+          }
+        },
+        {
+          "label": "> 10000",
+          "symbol": {
+            "type": "line",
+            "color": "#67001f"
+          }
+        }
+      ],
+      "units": "GWh/year/km",
+      "type": "default"
+    },
+    "download": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/603d78b96d9e5c931b2e30bb.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "wms": {
+      "uri": "https://maps-data.nrel.gov/wms",
+      "name": "mhk_atlas:river_ra_pwr_gwhryr_excl",
+      "tileUri": "https://maps-data.nrel.gov/wms?bbox={bbox-epsg-3857}&request=GetMap&version=1.1.1&layers=mhk_atlas%3Ariver_ra_pwr_gwhryr_excl&service=WMS&format=image%2Fpng&height=256&width=256&tiled=true&srs=EPSG%3A3857&transparent=true&styles=",
+      "sldUri": "https://maps-data.nrel.gov/rest/styles/river_ra_pwr_gwhryr_excl.sld"
+    }
+  },
+  "Technically Recoverable Resource": {
+    "id": "603d78b96d9e5c931b2e30ba",
+    "title": "Technically Recoverable Resource",
+    "atlas_url": "https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library/layers?vL=603d78b96d9e5c931b2e30ba",
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "River"
+        ]
+      },
+      {
+        "name": "oldOcCountry",
+        "val": [
+          "river_ra"
+        ]
+      },
+      {
+        "name": "superCategory",
+        "val": [
+          "River currents"
+        ]
+      }
+    ],
+    "tags": [
+      "River currents"
+    ],
+    "metaTags": [
+      "mhk-atlas",
+      "transferred-layer",
+      "river_ra",
+      "hydrokinetic_final"
+    ],
+    "description": "River Reach Technically Recoverable Resource\n\nAnnual average river reach segment power after applying the recovery factor - in gigawatt hours per year.\n\nThe technically recoverable resource in the contiguous 48 states was estimated by applying a recovery factor to the segment-specific theoretical resource estimates. The recovery factor scales the theoretical resource for a given segment to take into account assumptions such as minimum required water velocity and depth during low flow conditions, maximum device packing density, device efficiency, and flow statistics. The recovery factor also considers feedback effects of turbine presence on hydraulic head and velocity. The recovery factor was determined over a range of flow rates and slopes using the hydraulic model, HEC-RAS. Refer to the technical report for full details on technical approach and results\n\nPower classes for this map were determined by using standard deviations from the median.\n\nData Source: NHDplus",
+    "description_html": "<p><strong>River Reach Technically Recoverable Resource</strong></p>\n\n<hr />\n\n<p>Annual average river reach segment power after applying the recovery factor - in gigawatt hours per year.</p>\n\n<p>The technically recoverable resource in the contiguous 48 states was estimated by applying a recovery factor to the segment-specific theoretical resource estimates. The recovery factor scales the theoretical resource for a given segment to take into account assumptions such as minimum required water velocity and depth during low flow conditions, maximum device packing density, device efficiency, and flow statistics. The recovery factor also considers feedback effects of turbine presence on hydraulic head and velocity. The recovery factor was determined over a range of flow rates and slopes using the hydraulic model, HEC-RAS. Refer to the <a href=\"http://www.epri.com/abstracts/Pages/ProductAbstract.aspx?ProductId=000000000001026880\" target=\"_blank\">technical report</a> for full details on technical approach and results</p>\n\n<p>Power classes for this map were determined by using standard deviations from the median.</p>\n\n<p><strong>Data Source:</strong> <a href=\"http://www.horizon-systems.com/nhdplus/\" target=\"_blank\">NHDplus</a></p>\n",
+    "dimensions": [],
+    "variables": [
+      {
+        "dbColumn": "gnis_name",
+        "title": "River Reach Name",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "basin",
+        "title": "Hydrologic Basin",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "lengthkm",
+        "title": "River Reach Length (km)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "maflowu",
+        "title": "River Reach Avg. Discharge (cubic ft/sec)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "q_m3persec",
+        "title": "River Reach Avg. Discharge (cubic m/sec)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "power_w",
+        "title": "River Reach Power (watts)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "pwr_gwhryr",
+        "title": "River Reach Power",
+        "units": "GWh/yr",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "final_rf",
+        "title": "Recovery Factor (RF)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "rf_gwhryr",
+        "title": "River Reach Power (gigawatt hours per year w/ RF applied)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "slope",
+        "title": "Slope",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "delta_h_m",
+        "title": "Change in Height",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "legend": {
+      "title": "",
+      "legendItems": [
+        {
+          "label": "< 13",
+          "symbol": {
+            "type": "line",
+            "color": "#fcae91"
+          }
+        },
+        {
+          "label": "13 - 37",
+          "symbol": {
+            "type": "line",
+            "color": "#fb6a4a"
+          }
+        },
+        {
+          "label": "> 37",
+          "symbol": {
+            "type": "line",
+            "color": "#cb181d"
+          }
+        }
+      ],
+      "units": "GWh/yr",
+      "type": "default"
+    },
+    "download": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/603d78b96d9e5c931b2e30ba.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "wms": {
+      "uri": "https://maps-data.nrel.gov/wms",
+      "name": "mhk_atlas:river_ra_rf_gwhryr_excl",
+      "tileUri": "https://maps-data.nrel.gov/wms?bbox={bbox-epsg-3857}&request=GetMap&version=1.1.1&layers=mhk_atlas%3Ariver_ra_rf_gwhryr_excl&service=WMS&format=image%2Fpng&height=256&width=256&tiled=true&srs=EPSG%3A3857&transparent=true&styles=",
+      "sldUri": "https://maps-data.nrel.gov/rest/styles/river_ra_rf_gwhryr_excl.sld"
+    }
+  },
+  "Hydrologic Watershed Basins": {
+    "id": "603d78b96d9e5c931b2e30b9",
+    "title": "Hydrologic Watershed Basins",
+    "atlas_url": "https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library/layers?vL=603d78b96d9e5c931b2e30b9",
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "River"
+        ]
+      },
+      {
+        "name": "oldOcCountry",
+        "val": [
+          "river_ra"
+        ]
+      },
+      {
+        "name": "superCategory",
+        "val": [
+          "River currents"
+        ]
+      },
+      {
+        "name": "subCategory",
+        "val": [
+          "Hydrologic Watershed Basins in CONUS"
+        ]
+      }
+    ],
+    "tags": [
+      "River currents"
+    ],
+    "metaTags": [
+      "mhk-atlas",
+      "transferred-layer",
+      "river_ra",
+      "huc_regions"
+    ],
+    "description": "Hydrologic Basins\n\nThis dataset defines the areal extnet of surface water drainage to a point. The selection and delineation of hydrologic boundaries are determined solely upon science-based hydrologic principles, not favoring any administration, special project, program, or agency.\n\nSource: USGS National Hydrography Dataset",
+    "description_html": "<p><strong>Hydrologic Basins</strong></p>\n\n<hr />\n\n<p>This dataset defines the areal extnet of surface water drainage to a point. The selection and delineation of hydrologic boundaries are determined solely upon science-based hydrologic principles, not favoring any administration, special project, program, or agency.</p>\n\n<p><strong>Source:</strong> <a href=\"http://nhd.usgs.gov/wbd.html\" target=\"_blank\">USGS National Hydrography Dataset</a></p>\n",
+    "dimensions": [],
+    "variables": [
+      {
+        "dbColumn": "region",
+        "title": "Hydrologic Unit",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "huc_number",
+        "title": "Hydrologic Unit Code (HUC)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "legend": {
+      "title": "",
+      "legendItems": [
+        {
+          "label": "Arkansas-White-Red Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#d276b7"
+          }
+        },
+        {
+          "label": "California Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#6370d4"
+          }
+        },
+        {
+          "label": "Great Basin Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#31df82"
+          }
+        },
+        {
+          "label": "Great Lakes Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#cdd358"
+          }
+        },
+        {
+          "label": "Lower Colorado Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#d9316f"
+          }
+        },
+        {
+          "label": "Lower Mississippi Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#de9444"
+          }
+        },
+        {
+          "label": "Mid Atlantic Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#d01bc1"
+          }
+        },
+        {
+          "label": "Missouri Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#6c8bc8"
+          }
+        },
+        {
+          "label": "New England Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#78d791"
+          }
+        },
+        {
+          "label": "Ohio Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#61d7e9"
+          }
+        },
+        {
+          "label": "Pacific Northwest Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#9bdd81"
+          }
+        },
+        {
+          "label": "Rio Grande Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#db7748"
+          }
+        },
+        {
+          "label": "Souris-Red-Rainy Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#df66ef"
+          }
+        },
+        {
+          "label": "South Atlantic-Gulf Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#88bfee"
+          }
+        },
+        {
+          "label": "Tennessee Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#a27bee"
+          }
+        },
+        {
+          "label": "Texas-Gulf Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2ecdc3"
+          }
+        },
+        {
+          "label": "Upper Colorado Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#96cd62"
+          }
+        },
+        {
+          "label": "Upper Mississippi Region",
+          "symbol": {
+            "type": "polygon",
+            "color": "#cc5447"
+          }
+        }
+      ],
+      "units": "",
+      "type": "default"
+    },
+    "download": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/603d78b96d9e5c931b2e30b9.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "wms": {
+      "uri": "https://maps-data.nrel.gov/wms",
+      "name": "mhk_atlas:river_ra_hydrologic_basins",
+      "tileUri": "https://maps-data.nrel.gov/wms?bbox={bbox-epsg-3857}&request=GetMap&version=1.1.1&layers=mhk_atlas%3Ariver_ra_hydrologic_basins&service=WMS&format=image%2Fpng&height=256&width=256&tiled=true&srs=EPSG%3A3857&transparent=true&styles=",
+      "sldUri": "https://maps-data.nrel.gov/rest/styles/river_ra_hydrologic_basins.sld"
+    }
+  }
+}
