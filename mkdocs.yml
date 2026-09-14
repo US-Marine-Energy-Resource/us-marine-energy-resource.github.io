@@ -102,10 +102,13 @@ nav:
       - References: tidal/high-resolution-hindcast/references.md
   - OTEC:
     - otec/index.md
+    - References: otec/references.md
   - Ocean Current:
     - ocean-current/index.md
+    - References: ocean-current/references.md
   - River:
     - river/index.md
+    - References: river/references.md
   - Conferences:
     - conferences/index.md
     - UMERC 2026: conferences/umerc-2026.md
@@ -145,6 +148,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - def_list
+  - footnotes
 
 extra_javascript:
   - path: javascripts/notice.js
