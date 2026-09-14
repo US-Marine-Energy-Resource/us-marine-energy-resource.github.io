@@ -1,0 +1,114 @@
+---
+title: "NLR Marine Energy Atlas Data Library: UI Copy"
+subtitle: "U.S. Marine Energy Resource Characterization Project"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+  docx:
+    toc: false
+---
+
+## Executive Summary
+
+The NLR Marine Energy Atlas maps reconnaissance-level, time-averaged hindcast summaries modeled and validated by PNNL, NLR, and Sandia National Laboratories. The Atlas is the right starting point for site comparison and resource screening, but does not provide the context needed to apply or cite the data. These copy snippets bridge that gap, pointing users to the project website where variable definitions, methodology, validation details, data access links, and references live. Three lengths for different UI placements, each in three tones. **Option B (Trust-building) is recommended** based on reviewer consensus.
+
+---
+
+## Short
+
+*~20 words -- tooltip, inline caption, footnote*
+
+### Option A: Explicit
+
+The NLR Marine Energy Atlas maps time-averaged hindcast summaries. To understand, validate, and use this data, see the [project website][project-website].
+
+### Option B: Trust-building *(recommended)*
+
+This modeled hindcast data was validated by PNNL, NLR, and Sandia National Laboratories. For definitions, methodology, and data access, visit the [project website][project-website].
+
+### Option C: Balanced
+
+Time-averaged modeled hindcast data. For what you need to use it confidently (definitions, methodology, and data access), see the [project website][project-website].
+
+---
+
+## Medium
+
+*~60 words -- sidebar panel, info dialog when clicking layer details*
+
+### Option A: Explicit
+
+The NLR Marine Energy Atlas maps reconnaissance-level, time-averaged hindcast summaries for site comparison and resource screening. To use this data with confidence, you need to know what the variables mean, how the models were built and validated, and how to access the full datasets. All of that is at the [project website][project-website].
+
+### Option B: Trust-building *(recommended)*
+
+The data on this map was produced by PNNL, NLR, and Sandia National Laboratories using validated, physics-based hindcast models funded by the U.S. Department of Energy. It covers a 42-year wave hindcast (1979-2020) and tidal hindcast time-series across key U.S. sites. For variable definitions, methodology, known limitations, and data access links, visit the [project website][project-website].
+
+### Option C: Balanced
+
+The NLR Marine Energy Atlas maps reconnaissance-level, time-averaged hindcast summaries for site comparison and resource screening. The [project website][project-website] provides the variable definitions, methodology, validation details, and data access links needed to apply or cite this data with confidence.
+
+---
+
+## Long
+
+*~140 words -- "About this data" section, modal, data library page header*
+
+### Option A: Explicit
+
+The NLR Marine Energy Atlas maps reconnaissance-level, time-averaged summaries from physics-based hindcast simulations of tidal currents and ocean surface waves across the United States. The map is the right starting point for identifying where resources exist, but does not provide the context needed to understand, apply, or cite the data.
+
+The **[U.S. Marine Energy Resource Characterization Project][project-website]**, a collaboration between [Pacific Northwest National Laboratory][pnnl], [National Laboratory of the Rockies][nlr], and [Sandia National Laboratories][sandia], funded by the [U.S. Department of Energy's Hydropower and Hydrokinetic Office][h2o], provides that context:
+
+- [Variable definitions][docs-variables]: units, equations, and what each layer measures
+- [Methodology][docs-methodology]: how models were built, configured, and validated
+- [Data limitations][docs-limitations]: known caveats and appropriate use cases
+- [Data access links][mhkdr]: 42-year wave hindcast (1979-2020) and tidal hindcast time-series data via MHKDR and AWS S3
+- [References][docs-references]: citations for use in formal assessments
+
+[Project website][project-website]
+
+### Option B: Trust-building *(recommended)*
+
+The NLR Marine Energy Atlas maps reconnaissance-level, time-averaged summaries from physics-based hindcast simulations of tidal currents and ocean surface waves across the United States. The data was produced by [Pacific Northwest National Laboratory][pnnl], [National Laboratory of the Rockies][nlr], and [Sandia National Laboratories][sandia], funded by the [U.S. Department of Energy's Hydropower and Hydrokinetic Office][h2o], using validated numerical models built to recognized resource assessment standards.
+
+The **[U.S. Marine Energy Resource Characterization Project][project-website]** documents everything needed to use this data with confidence:
+
+- [Variable definitions][docs-variables]: units, equations, and what each layer measures
+- [Methodology][docs-methodology]: how models were built, configured, and validated
+- [Data limitations][docs-limitations]: known caveats and appropriate use cases
+- [Data access links][mhkdr]: 42-year wave hindcast (1979-2020) and tidal hindcast time-series data via MHKDR and AWS S3
+- [References][docs-references]: citations for use in formal assessments
+
+[Visit the project website][project-website]
+
+### Option C: Balanced
+
+The NLR Marine Energy Atlas maps reconnaissance-level, time-averaged summaries from physics-based hindcast simulations of tidal currents and ocean surface waves across the United States. It is the right tool for site comparison and initial resource screening. To go further, use the project website.
+
+The **[U.S. Marine Energy Resource Characterization Project][project-website]**, a collaboration between [Pacific Northwest National Laboratory][pnnl], [National Laboratory of the Rockies][nlr], and [Sandia National Laboratories][sandia], funded by the [U.S. Department of Energy's Hydropower and Hydrokinetic Office][h2o], covers what you need to apply this data:
+
+- [Variable definitions][docs-variables]: units, equations, and what each layer measures
+- [Methodology][docs-methodology]: how models were built, configured, and validated
+- [Data limitations][docs-limitations]: known caveats and appropriate use cases
+- [Data access links][mhkdr]: 42-year wave hindcast (1979-2020) and tidal hindcast time-series data via MHKDR and AWS S3
+- [References][docs-references]: citations for use in formal assessments
+
+[Project website][project-website]
+
+---
+
+<!-- Link definitions: update URLs here only -->
+[project-website]: https://us-marine-energy-resource.github.io/
+[pnnl]:            https://www.pnnl.gov/projects/ocean-dynamics-modeling
+[nlr]:             https://www.nlr.gov/water/resource-characterization
+[sandia]:          https://energy.sandia.gov/programs/renewable-energy/water-power/research-capabilities/resource-characterization/
+[h2o]:             https://www.energy.gov/cmei/water/hydropower-and-hydrokinetic-office
+[docs-variables]:  https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/variables/
+[docs-methodology]:https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/methodology/
+[docs-limitations]:https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/limitations/
+[docs-references]: https://us-marine-energy-resource.github.io/tidal/high-resolution-hindcast/references/
+[mhkdr]:           https://mhkdr.openei.org/submissions/632
