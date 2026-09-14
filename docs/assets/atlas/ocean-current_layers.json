@@ -1,0 +1,540 @@
+{
+  "Mean Current Speed": {
+    "id": "603d78b56d9e5c931b2e309c",
+    "title": "Mean Current Speed",
+    "atlas_url": "https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library/layers?vL=603d78b56d9e5c931b2e309c",
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "Ocean currents"
+        ]
+      },
+      {
+        "name": "oldOcCountry",
+        "val": [
+          "wave"
+        ]
+      },
+      {
+        "name": "superCategory",
+        "val": [
+          "Ocean currents"
+        ]
+      }
+    ],
+    "tags": [
+      "Model",
+      "Ocean Currents"
+    ],
+    "metaTags": [
+      "mhk-atlas",
+      "transferred-layer",
+      "wave",
+      "gat_ocurrent_full",
+      "multi-dimensional"
+    ],
+    "description": "Mean Ocean Current Speed  \n\nMonthly mean ocean current speed. \n\nFor more information please see:\n\n* Assessment of Energy Production Potential from Ocean Currents in the United States\n\n* Data Documentation",
+    "description_html": "<p><strong>Mean Ocean Current Speed</strong>&nbsp;&nbsp;</p>\n<p>Monthly mean ocean current speed.&nbsp;</p>\n<p>For more information please see:<br><br>* <a href=\"http://www.oceancurrentpower.gatech.edu/\" target=\"_blank\">Assessment of Energy Production Potential from Ocean Currents in the United States</a><br><br>* <a href=\"http://www.oceancurrentpower.gatech.edu/documentation.htm\" target=\"_blank\">Data Documentation</a></p>\n",
+    "dimensions": [
+      {
+        "paramName": "anncur",
+        "title": "Annual"
+      },
+      {
+        "paramName": "jancur",
+        "title": "January"
+      },
+      {
+        "paramName": "febcur",
+        "title": "February"
+      },
+      {
+        "paramName": "marcur",
+        "title": "March"
+      },
+      {
+        "paramName": "aprcur",
+        "title": "April"
+      },
+      {
+        "paramName": "maycur",
+        "title": "May"
+      },
+      {
+        "paramName": "juncur",
+        "title": "June"
+      },
+      {
+        "paramName": "julcur",
+        "title": "July"
+      },
+      {
+        "paramName": "augcur",
+        "title": "August"
+      },
+      {
+        "paramName": "sepcur",
+        "title": "September"
+      },
+      {
+        "paramName": "octcur",
+        "title": "October"
+      },
+      {
+        "paramName": "novcur",
+        "title": "November"
+      },
+      {
+        "paramName": "deccur",
+        "title": "December"
+      }
+    ],
+    "variables": [
+      {
+        "dbColumn": "{{dimension}}",
+        "title": "Mean Current Speed (m/s) - {{dimension}}",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "legend": {
+      "title": "",
+      "legendItems": [
+        {
+          "label": "0.0 - 0.1",
+          "symbol": {
+            "type": "polygon",
+            "color": "#040bfa"
+          }
+        },
+        {
+          "label": "0.1 - 0.2",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2936ff"
+          }
+        },
+        {
+          "label": "0.2 - 0.3",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2f5fff"
+          }
+        },
+        {
+          "label": "0.3 - 0.4",
+          "symbol": {
+            "type": "polygon",
+            "color": "#3c82ff"
+          }
+        },
+        {
+          "label": "0.4 - 0.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#3da3f7"
+          }
+        },
+        {
+          "label": "0.5 - 0.6",
+          "symbol": {
+            "type": "polygon",
+            "color": "#35ccf7"
+          }
+        },
+        {
+          "label": "0.6 - 0.7",
+          "symbol": {
+            "type": "polygon",
+            "color": "#1af3ff"
+          }
+        },
+        {
+          "label": "0.7 - 0.8",
+          "symbol": {
+            "type": "polygon",
+            "color": "#55fce8"
+          }
+        },
+        {
+          "label": "0.8 - 0.9",
+          "symbol": {
+            "type": "polygon",
+            "color": "#82ffc6"
+          }
+        },
+        {
+          "label": "0.9 - 1.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#aafe9c"
+          }
+        },
+        {
+          "label": "1.0 - 1.1",
+          "symbol": {
+            "type": "polygon",
+            "color": "#c5ff78"
+          }
+        },
+        {
+          "label": "1.1 - 1.2",
+          "symbol": {
+            "type": "polygon",
+            "color": "#dcff5a"
+          }
+        },
+        {
+          "label": "1.2 - 1.3",
+          "symbol": {
+            "type": "polygon",
+            "color": "#f2f834"
+          }
+        },
+        {
+          "label": "1.3 - 1.4",
+          "symbol": {
+            "type": "polygon",
+            "color": "#faf601"
+          }
+        },
+        {
+          "label": "1.4 - 1.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ffd200"
+          }
+        },
+        {
+          "label": "1.5 - 1.6",
+          "symbol": {
+            "type": "polygon",
+            "color": "#f3b700"
+          }
+        },
+        {
+          "label": "1.6 - 1.7",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fc9000"
+          }
+        },
+        {
+          "label": "1.7 - 1.8",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ff6900"
+          }
+        },
+        {
+          "label": "1.8 - 1.9",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ff470b"
+          }
+        },
+        {
+          "label": "1.9 - 2.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fe000b"
+          }
+        }
+      ],
+      "units": "",
+      "type": "default"
+    },
+    "download": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/603d78b56d9e5c931b2e309c.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "wms": {}
+  },
+  "Mean Annual Power Density": {
+    "id": "603d78b36d9e5c931b2e3093",
+    "title": "Mean Annual Power Density",
+    "atlas_url": "https://maps.nlr.gov/marine-energy-atlas/data-viewer/data-library/layers?vL=603d78b36d9e5c931b2e3093",
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "Ocean currents"
+        ]
+      },
+      {
+        "name": "oldOcCountry",
+        "val": [
+          "wave"
+        ]
+      },
+      {
+        "name": "superCategory",
+        "val": [
+          "Ocean currents"
+        ]
+      },
+      {
+        "name": "subCategory",
+        "val": [
+          "Ocean Current Mean Kinetic Power Density (2013)"
+        ]
+      }
+    ],
+    "tags": [
+      "Model",
+      "Ocean Currents"
+    ],
+    "metaTags": [
+      "mhk-atlas",
+      "transferred-layer",
+      "wave",
+      "gat_ocurrent_full"
+    ],
+    "description": "Ocean Current Mean Kinetic Power Density - Annual Average\n\nPower density is used to quantify the amount of available undisturbed kinetic power (P)throughout the country using the following equation where p is the density of water and V is the magnitude of the velocity:\n\nFor more information please see:\n\n* Assessment of Energy Production Potential from Ocean Currents in the United States\n\n* Data Documentation\n\nUpdate. Include:\n\nHaas, Kevin. 2013. \"Assessment of Energy Production Potential from Ocean Currents along the United States Coastline.\" United States. https://doi.org/10.2172/1093367.",
+    "description_html": "<p><strong>Ocean Current Mean Kinetic Power Density - Annual Average</strong></p>\n\n<hr />\n\n<p>Power density is used to quantify the amount of available undisturbed kinetic power (P)throughout the country using the following equation where p is the density of water and V is the magnitude of the velocity:</p>\n\n<p><img src=\"http://www.oceancurrentpower.gatech.edu/documentation_files/image008.gif\" alt=\"\" target=\"_blank\" /></p>\n\n<p>For more information please see:<br />\n* <a href=\"http://www.oceancurrentpower.gatech.edu/\" target=\"_blank\">Assessment of Energy Production Potential from Ocean Currents in the United States</a><br />\n* <a href=\"http://www.oceancurrentpower.gatech.edu/documentation.htm\" target=\"_blank\">Data Documentation</a></p>\n<br>Update. Include:\n\nHaas, Kevin. 2013. �Assessment of Energy Production Potential from Ocean Currents along the United States Coastline.� United States. https://doi.org/10.2172/1093367.",
+    "dimensions": [],
+    "variables": [
+      {
+        "dbColumn": "power",
+        "title": "Mean Annual Kinetic Power Density (w/sq.m.)",
+        "units": "",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "legend": {
+      "title": "",
+      "legendItems": [
+        {
+          "label": "0 - 100",
+          "symbol": {
+            "type": "polygon",
+            "color": "#0709fd"
+          }
+        },
+        {
+          "label": "100 - 200",
+          "symbol": {
+            "type": "polygon",
+            "color": "#202efe"
+          }
+        },
+        {
+          "label": "200 - 300",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2c40ff"
+          }
+        },
+        {
+          "label": "300 - 400",
+          "symbol": {
+            "type": "polygon",
+            "color": "#3359ff"
+          }
+        },
+        {
+          "label": "400 - 500",
+          "symbol": {
+            "type": "polygon",
+            "color": "#3772ff"
+          }
+        },
+        {
+          "label": "500 - 600",
+          "symbol": {
+            "type": "polygon",
+            "color": "#3a8afe"
+          }
+        },
+        {
+          "label": "600 - 700",
+          "symbol": {
+            "type": "polygon",
+            "color": "#3ba1fe"
+          }
+        },
+        {
+          "label": "700 - 800",
+          "symbol": {
+            "type": "polygon",
+            "color": "#37bdff"
+          }
+        },
+        {
+          "label": "800 - 900",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2bd5ff"
+          }
+        },
+        {
+          "label": "900 - 1000",
+          "symbol": {
+            "type": "polygon",
+            "color": "#1bf1fe"
+          }
+        },
+        {
+          "label": "1000 - 1100",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2dfff4"
+          }
+        },
+        {
+          "label": "1100 - 1200",
+          "symbol": {
+            "type": "polygon",
+            "color": "#5cffde"
+          }
+        },
+        {
+          "label": "1200 - 1300",
+          "symbol": {
+            "type": "polygon",
+            "color": "#7cffc9"
+          }
+        },
+        {
+          "label": "1300 - 1400",
+          "symbol": {
+            "type": "polygon",
+            "color": "#95ffaf"
+          }
+        },
+        {
+          "label": "1400 - 1500",
+          "symbol": {
+            "type": "polygon",
+            "color": "#acff99"
+          }
+        },
+        {
+          "label": "1500 - 1600",
+          "symbol": {
+            "type": "polygon",
+            "color": "#bfff85"
+          }
+        },
+        {
+          "label": "1600 - 1700",
+          "symbol": {
+            "type": "polygon",
+            "color": "#cfff6e"
+          }
+        },
+        {
+          "label": "1700 - 1800",
+          "symbol": {
+            "type": "polygon",
+            "color": "#dfff54"
+          }
+        },
+        {
+          "label": "1800 - 1900",
+          "symbol": {
+            "type": "polygon",
+            "color": "#efff3b"
+          }
+        },
+        {
+          "label": "1900 - 2000",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fbff19"
+          }
+        },
+        {
+          "label": "2000 - 2100",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ffef00"
+          }
+        },
+        {
+          "label": "2100 - 2200",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ffda00"
+          }
+        },
+        {
+          "label": "2200 - 2300",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fec500"
+          }
+        },
+        {
+          "label": "2300 - 2400",
+          "symbol": {
+            "type": "polygon",
+            "color": "#feac00"
+          }
+        },
+        {
+          "label": "2400 - 2500",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ff9600"
+          }
+        },
+        {
+          "label": "2500 - 2600",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fe8100"
+          }
+        },
+        {
+          "label": "2600 - 2700",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ff6700"
+          }
+        },
+        {
+          "label": "2700 - 2800",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ff5200"
+          }
+        },
+        {
+          "label": "2800 - 2900",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fe3400"
+          }
+        },
+        {
+          "label": "2900 - 3000",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fe0100"
+          }
+        }
+      ],
+      "units": "",
+      "type": "default"
+    },
+    "download": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/603d78b36d9e5c931b2e3093.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "wms": {}
+  }
+}
