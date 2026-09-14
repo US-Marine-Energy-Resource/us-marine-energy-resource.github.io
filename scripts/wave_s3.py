@@ -5,7 +5,7 @@ Used by:
   - scripts/check_wave_s3.py            — bucket inventory tables
   - scripts/generate_wave_region_stats.py — per-region doc snippets
 
-Everything here reads the bucket anonymously (no credentials, no NREL API key,
+Everything here reads the bucket anonymously (no credentials, no NLR API key,
 no HSDS). Two levels of access:
 
   list_domain()  — cheap. Paginated LIST, gives file count, years, sizes.

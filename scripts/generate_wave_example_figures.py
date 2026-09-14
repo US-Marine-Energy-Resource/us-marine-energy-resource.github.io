@@ -18,7 +18,7 @@ Usage:
 Requires:
     - mhkit installed (pip install mhkit)
     - seaborn installed (pip install seaborn)
-    - NREL API key configured: hsconfigure
+    - NLR API key configured: hsconfigure
 """
 
 import argparse
