@@ -182,7 +182,7 @@ Part of the Gulf of America dataset, using the same grid, variables, and archive
 
 Wave energy resource characterization data is available in three data products that serve different needs. **Start with the Atlas** for visual exploration, then move to the API or raw files as your analysis deepens.
 
-| I want to…                                      | Use this                                                       | Reference                                                                               |
+| Use Case                                        | Data Product                                                   | Reference                                                                               |
 | :---                                            | :---                                                           | :---                                                                                    |
 | Explore the resource spatially, compare regions | [Marine Energy Atlas][atlas-wave-all-datasets]                 | [Atlas guide](../getting-started/marine-energy-atlas.md)                                |
 | Download time series for up to ~100 sites       | `us-marine-energy-resource-python` or MHKiT `wave.io.hindcast` | [Getting Started](../getting-started/index.md)                                          |
